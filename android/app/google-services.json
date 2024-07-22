@@ -1,0 +1,266 @@
+{
+  "project_info": {
+    "project_number": "592543327679",
+    "project_id": "ibeauty-e83da",
+    "storage_bucket": "ibeauty-e83da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:e113c559e6c16e446f6d0a",
+        "android_client_info": {
+          "package_name": "com.ibeauty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-ld53ebmptlsnruj47i8lug097ntmo560.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibeauty",
+            "certificate_hash": "23bb9bbcccf92d1019bce0028443ed0bdc37db5d"
+          }
+        },
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:51cdc0ff864d26a06f6d0a",
+        "android_client_info": {
+          "package_name": "com.ibeauty.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-4d605rven2mfvgkgkd4neu7ad7f0t9cb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibeauty.app",
+            "certificate_hash": "23bb9bbcccf92d1019bce0028443ed0bdc37db5d"
+          }
+        },
+        {
+          "client_id": "592543327679-8k55duvpgkrm9opo6b62r6fr98hce2vs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibeauty.app",
+            "certificate_hash": "a1f49ee6a310fae9c7d3deb5731a6ee6ff826efa"
+          }
+        },
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:d32e110446a3759e6f6d0a",
+        "android_client_info": {
+          "package_name": "com.yelpos.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:a998680a1003a85f6f6d0a",
+        "android_client_info": {
+          "package_name": "com.yelpos.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-ftkhrj35o0k3jcs9u4mbj78l6bgqapvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yelpos.pos",
+            "certificate_hash": "3fd1e3274c4e9d19f0ec40b401bc730a8a56ea34"
+          }
+        },
+        {
+          "client_id": "592543327679-gk46ihfmti6p7phpp9dhjkdkgacapnob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yelpos.pos",
+            "certificate_hash": "a1f49ee6a310fae9c7d3deb5731a6ee6ff826efa"
+          }
+        },
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:e4a85831d31fdf646f6d0a",
+        "android_client_info": {
+          "package_name": "com.yelpos.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592543327679:android:441b280e6bf279856f6d0a",
+        "android_client_info": {
+          "package_name": "yelpos.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592543327679-kmqo4qei6i7mrj9cuaqln76rv28fs1a8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "592543327679-1fcucu42c9mnbhdced3st33vo09abum4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ibeauty.seller"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

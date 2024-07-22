@@ -1,1 +1,1 @@
-# Store-testfligt
+# Ibeauty customer app

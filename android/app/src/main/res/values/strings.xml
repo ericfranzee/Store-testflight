@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ibeauty</string>
+    <string name="facebook_app_id">919293142642874</string>
+    <string name="fb_login_protocol_scheme">fb919293142642874</string>
+    <string name="facebook_client_token">3d2818aedccb6222ad97cdfdcc2c5e50</string>
+</resources>
