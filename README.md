@@ -1,1 +1,1 @@
-# Ibeauty customer app
+# Store customer app
