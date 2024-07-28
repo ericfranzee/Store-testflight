@@ -19,16 +19,15 @@ tasks:
     flutter update-packages --force-upgrade &&
     flutter run -d web-server --no-resident # prebuilds the app
   command: >
-    flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
-- command: |
     mkdir -p /home/gitpod/.android
     touch /home/gitpod/.android/repositories.cfg
     export PATH=/usr/lib/dart/bin:$FLUTTER_HOME/bin:$ANDROID_HOME/bin:$PATH
     /home/gitpod/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-28" "build-tools;28.0.3"
+    flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
 ports:
 - port: 8080
   onOpen: open-preview
 vscode:
   extensions:
-    - Dart-Code.dart-code@3.5.1:W6zqgIED1gxtkBH/pbfGXA==
-    - Dart-Code.flutter@3.5.1:0FyuzXye7dV19PNst3+Llg==
+    - Dart-Code.dart-code
+    - Dart-Code.flutter
