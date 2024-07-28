@@ -1,5 +1,16 @@
+
 image:
-  file: .gitpod.Dockerfile
+  file: .gitpod.dockerfile
+github:
+  prebuilds:
+    master: true
+    branches: false
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: true
+    addBadge: false
+    addLabel: false
 tasks:
 - before: >
     source ~/.bashrc
@@ -9,6 +20,11 @@ tasks:
     flutter run -d web-server --no-resident # prebuilds the app
   command: >
     flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
+- command: |
+    mkdir -p /home/gitpod/.android
+    touch /home/gitpod/.android/repositories.cfg
+    export PATH=/usr/lib/dart/bin:$FLUTTER_HOME/bin:$ANDROID_HOME/bin:$PATH
+    /home/gitpod/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-28" "build-tools;28.0.3"
 ports:
 - port: 8080
   onOpen: open-preview
