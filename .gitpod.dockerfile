@@ -44,4 +44,4 @@ ENV PUB_CACHE=/workspace/.pub_cache
 ENV PUB_CACHE=/workspace/.pub_cache
 
 # Env
-RUN echo 'export PATH=${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PUB_CACHE}/bin:${FLUTTER_HOME}/.pub-cache/bin:$PATH' >>~/.bashrc
+RUN echo 'export PATH=${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PUB_CACHE}/bin:${FLUTTER_HOME}/.pub-cache/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:$PATH' >>~/.bashrc
