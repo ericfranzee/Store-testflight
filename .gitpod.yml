@@ -15,8 +15,8 @@ tasks:
       flutter pub get
       flutter run -d web-server --no-resident # prebuilds the app
     command: >
-    flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
-    echo "Ready!"
+      flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
+      echo "Ready!"
     
 ports:
 - port: 8080
