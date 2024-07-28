@@ -1,14 +1,23 @@
 image:
   file: .gitpod.dockerfile
+
 tasks:
-- before: >
-    source ~/.bashrc
-  init: >
-    flutter upgrade --force && 
-    flutter update-packages --force-upgrade &&
-    flutter run -d web-server --no-resident # prebuilds the app
-  command: >
+  - before: >
+      source ~/.bashrc
+    init: |
+      echo "Wait for the installation"
+      yes | sdk i java 8.0.232-open
+      sdk i kotlin
+      sdkmanager --update
+      yes | sdkmanager --licenses
+      flutter upgrade --force && 
+      flutter update-packages --force-upgrade &&
+      flutter pub get
+      flutter run -d web-server --no-resident # prebuilds the app
+    command: >
     flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0
+    echo "Ready!"
+    
 ports:
 - port: 8080
   onOpen: open-preview
