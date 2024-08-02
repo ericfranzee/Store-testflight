@@ -1,0 +1,1 @@
+ /home/user/Store-testfligt/.dart_tool/flutter_build/13022dee21548daf46e35b24c0284691/native_assets.yaml: 
