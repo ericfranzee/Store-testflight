@@ -1,0 +1,12 @@
+com.example.fluttershare.flutter_share-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.fluttershare.flutter_share-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.fluttershare.flutter_share-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.example.fluttershare.flutter_share-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.example.fluttershare.flutter_share-main-4 /home/user/.pub-cache/hosted/pub.dev/flutter_share-2.0.0/android/src/main/res
+com.example.fluttershare.flutter_share-release-5 /home/user/.pub-cache/hosted/pub.dev/flutter_share-2.0.0/android/src/release/res
+com.example.fluttershare.flutter_share-pngs-6 /home/user/Store-testfligt/build/flutter_share/generated/res/pngs/release
+com.example.fluttershare.flutter_share-resValues-7 /home/user/Store-testfligt/build/flutter_share/generated/res/resValues/release
+com.example.fluttershare.flutter_share-rs-8 /home/user/Store-testfligt/build/flutter_share/generated/res/rs/release
+com.example.fluttershare.flutter_share-mergeReleaseResources-9 /home/user/Store-testfligt/build/flutter_share/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.example.fluttershare.flutter_share-mergeReleaseResources-10 /home/user/Store-testfligt/build/flutter_share/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.example.fluttershare.flutter_share-merged_res-11 /home/user/Store-testfligt/build/flutter_share/intermediates/merged_res/release

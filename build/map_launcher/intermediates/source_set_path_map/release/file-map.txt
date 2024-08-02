@@ -1,0 +1,12 @@
+com.alexmiller.map_launcher-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.alexmiller.map_launcher-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.alexmiller.map_launcher-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.alexmiller.map_launcher-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.alexmiller.map_launcher-main-4 /home/user/.pub-cache/hosted/pub.dev/map_launcher-2.5.0+1/android/src/main/res
+com.alexmiller.map_launcher-release-5 /home/user/.pub-cache/hosted/pub.dev/map_launcher-2.5.0+1/android/src/release/res
+com.alexmiller.map_launcher-pngs-6 /home/user/Store-testfligt/build/map_launcher/generated/res/pngs/release
+com.alexmiller.map_launcher-resValues-7 /home/user/Store-testfligt/build/map_launcher/generated/res/resValues/release
+com.alexmiller.map_launcher-rs-8 /home/user/Store-testfligt/build/map_launcher/generated/res/rs/release
+com.alexmiller.map_launcher-mergeReleaseResources-9 /home/user/Store-testfligt/build/map_launcher/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.alexmiller.map_launcher-mergeReleaseResources-10 /home/user/Store-testfligt/build/map_launcher/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.alexmiller.map_launcher-merged_res-11 /home/user/Store-testfligt/build/map_launcher/intermediates/merged_res/release

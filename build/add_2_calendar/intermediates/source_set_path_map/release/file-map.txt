@@ -1,0 +1,12 @@
+com.javih.add_2_calendar-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.javih.add_2_calendar-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.javih.add_2_calendar-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.javih.add_2_calendar-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.javih.add_2_calendar-main-4 /home/user/.pub-cache/hosted/pub.dev/add_2_calendar-3.0.1/android/src/main/res
+com.javih.add_2_calendar-release-5 /home/user/.pub-cache/hosted/pub.dev/add_2_calendar-3.0.1/android/src/release/res
+com.javih.add_2_calendar-pngs-6 /home/user/Store-testfligt/build/add_2_calendar/generated/res/pngs/release
+com.javih.add_2_calendar-resValues-7 /home/user/Store-testfligt/build/add_2_calendar/generated/res/resValues/release
+com.javih.add_2_calendar-rs-8 /home/user/Store-testfligt/build/add_2_calendar/generated/res/rs/release
+com.javih.add_2_calendar-mergeReleaseResources-9 /home/user/Store-testfligt/build/add_2_calendar/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.javih.add_2_calendar-mergeReleaseResources-10 /home/user/Store-testfligt/build/add_2_calendar/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.javih.add_2_calendar-merged_res-11 /home/user/Store-testfligt/build/add_2_calendar/intermediates/merged_res/release

@@ -1,0 +1,12 @@
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-main-4 /home/user/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/android/src/main/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-release-5 /home/user/.pub-cache/hosted/pub.dev/flutter_displaymode-0.6.0/android/src/release/res
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-pngs-6 /home/user/Store-testfligt/build/flutter_displaymode/generated/res/pngs/release
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-resValues-7 /home/user/Store-testfligt/build/flutter_displaymode/generated/res/resValues/release
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-rs-8 /home/user/Store-testfligt/build/flutter_displaymode/generated/res/rs/release
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-mergeReleaseResources-9 /home/user/Store-testfligt/build/flutter_displaymode/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-mergeReleaseResources-10 /home/user/Store-testfligt/build/flutter_displaymode/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-11 /home/user/Store-testfligt/build/flutter_displaymode/intermediates/merged_res/release

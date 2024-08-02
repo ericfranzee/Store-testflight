@@ -1,0 +1,12 @@
+dev.fluttercommunity.plus.packageinfo.package_info_plus-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-main-4 /home/user/.pub-cache/hosted/pub.dev/package_info_plus-5.0.1/android/src/main/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-release-5 /home/user/.pub-cache/hosted/pub.dev/package_info_plus-5.0.1/android/src/release/res
+dev.fluttercommunity.plus.packageinfo.package_info_plus-pngs-6 /home/user/Store-testfligt/build/package_info_plus/generated/res/pngs/release
+dev.fluttercommunity.plus.packageinfo.package_info_plus-resValues-7 /home/user/Store-testfligt/build/package_info_plus/generated/res/resValues/release
+dev.fluttercommunity.plus.packageinfo.package_info_plus-rs-8 /home/user/Store-testfligt/build/package_info_plus/generated/res/rs/release
+dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-9 /home/user/Store-testfligt/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
+dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-10 /home/user/Store-testfligt/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+dev.fluttercommunity.plus.packageinfo.package_info_plus-merged_res-11 /home/user/Store-testfligt/build/package_info_plus/intermediates/merged_res/release

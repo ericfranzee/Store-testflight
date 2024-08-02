@@ -1,0 +1,12 @@
+flutter.plugins.vibrate.flutter_vibrate-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+flutter.plugins.vibrate.flutter_vibrate-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+flutter.plugins.vibrate.flutter_vibrate-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+flutter.plugins.vibrate.flutter_vibrate-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+flutter.plugins.vibrate.flutter_vibrate-main-4 /home/user/.pub-cache/hosted/pub.dev/flutter_vibrate-1.3.0/android/src/main/res
+flutter.plugins.vibrate.flutter_vibrate-release-5 /home/user/.pub-cache/hosted/pub.dev/flutter_vibrate-1.3.0/android/src/release/res
+flutter.plugins.vibrate.flutter_vibrate-pngs-6 /home/user/Store-testfligt/build/flutter_vibrate/generated/res/pngs/release
+flutter.plugins.vibrate.flutter_vibrate-resValues-7 /home/user/Store-testfligt/build/flutter_vibrate/generated/res/resValues/release
+flutter.plugins.vibrate.flutter_vibrate-rs-8 /home/user/Store-testfligt/build/flutter_vibrate/generated/res/rs/release
+flutter.plugins.vibrate.flutter_vibrate-mergeReleaseResources-9 /home/user/Store-testfligt/build/flutter_vibrate/intermediates/incremental/release/mergeReleaseResources/merged.dir
+flutter.plugins.vibrate.flutter_vibrate-mergeReleaseResources-10 /home/user/Store-testfligt/build/flutter_vibrate/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+flutter.plugins.vibrate.flutter_vibrate-merged_res-11 /home/user/Store-testfligt/build/flutter_vibrate/intermediates/merged_res/release

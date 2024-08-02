@@ -1,0 +1,13 @@
+com.aboutyou.dart_packages.sign_in_with_apple-browser-1.2.0-0 /home/user/.gradle/caches/transforms-3/0209e40980cfadb176024b5e73633df5/transformed/browser-1.2.0/res
+com.aboutyou.dart_packages.sign_in_with_apple-jetified-window-java-1.0.0-beta04-1 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.aboutyou.dart_packages.sign_in_with_apple-jetified-annotation-experimental-1.1.0-2 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.aboutyou.dart_packages.sign_in_with_apple-jetified-window-1.0.0-beta04-4 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.aboutyou.dart_packages.sign_in_with_apple-main-5 /home/user/.pub-cache/hosted/pub.dev/sign_in_with_apple-4.3.0/android/src/main/res
+com.aboutyou.dart_packages.sign_in_with_apple-release-6 /home/user/.pub-cache/hosted/pub.dev/sign_in_with_apple-4.3.0/android/src/release/res
+com.aboutyou.dart_packages.sign_in_with_apple-pngs-7 /home/user/Store-testfligt/build/sign_in_with_apple/generated/res/pngs/release
+com.aboutyou.dart_packages.sign_in_with_apple-resValues-8 /home/user/Store-testfligt/build/sign_in_with_apple/generated/res/resValues/release
+com.aboutyou.dart_packages.sign_in_with_apple-rs-9 /home/user/Store-testfligt/build/sign_in_with_apple/generated/res/rs/release
+com.aboutyou.dart_packages.sign_in_with_apple-mergeReleaseResources-10 /home/user/Store-testfligt/build/sign_in_with_apple/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.aboutyou.dart_packages.sign_in_with_apple-mergeReleaseResources-11 /home/user/Store-testfligt/build/sign_in_with_apple/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.aboutyou.dart_packages.sign_in_with_apple-merged_res-12 /home/user/Store-testfligt/build/sign_in_with_apple/intermediates/merged_res/release

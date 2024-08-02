@@ -1,0 +1,12 @@
+com.jrai.flutter_keyboard_visibility-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.jrai.flutter_keyboard_visibility-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.jrai.flutter_keyboard_visibility-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.jrai.flutter_keyboard_visibility-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.jrai.flutter_keyboard_visibility-main-4 /home/user/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility-6.0.0/android/src/main/res
+com.jrai.flutter_keyboard_visibility-release-5 /home/user/.pub-cache/hosted/pub.dev/flutter_keyboard_visibility-6.0.0/android/src/release/res
+com.jrai.flutter_keyboard_visibility-pngs-6 /home/user/Store-testfligt/build/flutter_keyboard_visibility/generated/res/pngs/release
+com.jrai.flutter_keyboard_visibility-resValues-7 /home/user/Store-testfligt/build/flutter_keyboard_visibility/generated/res/resValues/release
+com.jrai.flutter_keyboard_visibility-rs-8 /home/user/Store-testfligt/build/flutter_keyboard_visibility/generated/res/rs/release
+com.jrai.flutter_keyboard_visibility-mergeReleaseResources-9 /home/user/Store-testfligt/build/flutter_keyboard_visibility/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.jrai.flutter_keyboard_visibility-mergeReleaseResources-10 /home/user/Store-testfligt/build/flutter_keyboard_visibility/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.jrai.flutter_keyboard_visibility-merged_res-11 /home/user/Store-testfligt/build/flutter_keyboard_visibility/intermediates/merged_res/release

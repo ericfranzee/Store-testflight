@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ibeauty.app-mergeReleaseResources-42:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

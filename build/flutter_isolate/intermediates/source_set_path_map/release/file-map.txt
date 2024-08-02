@@ -1,0 +1,12 @@
+com.rmawatson.flutterisolate.flutter_isolate-jetified-window-java-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/33a6a6a886ac7a83048aae2d20ec0c7c/transformed/jetified-window-java-1.0.0-beta04/res
+com.rmawatson.flutterisolate.flutter_isolate-jetified-annotation-experimental-1.1.0-1 /home/user/.gradle/caches/transforms-3/7657ddcb0775083099b32cd1a2468d93/transformed/jetified-annotation-experimental-1.1.0/res
+com.rmawatson.flutterisolate.flutter_isolate-core-1.6.0-2 /home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res
+com.rmawatson.flutterisolate.flutter_isolate-jetified-window-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/f7df4559d16a82ef248bb65039063d55/transformed/jetified-window-1.0.0-beta04/res
+com.rmawatson.flutterisolate.flutter_isolate-main-4 /home/user/.pub-cache/hosted/pub.dev/flutter_isolate-2.0.4/android/src/main/res
+com.rmawatson.flutterisolate.flutter_isolate-release-5 /home/user/.pub-cache/hosted/pub.dev/flutter_isolate-2.0.4/android/src/release/res
+com.rmawatson.flutterisolate.flutter_isolate-pngs-6 /home/user/Store-testfligt/build/flutter_isolate/generated/res/pngs/release
+com.rmawatson.flutterisolate.flutter_isolate-resValues-7 /home/user/Store-testfligt/build/flutter_isolate/generated/res/resValues/release
+com.rmawatson.flutterisolate.flutter_isolate-rs-8 /home/user/Store-testfligt/build/flutter_isolate/generated/res/rs/release
+com.rmawatson.flutterisolate.flutter_isolate-mergeReleaseResources-9 /home/user/Store-testfligt/build/flutter_isolate/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.rmawatson.flutterisolate.flutter_isolate-mergeReleaseResources-10 /home/user/Store-testfligt/build/flutter_isolate/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.rmawatson.flutterisolate.flutter_isolate-merged_res-11 /home/user/Store-testfligt/build/flutter_isolate/intermediates/merged_res/release
