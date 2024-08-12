@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>592543327679-apeebaqu6k0gpaq8vu64abr21ub7saeq.apps.googleusercontent.com</string>
+	<string>15350343199-lgj4miseug79ba8v4ff284t3ln5odlo3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.592543327679-apeebaqu6k0gpaq8vu64abr21ub7saeq</string>
+	<string>com.googleusercontent.apps.15350343199-lgj4miseug79ba8v4ff284t3ln5odlo3</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>15350343199-h7ib59376cu9c891u4gs2nko5ekqbffh.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA9R9uTj4yWBnFPdi9VtqTumUa-Fud4u0E</string>
+	<string>AIzaSyDB3jp3XF-MTt8hStOnsV_yLe1N6He6T3c</string>
 	<key>GCM_SENDER_ID</key>
-	<string>592543327679</string>
+	<string>15350343199</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.ibeauty.org</string>
+	<string>com.ericfranzee.store</string>
 	<key>PROJECT_ID</key>
-	<string>ibeauty-e83da</string>
+	<string>store-zee</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ibeauty-e83da.appspot.com</string>
+	<string>store-zee.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:592543327679:ios:9abb64f9ec9228826f6d0a</string>
+	<string>1:15350343199:ios:189253694b3107a358172a</string>
 </dict>
 </plist>

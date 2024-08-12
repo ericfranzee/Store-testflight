@@ -23,7 +23,7 @@ class _WebViewPageState extends State<WebViewPage> {
           onPageFinished: (String url) {},
           onWebResourceError: (WebResourceError error) {},
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.contains("ibeauty")) {
+            if (request.url.contains("ericfranzee")) {
               Navigator.pop(context, true);
               return NavigationDecision.prevent;
             }
