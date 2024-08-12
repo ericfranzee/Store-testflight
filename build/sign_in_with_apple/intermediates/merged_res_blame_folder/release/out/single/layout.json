@@ -1,7 +1,7 @@
 [
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/notification_action.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/notification_action.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/notification_action.xml"
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/browser_actions_context_menu_row.xml",
@@ -9,11 +9,11 @@
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/custom_dialog.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/custom_dialog.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/custom_dialog.xml"
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/notification_template_part_time.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/notification_template_part_time.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/notification_template_part_time.xml"
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/browser_actions_context_menu_page.xml",
@@ -21,14 +21,14 @@
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/notification_action_tombstone.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/notification_action_tombstone.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/notification_action_tombstone.xml"
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/notification_template_icon_group.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/notification_template_icon_group.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/layout/notification_template_part_chronometer.xml",
-        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-3:/layout/notification_template_part_chronometer.xml"
+        "source": "com.aboutyou.dart_packages.sign_in_with_apple-core-1.6.0-2:/layout/notification_template_part_chronometer.xml"
     }
 ]

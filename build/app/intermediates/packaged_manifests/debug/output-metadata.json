@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.ibeauty.app",
+  "applicationId": "com.ericfranzee.store",
   "variantName": "debug",
   "elements": [
     {

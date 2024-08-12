@@ -4,17 +4,7 @@
             "outputFile": "com.aboutyou.dart_packages.sign_in_with_apple-mergeReleaseResources-9:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/0209e40980cfadb176024b5e73633df5/transformed/browser-1.2.0/res/values-pt/values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,170,269,381",
-                        "endColumns": "114,98,111,104",
-                        "endOffsets": "165,264,376,481"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "486",
                         "endColumns": "100",
                         "endOffsets": "582"
+                    }
+                },
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/7a951d0b421fa5f157d7a164c015a708/transformed/browser-1.2.0/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,170,269,381",
+                        "endColumns": "114,98,111,104",
+                        "endOffsets": "165,264,376,481"
                     }
                 }
             ]
@@ -36,17 +36,7 @@
             "outputFile": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/0209e40980cfadb176024b5e73633df5/transformed/browser-1.2.0/res/values-pt/values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,170,269,381",
-                        "endColumns": "114,98,111,104",
-                        "endOffsets": "165,264,376,481"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -60,6 +50,16 @@
                         "startOffsets": "486",
                         "endColumns": "100",
                         "endOffsets": "582"
+                    }
+                },
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/7a951d0b421fa5f157d7a164c015a708/transformed/browser-1.2.0/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,170,269,381",
+                        "endColumns": "114,98,111,104",
+                        "endOffsets": "165,264,376,481"
                     }
                 }
             ]

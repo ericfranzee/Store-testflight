@@ -4,7 +4,7 @@
             "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-10:/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/c13e2bda8211ad9e0bec22804e168824/transformed/core-1.7.0/res/values-as/values-as.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/858fb381d452b0dc35351b1251c5b19a/transformed/core-1.7.0/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-12:/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/c13e2bda8211ad9e0bec22804e168824/transformed/core-1.7.0/res/values-as/values-as.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/858fb381d452b0dc35351b1251c5b19a/transformed/core-1.7.0/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

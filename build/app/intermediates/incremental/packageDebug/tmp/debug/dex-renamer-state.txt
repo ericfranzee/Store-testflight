@@ -1,12 +1,12 @@
-#Fri Aug 02 11:23:23 UTC 2024
-path.4=7/classes.dex
+#Fri Aug 02 23:54:36 UTC 2024
+path.4=13/classes.dex
 path.3=1/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.6=classes3.dex
 path.5=classes2.dex
 path.0=classes.dex
-base.4=/home/user/Store-testfligt/build/app/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+base.4=/home/user/Store-testfligt/build/app/intermediates/dex/debug/mergeProjectDexDebug/13/classes.dex
 base.3=/home/user/Store-testfligt/build/app/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
 base.2=/home/user/Store-testfligt/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.1=/home/user/Store-testfligt/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex

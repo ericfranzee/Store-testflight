@@ -15,6 +15,7 @@
 -keep class androidx.work.impl.foreground.SystemForegroundService { <init>(); }
 -keep class androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver { <init>(); }
 -keep class com.baseflow.geolocator.GeolocatorLocationService { <init>(); }
+-keep class com.ericfranzee.store.MainActivity { <init>(); }
 -keep class com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver { <init>(); }
 -keep class com.facebook.CurrentAccessTokenExpirationBroadcastReceiver { <init>(); }
 -keep class com.facebook.CustomTabActivity { <init>(); }
@@ -33,7 +34,6 @@
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
--keep class com.ibeauty.app.MainActivity { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider { <init>(); }
 -keep class io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver { <init>(); }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ibeauty.app"
+    package="com.ericfranzee.store"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -70,17 +70,17 @@
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
     <permission
-        android:name="com.ibeauty.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.ericfranzee.store.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.ibeauty.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.ericfranzee.store.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
         android:name="android.app.Application"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
-        android:label="Demand 24"
+        android:label="CeaZed"
         android:supportsRtl="true" >
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -93,7 +93,7 @@
             android:value="AIzaSyCuDSljHjF4pKT9yJWtnJgsCXf6rxi40Tg" />
 
         <activity
-            android:name="com.ibeauty.app.MainActivity"
+            android:name="com.ericfranzee.store.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"
@@ -127,7 +127,7 @@
 
         <provider
             android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"
-            android:authorities="com.ibeauty.app.flutter_downloader.provider"
+            android:authorities="com.ericfranzee.store.flutter_downloader.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -217,12 +217,12 @@
 
         <provider
             android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-            android:authorities="com.ibeauty.app.flutterfirebasemessaginginitprovider"
+            android:authorities="com.ericfranzee.store.flutterfirebasemessaginginitprovider"
             android:exported="false"
             android:initOrder="99" />
         <provider
             android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-            android:authorities="com.ibeauty.app.flutter.image_provider"
+            android:authorities="com.ericfranzee.store.flutter.image_provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -255,7 +255,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="cct.com.ibeauty.app"
+                    android:host="cct.com.ericfranzee.store"
                     android:scheme="fbconnect" />
             </intent-filter>
         </activity> <!-- Needs to be explicitly declared on P+ -->
@@ -347,13 +347,13 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.ibeauty.app.firebaseinitprovider"
+            android:authorities="com.ericfranzee.store.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.ibeauty.app.androidx-startup"
+            android:authorities="com.ericfranzee.store.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
@@ -465,7 +465,7 @@
         -->
         <provider
             android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="com.ibeauty.app.FacebookInitProvider"
+            android:authorities="com.ericfranzee.store.FacebookInitProvider"
             android:exported="false" />
 
         <receiver

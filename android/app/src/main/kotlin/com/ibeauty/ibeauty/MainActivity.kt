@@ -1,4 +1,4 @@
-package com.ibeauty.app
+package com.ericfranzee.store
 
 import io.flutter.embedding.android.FlutterActivity
 

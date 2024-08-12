@@ -4,26 +4,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-mergeReleaseResources-20:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/1490f1b2c80f8f0638baca1b3f99c9f5/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3115",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3260"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -39,6 +20,25 @@
                         "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
                         "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1220,1970,2089,2216,2321,2545,2660,2767,2880,3110"
+                    }
+                },
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/1dbceea3ed28302655a8a912d32bb98f/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "3115",
+                        "endLines": "50",
+                        "endColumns": "12",
+                        "endOffsets": "3260"
                     }
                 }
             ]
@@ -47,26 +47,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-merged_res-22:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/1490f1b2c80f8f0638baca1b3f99c9f5/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3115",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3260"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -82,6 +63,25 @@
                         "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
                         "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1220,1970,2089,2216,2321,2545,2660,2767,2880,3110"
+                    }
+                },
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/1dbceea3ed28302655a8a912d32bb98f/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "3115",
+                        "endLines": "50",
+                        "endColumns": "12",
+                        "endOffsets": "3260"
                     }
                 }
             ]

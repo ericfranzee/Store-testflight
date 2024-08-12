@@ -4,7 +4,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-merged_res-22:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -19,7 +19,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-mergeReleaseResources-20:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

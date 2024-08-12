@@ -438,6 +438,12 @@
     <string name="flutter_downloader_notification_in_progress">in progress</string>
     <string name="flutter_downloader_notification_paused">paused</string>
     <string name="flutter_downloader_notification_started">started</string>
+    <string name="gcm_defaultSenderId" translatable="false">15350343199</string>
+    <string name="google_api_key" translatable="false">AIzaSyA01rajusCtUrP4kvSGQYJ47Fvf-L7cVRk</string>
+    <string name="google_app_id" translatable="false">1:15350343199:android:4d513094fa048fed58172a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA01rajusCtUrP4kvSGQYJ47Fvf-L7cVRk</string>
+    <string name="google_storage_bucket" translatable="false">store-zee.appspot.com</string>
+    <string name="project_id" translatable="false">store-zee</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

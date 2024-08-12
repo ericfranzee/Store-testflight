@@ -26,10 +26,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -53,10 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBJThhE5Cq5IH4Lj9H5c9FL3x9J9E2bQL0',
-    appId: '1:592543327679:android:51cdc0ff864d26a06f6d0a',
-    messagingSenderId: '592543327679',
-    projectId: 'ibeauty-e83da',
-    storageBucket: 'ibeauty-e83da.appspot.com',
+    apiKey: 'AIzaSyA01rajusCtUrP4kvSGQYJ47Fvf-L7cVRk',
+    appId: '1:15350343199:android:4d513094fa048fed58172a',
+    messagingSenderId: '15350343199',
+    projectId: 'store-zee',
+    storageBucket: 'store-zee.appspot.com',
   );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyDB3jp3XF-MTt8hStOnsV_yLe1N6He6T3c',
+    appId: '1:15350343199:ios:189253694b3107a358172a',
+    messagingSenderId: '15350343199',
+    projectId: 'store-zee',
+    storageBucket: 'store-zee.appspot.com',
+    iosBundleId: 'com.ericfranzee.store',
+  );
+
 }

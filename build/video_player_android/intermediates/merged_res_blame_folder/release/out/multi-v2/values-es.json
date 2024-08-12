@@ -4,7 +4,7 @@
             "outputFile": "io.flutter.plugins.videoplayer.video_player_android-merged_res-12:/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/0fc73c160f57d65d3cf687c33f63a053/transformed/jetified-exoplayer-core-2.18.7/res/values-es/values-es.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/c73d327fe599a8d9f7b8b19a8eb2f364/transformed/jetified-exoplayer-core-2.18.7/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/c13e2bda8211ad9e0bec22804e168824/transformed/core-1.7.0/res/values-es/values-es.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/858fb381d452b0dc35351b1251c5b19a/transformed/core-1.7.0/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -36,7 +36,7 @@
             "outputFile": "io.flutter.plugins.videoplayer.video_player_android-mergeReleaseResources-10:/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/0fc73c160f57d65d3cf687c33f63a053/transformed/jetified-exoplayer-core-2.18.7/res/values-es/values-es.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/c73d327fe599a8d9f7b8b19a8eb2f364/transformed/jetified-exoplayer-core-2.18.7/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -46,7 +46,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/c13e2bda8211ad9e0bec22804e168824/transformed/core-1.7.0/res/values-es/values-es.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/858fb381d452b0dc35351b1251c5b19a/transformed/core-1.7.0/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

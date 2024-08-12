@@ -1,4 +1,4 @@
-com.ibeauty.app
+com.ericfranzee.store
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1230,6 +1230,12 @@ string flutter_downloader_notification_failed
 string flutter_downloader_notification_in_progress
 string flutter_downloader_notification_paused
 string flutter_downloader_notification_started
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

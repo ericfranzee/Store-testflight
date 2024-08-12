@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.ibeauty.app-mergeDebugResources-42:/values-v26/values-v26.xml",
+            "outputFile": "com.ericfranzee.store.app-mergeDebugResources-43:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-v26/values-v26.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

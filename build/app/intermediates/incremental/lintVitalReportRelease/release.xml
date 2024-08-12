@@ -1,6 +1,6 @@
 <variant
     name="release"
-    package="com.ibeauty.app"
+    package="com.ericfranzee.store"
     minSdkVersion="21"
     targetSdkVersion="34"
     shrinking="true"
@@ -33,8 +33,8 @@
   </manifestPlaceholders>
   <mainArtifact
       classOutputs="/home/user/Store-testfligt/build/app/intermediates/javac/release/classes:/home/user/Store-testfligt/build/app/tmp/kotlin-classes/release:/home/user/Store-testfligt/build/app/kotlinToolingMetadata:/home/user/Store-testfligt/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
-      applicationId="com.ibeauty.app"
+      applicationId="com.ericfranzee.store"
       generatedSourceFolders="/home/user/Store-testfligt/build/app/generated/ap_generated_sources/release/out:/home/user/Store-testfligt/build/app/generated/aidl_source_output_dir/release/out:/home/user/Store-testfligt/build/app/generated/source/buildConfig/release:/home/user/Store-testfligt/build/app/generated/renderscript_source_output_dir/release/out"
-      generatedResourceFolders="/home/user/Store-testfligt/build/app/generated/res/rs/release:/home/user/Store-testfligt/build/app/generated/res/resValues/release">
+      generatedResourceFolders="/home/user/Store-testfligt/build/app/generated/res/google-services/release:/home/user/Store-testfligt/build/app/generated/res/rs/release:/home/user/Store-testfligt/build/app/generated/res/resValues/release">
   </mainArtifact>
 </variant>

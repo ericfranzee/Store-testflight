@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.ibeauty.app-mergeReleaseResources-42:/values-v31/values-v31.xml",
+            "outputFile": "com.ericfranzee.store.app-mergeReleaseResources-43:/values-v31/values-v31.xml",
             "map": [
                 {
                     "source": "/home/user/Store-testfligt/android/app/src/main/res/values-v31/styles.xml",

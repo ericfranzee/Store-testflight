@@ -4,7 +4,7 @@
             "outputFile": "com.jaumard.smsautofill.sms_autofill-merged_res-13:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/1e8add33f26bea110668595bfb73d724/transformed/jetified-play-services-auth-19.2.0/res/values-watch-v20/values.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/3073339d5bf1a63a92c56ed13c64268e/transformed/jetified-play-services-auth-19.2.0/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -26,7 +26,7 @@
             "outputFile": "com.jaumard.smsautofill.sms_autofill-mergeReleaseResources-11:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/1e8add33f26bea110668595bfb73d724/transformed/jetified-play-services-auth-19.2.0/res/values-watch-v20/values.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/3073339d5bf1a63a92c56ed13c64268e/transformed/jetified-play-services-auth-19.2.0/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

@@ -4,7 +4,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-mergeReleaseResources-20:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-sl/values-sl.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res/values-sl/values-sl.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -36,7 +36,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-merged_res-22:/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/8735c9cc788622f2d3c9b7d74c582716/transformed/appcompat-1.1.0/res/values-sl/values-sl.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -46,7 +46,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/e1ad1ea740cc8d12cc4b8ed9d75296ac/transformed/core-1.6.0/res/values-sl/values-sl.xml",
+                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-sl/values-sl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

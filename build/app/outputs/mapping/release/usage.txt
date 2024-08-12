@@ -9617,6 +9617,25 @@ com.baseflow.permissionhandler.R$string
 com.baseflow.permissionhandler.R$style
 com.baseflow.permissionhandler.R$styleable
 com.baseflow.permissionhandler.R
+com.ericfranzee.store.BuildConfig
+com.ericfranzee.store.R$anim
+com.ericfranzee.store.R$animator
+com.ericfranzee.store.R$attr
+com.ericfranzee.store.R$bool
+com.ericfranzee.store.R$color
+com.ericfranzee.store.R$dimen
+com.ericfranzee.store.R$drawable
+com.ericfranzee.store.R$id
+com.ericfranzee.store.R$integer
+com.ericfranzee.store.R$interpolator
+com.ericfranzee.store.R$layout
+com.ericfranzee.store.R$mipmap
+com.ericfranzee.store.R$raw
+com.ericfranzee.store.R$string
+com.ericfranzee.store.R$style
+com.ericfranzee.store.R$styleable
+com.ericfranzee.store.R$xml
+com.ericfranzee.store.R
 com.example.fluttershare.BuildConfig
 com.example.fluttershare.FlutterSharePlugin:
     public static void registerWith(io.flutter.plugin.common.PluginRegistry$Registrar)
@@ -30973,25 +30992,6 @@ com.google.zxing.qrcode.encoder.QRCode:
     public int getMaskPattern()
     public com.google.zxing.qrcode.decoder.Mode getMode()
     public com.google.zxing.qrcode.decoder.Version getVersion()
-com.ibeauty.app.BuildConfig
-com.ibeauty.app.R$anim
-com.ibeauty.app.R$animator
-com.ibeauty.app.R$attr
-com.ibeauty.app.R$bool
-com.ibeauty.app.R$color
-com.ibeauty.app.R$dimen
-com.ibeauty.app.R$drawable
-com.ibeauty.app.R$id
-com.ibeauty.app.R$integer
-com.ibeauty.app.R$interpolator
-com.ibeauty.app.R$layout
-com.ibeauty.app.R$mipmap
-com.ibeauty.app.R$raw
-com.ibeauty.app.R$string
-com.ibeauty.app.R$style
-com.ibeauty.app.R$styleable
-com.ibeauty.app.R$xml
-com.ibeauty.app.R
 com.jaumard.smsautofill.AppSignatureHelper:
     private static final java.lang.String HASH_TYPE
     public static final int NUM_BASE64_CHAR
