@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/response/blog_details_response.dart';
-import 'package:ibeauty/domain/model/response/booking_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/booking_response.dart';
-import 'package:ibeauty/domain/model/response/check_time_response.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/model/response/service_of_master_response.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/response/blog_details_response.dart';
+import 'package:cea_zed/domain/model/response/booking_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/booking_response.dart';
+import 'package:cea_zed/domain/model/response/check_time_response.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/model/response/service_of_master_response.dart';
 
 abstract class BookingInterface {
   Future<Either<BookingResponse, dynamic>> getBooks(
@@ -25,7 +25,8 @@ abstract class BookingInterface {
 
   Future<Either<bool, dynamic>> cancelBook(int id);
 
-  Future<Either<bool, dynamic>> saveForm({required List<FormOptionsData?> form,required int id});
+  Future<Either<bool, dynamic>> saveForm(
+      {required List<FormOptionsData?> form, required int id});
 
   Future<Either<BookingCalculateResponse, dynamic>> calculateBooking(
       {required Map<int, MasterModel> selectMasters,

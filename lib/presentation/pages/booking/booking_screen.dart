@@ -3,24 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/booking/booking_bloc.dart';
-import 'package:ibeauty/application/form_option/form_bloc.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/model/response/booking_response.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/pages/booking/widget/booked_service.dart';
-import 'package:ibeauty/presentation/pages/shop/widgets/connect_button.dart';
-import 'package:ibeauty/presentation/pages/shop/widgets/share_like_widget.dart';
-import 'package:ibeauty/presentation/pages/shop/widgets/shop_avatar.dart';
-import 'package:ibeauty/presentation/route/app_route_service.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/booking/booking_bloc.dart';
+import 'package:cea_zed/application/form_option/form_bloc.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/model/response/booking_response.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/pages/booking/widget/booked_service.dart';
+import 'package:cea_zed/presentation/pages/shop/widgets/connect_button.dart';
+import 'package:cea_zed/presentation/pages/shop/widgets/share_like_widget.dart';
+import 'package:cea_zed/presentation/pages/shop/widgets/shop_avatar.dart';
+import 'package:cea_zed/presentation/route/app_route_service.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 import '../../components/button/pop_button.dart';
 import 'widget/cancel_screen.dart';
@@ -107,7 +107,6 @@ class BookingPage extends StatelessWidget {
                                             const NeverScrollableScrollPhysics(),
                                         itemCount: state.upcoming.length,
                                         itemBuilder: (context, index) {
-
                                           return BookedServiceItem(
                                               shopId: shopId,
                                               colors: colors,
@@ -115,7 +114,11 @@ class BookingPage extends StatelessWidget {
                                                   state.upcoming[index]);
                                         }),
                                     const Divider(),
-                                    _formScreen(colors,state.upcoming.map((e) => e.address).toList()),
+                                    _formScreen(
+                                        colors,
+                                        state.upcoming
+                                            .map((e) => e.address)
+                                            .toList()),
                                     16.verticalSpace,
                                     Row(
                                       children: [

@@ -3,9 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/blog.dart';
-import 'package:ibeauty/domain/model/model/blog_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/blog.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'blog_event.dart';
@@ -44,7 +44,6 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
         emit(state.copyWith(isLoadingBlog: false));
         if (event.isRefresh ?? false) {
           event.controller?.refreshFailed();
-
         }
         event.controller?.loadFailed();
 

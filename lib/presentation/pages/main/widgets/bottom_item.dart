@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class BottomItem extends StatelessWidget {
   final bool isActive;

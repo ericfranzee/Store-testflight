@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/profile/profile_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/domain/service/validators.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/profile/profile_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/validators.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ChangePassword extends StatefulWidget {
   final CustomColorSet colors;
@@ -110,9 +110,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                     return CustomTextFormField(
                       hint: AppHelper.getTrn(TrKeys.confirmPassword),
                       controller: confirmPassword,
-                      validation: (s) =>
-                          AppValidators.isValidConfirmPassword(
-                              newPassword.text, s),
+                      validation: (s) => AppValidators.isValidConfirmPassword(
+                          newPassword.text, s),
                       obscure: state.showConfirmPassword,
                       maxLines: 1,
                       suffixIcon: IconButton(
@@ -138,22 +137,22 @@ class _ChangePasswordState extends State<ChangePassword> {
                   },
                   builder: (context, state) {
                     return CustomButton(
-                        isLoading: state.isPasswordLoading,
-                        title: AppHelper.getTrn(TrKeys.save),
-                        bgColor: widget.colors.primary,
-                        titleColor: widget.colors.white,
-                        onTap: () {
-                          if (_formKey.currentState?.validate() ?? false) {
-                            context.read<ProfileBloc>().add(
-                              ProfileEvent.updatePassword(
-                                newPassword: newPassword.text,
-                                confirmPassword: confirmPassword.text,
-                                context: context,
-                                onSuccess: () => Navigator.pop(context),
-                              ),
-                            );
-                          }
-                        },
+                      isLoading: state.isPasswordLoading,
+                      title: AppHelper.getTrn(TrKeys.save),
+                      bgColor: widget.colors.primary,
+                      titleColor: widget.colors.white,
+                      onTap: () {
+                        if (_formKey.currentState?.validate() ?? false) {
+                          context.read<ProfileBloc>().add(
+                                ProfileEvent.updatePassword(
+                                  newPassword: newPassword.text,
+                                  confirmPassword: confirmPassword.text,
+                                  context: context,
+                                  onSuccess: () => Navigator.pop(context),
+                                ),
+                              );
+                        }
+                      },
                     );
                   },
                 ),

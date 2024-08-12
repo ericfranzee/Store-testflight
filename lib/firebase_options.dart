@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '15350343199',
     projectId: 'store-zee',
     storageBucket: 'store-zee.appspot.com',
+    androidClientId: '15350343199-h7ib59376cu9c891u4gs2nko5ekqbffh.apps.googleusercontent.com',
+    iosClientId: '15350343199-lgj4miseug79ba8v4ff284t3ln5odlo3.apps.googleusercontent.com',
     iosBundleId: 'com.ericfranzee.store',
   );
 

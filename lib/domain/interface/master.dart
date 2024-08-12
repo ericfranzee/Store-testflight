@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/response/master_response.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/response/master_response.dart';
 
 abstract class MasterInterface {
   Future<Either<MasterPaginationResponse, dynamic>> getMasters({

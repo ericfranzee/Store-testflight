@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ShimmerList extends StatelessWidget {
   final CustomColorSet colors;
@@ -12,22 +12,22 @@ class ShimmerList extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         return Column(
-          crossAxisAlignment:
-          CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: double.infinity,
               height: 20.r,
               color: CustomStyle.shimmerBase,
             ),
-            Divider(color: colors.textHint,)
+            Divider(
+              color: colors.textHint,
+            )
           ],
         );
       },
       itemCount: 4,
       shrinkWrap: true,
-      physics:
-      const NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
     );
   }
 }

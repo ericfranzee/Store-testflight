@@ -4,27 +4,27 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/application/blog/blog_bloc.dart';
-import 'package:ibeauty/application/brand/brand_bloc.dart';
-import 'package:ibeauty/application/category/category_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/application/notification/notification_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/all_shop_list.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/masters_list.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/popular_shop.dart';
-import 'package:ibeauty/presentation/pages/home_three/widgets/story_three_list.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/application/blog/blog_bloc.dart';
+import 'package:cea_zed/application/brand/brand_bloc.dart';
+import 'package:cea_zed/application/category/category_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/application/notification/notification_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/all_shop_list.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/masters_list.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/popular_shop.dart';
+import 'package:cea_zed/presentation/pages/home_three/widgets/story_three_list.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'widgets/category_two_list.dart';
@@ -101,18 +101,20 @@ class _HomeTwoPageState extends State<HomeTwoPage> {
                   margin: EdgeInsets.symmetric(horizontal: 16.r),
                   duration: const Duration(milliseconds: 500),
                   height: state.isShowSearch ? 50.r : 0,
-                  child: state.isShowSearch ? CustomTextFormField(
-                    onTap: () {
-                      AppRoute.goSearchPage(context: context);
-                    },
-                    readOnly: true,
-                    radius: 24,
-                    prefixIcon: const Icon(
-                      FlutterRemix.search_2_line,
-                      color: CustomStyle.textHint,
-                    ),
-                    hint: AppHelper.getTrn(TrKeys.search),
-                  ) : const SizedBox.shrink(),
+                  child: state.isShowSearch
+                      ? CustomTextFormField(
+                          onTap: () {
+                            AppRoute.goSearchPage(context: context);
+                          },
+                          readOnly: true,
+                          radius: 24,
+                          prefixIcon: const Icon(
+                            FlutterRemix.search_2_line,
+                            color: CustomStyle.textHint,
+                          ),
+                          hint: AppHelper.getTrn(TrKeys.search),
+                        )
+                      : const SizedBox.shrink(),
                 );
               },
             ),
@@ -182,8 +184,7 @@ class _HomeTwoPageState extends State<HomeTwoPage> {
                         categoryRefresh: categoryRefresh, colors: colors),
                     ShopsPopularList(colors: colors),
                     16.verticalSpace,
-                    StoryThreeList(
-                        storyRefresh: storyRefresh, colors: colors),
+                    StoryThreeList(storyRefresh: storyRefresh, colors: colors),
                     MastersList(
                       colors: colors,
                       controller: masterRefresh,
@@ -222,12 +223,12 @@ class _HomeTwoPageState extends State<HomeTwoPage> {
               label: (LocalStorage.getToken().isEmpty)
                   ? const Text("0")
                   : BlocBuilder<NotificationBloc, NotificationState>(
-                builder: (context, state) {
-                  return Text(state.countOfNotifications?.notification
-                      .toString() ??
-                      "0");
-                },
-              ),
+                      builder: (context, state) {
+                        return Text(state.countOfNotifications?.notification
+                                .toString() ??
+                            "0");
+                      },
+                    ),
               child: SvgPicture.asset(
                 "assets/svg/notification.svg",
                 height: 24.r,

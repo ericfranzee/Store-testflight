@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class ArcPainter extends CustomPainter {
   final int index;

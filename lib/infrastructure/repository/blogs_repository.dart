@@ -1,16 +1,15 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/blog.dart';
-import 'package:ibeauty/domain/model/response/blog_details_response.dart';
-import 'package:ibeauty/domain/model/response/blogs_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/blog.dart';
+import 'package:cea_zed/domain/model/response/blog_details_response.dart';
+import 'package:cea_zed/domain/model/response/blogs_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class BlogsRepository implements BlogInterface {
   @override
-  Future<Either<BlogsPaginateResponse,dynamic>> getBlogs(
+  Future<Either<BlogsPaginateResponse, dynamic>> getBlogs(
     int page,
     String type,
   ) async {
@@ -40,12 +39,12 @@ class BlogsRepository implements BlogInterface {
   }
 
   @override
-  Future<Either<BlogDetailsResponse,dynamic>> getBlogDetails(int id) async {
+  Future<Either<BlogDetailsResponse, dynamic>> getBlogDetails(int id) async {
     final data = {'lang': LocalStorage.getLanguage()?.locale};
     try {
       final client = dioHttp.client(requireAuth: false);
-      final response =
-          await client.get('/api/v1/rest/blog-by-id/$id', queryParameters: data);
+      final response = await client.get('/api/v1/rest/blog-by-id/$id',
+          queryParameters: data);
       return left(BlogDetailsResponse.fromJson(response.data));
     } catch (e) {
       debugPrint('==> get blogs details failure: $e');

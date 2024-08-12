@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/application/order/order_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/order_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/pages/order/widgets/send_refund_screen.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/application/order/order_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/pages/order/widgets/send_refund_screen.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class OrderBottom extends StatelessWidget {
@@ -80,18 +80,19 @@ class OrderBottom extends StatelessWidget {
                       .read<MainBloc>()
                       .add(const MainEvent.changeIndex(index: 4));
                   context.read<CartBloc>().add(CartEvent.insertCart(
-                    context: context,
-                    onSuccess: () {
-                      context.read<CartBloc>().add(
-                          CartEvent.calculateCartWithCoupon(context: context));
-                      context
-                          .read<ProductBloc>()
-                          .add(const ProductEvent.updateState());
+                        context: context,
+                        onSuccess: () {
+                          context.read<CartBloc>().add(
+                              CartEvent.calculateCartWithCoupon(
+                                  context: context));
+                          context
+                              .read<ProductBloc>()
+                              .add(const ProductEvent.updateState());
 
-                      Navigator.pop(context);
-                      Navigator.pop(context);
-                    },
-                  ));
+                          Navigator.pop(context);
+                          Navigator.pop(context);
+                        },
+                      ));
                 });
           },
         ),
@@ -157,17 +158,17 @@ class OrderBottom extends StatelessWidget {
             titleColor: colors.white,
             onTap: () {
               context.read<OrderBloc>().add(
-                OrderEvent.cancelOrder(
-                  context: context,
-                  id: order?.id ?? 0,
-                  onSuccess: () {
-                    Navigator.pop(context);
-                    context.read<OrderBloc>().add(
-                        OrderEvent.fetchActiveOrders(
-                            context: context, isRefresh: true));
-                  },
-                ),
-              );
+                    OrderEvent.cancelOrder(
+                      context: context,
+                      id: order?.id ?? 0,
+                      onSuccess: () {
+                        Navigator.pop(context);
+                        context.read<OrderBloc>().add(
+                            OrderEvent.fetchActiveOrders(
+                                context: context, isRefresh: true));
+                      },
+                    ),
+                  );
             });
       },
     );

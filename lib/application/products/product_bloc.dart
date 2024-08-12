@@ -4,11 +4,11 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/products.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/products_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/interface/products.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/products_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'product_event.dart';
@@ -337,7 +337,6 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
         emit(state.copyWith(isLoading: false));
         if (event.isRefresh ?? false) {
           event.controller?.refreshFailed();
-
         }
         event.controller?.loadFailed();
         AppHelper.errorSnackBar(context: event.context, message: r);

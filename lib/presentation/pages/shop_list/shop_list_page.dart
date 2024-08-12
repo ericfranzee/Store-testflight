@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/components/shop_items/shop_item.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/components/shop_items/shop_item.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class ShopListPage extends StatefulWidget {
@@ -54,37 +54,34 @@ class _ShopListPageState extends State<ShopListPage> {
                         color: colors.textBlack, size: 22),
                   ),
                   const Spacer(),
-                  BlocBuilder<ShopBloc, ShopState>(
-                      builder: (context, state) {
-                      return ButtonEffectAnimation(
-                        onTap: () {
-                          AppRouteShop.goFilterShopBottomSheet(
-                              context: context,
-                              colors: colors,
-                              filter: state.filter,
-                              isNear: false
-                          );
-                        },
-                        child: Container(
-                          height: 46.r,
-                          width: 46.r,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.r),
-                              border: Border.all(color: colors.icon)),
-                          child: Badge(
-                            smallSize: 8,
-                            isLabelVisible: state.filter?.type == TrKeys.allShops,
-                            padding: REdgeInsets.all(2),
-                            child: Icon(
-                              FlutterRemix.filter_2_line,
-                              color: colors.textBlack,
-                            ),
+                  BlocBuilder<ShopBloc, ShopState>(builder: (context, state) {
+                    return ButtonEffectAnimation(
+                      onTap: () {
+                        AppRouteShop.goFilterShopBottomSheet(
+                            context: context,
+                            colors: colors,
+                            filter: state.filter,
+                            isNear: false);
+                      },
+                      child: Container(
+                        height: 46.r,
+                        width: 46.r,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.r),
+                            border: Border.all(color: colors.icon)),
+                        child: Badge(
+                          smallSize: 8,
+                          isLabelVisible: state.filter?.type == TrKeys.allShops,
+                          padding: REdgeInsets.all(2),
+                          child: Icon(
+                            FlutterRemix.filter_2_line,
+                            color: colors.textBlack,
                           ),
                         ),
-                      );
-                    }
-                  )
+                      ),
+                    );
+                  })
                 ],
               ),
               24.verticalSpace,

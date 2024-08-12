@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/compare/compare_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/compare/compare_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 
 class CompareListPage extends StatelessWidget {
@@ -25,8 +25,7 @@ class CompareListPage extends StatelessWidget {
           children: [
             Text(
               AppHelper.getTrn(TrKeys.compare),
-              style: CustomStyle.interNoSemi(
-                  color: colors.textBlack, size: 18),
+              style: CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
             ),
             24.verticalSpace,
             BlocBuilder<CompareBloc, CompareState>(
@@ -93,7 +92,8 @@ class CompareListPage extends StatelessWidget {
   }
 
   Widget _empty(BuildContext context, CustomColorSet colors) {
-    return SizedBox(width: MediaQuery.sizeOf(context).width,
+    return SizedBox(
+      width: MediaQuery.sizeOf(context).width,
       child: Column(
         children: [
           32.verticalSpace,

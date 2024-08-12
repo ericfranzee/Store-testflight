@@ -1,5 +1,4 @@
-
-import 'package:ibeauty/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
 
 class RefundOrdersModel {
   RefundOrdersModel({
@@ -12,7 +11,8 @@ class RefundOrdersModel {
       RefundOrdersModel(
         data: json["data"] == null
             ? []
-            : List<RefundModel>.from(json["data"]!.map((x) => RefundModel.fromJson(x))),
+            : List<RefundModel>.from(
+                json["data"]!.map((x) => RefundModel.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -48,7 +48,8 @@ class RefundModel {
         answer: json["answer"],
         createdAt: DateTime.tryParse(json["created_at"])?.toLocal(),
         updatedAt: DateTime.tryParse(json["updated_at"])?.toLocal(),
-        order: json["order"] != null ? OrderShops.fromJson(json["order"]) : null,
+        order:
+            json["order"] != null ? OrderShops.fromJson(json["order"]) : null,
       );
 
   Map<String, dynamic> toJson() => {
@@ -61,5 +62,3 @@ class RefundModel {
         "order": order!.toJson(),
       };
 }
-
-

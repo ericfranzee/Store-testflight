@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/second_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/second_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ShopOneAvatar extends StatelessWidget {
   final CustomColorSet colors;

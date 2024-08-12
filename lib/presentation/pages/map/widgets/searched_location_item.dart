@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:osm_nominatim/osm_nominatim.dart';
 
 class SearchedLocationItem extends StatelessWidget {
@@ -47,7 +47,6 @@ class SearchedLocationItem extends StatelessWidget {
                             color: colors.textBlack, size: 16),
                       ),
                     ),
-
                   ],
                 ),
                 20.verticalSpace,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:chewie/chewie.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPage extends StatefulWidget {

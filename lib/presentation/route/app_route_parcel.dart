@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibeauty/application/checkout/checkout_bloc.dart';
-import 'package:ibeauty/application/parcel/parcel_bloc.dart';
-import 'package:ibeauty/application/parcels_list/parcels_list_bloc.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/parcel_order_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/pages/parcel/parcel_list_page.dart';
-import 'package:ibeauty/presentation/pages/parcel/parcel_order_page.dart';
-import 'package:ibeauty/presentation/pages/parcel/parcel_page.dart';
-import 'package:ibeauty/presentation/pages/parcel/widgets/info_screen.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/checkout/checkout_bloc.dart';
+import 'package:cea_zed/application/parcel/parcel_bloc.dart';
+import 'package:cea_zed/application/parcels_list/parcels_list_bloc.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/parcel_order_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/pages/parcel/parcel_list_page.dart';
+import 'package:cea_zed/presentation/pages/parcel/parcel_order_page.dart';
+import 'package:cea_zed/presentation/pages/parcel/parcel_page.dart';
+import 'package:cea_zed/presentation/pages/parcel/widgets/info_screen.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 abstract class AppRouteParcel {
   AppRouteParcel._();

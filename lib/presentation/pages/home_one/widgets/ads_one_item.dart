@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/ads_response.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/ads_response.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class AdsOneItem extends StatelessWidget {
   final CustomColorSet colors;
@@ -82,13 +82,13 @@ class AdsOneItem extends StatelessWidget {
   Widget _productItem(int shopAdsIndex, int index, BuildContext context) {
     return ButtonEffectAnimation(
       onTap: () async {
-       await AppRoute.goProductPage(
+        await AppRoute.goProductPage(
             context: context,
             product: bannerProducts[shopAdsIndex].shopAdsProducts?[index] ??
                 ProductData());
-       if (context.mounted) {
-         context.read<ProductBloc>().add(const ProductEvent.updateState());
-       }
+        if (context.mounted) {
+          context.read<ProductBloc>().add(const ProductEvent.updateState());
+        }
       },
       child: Column(
         children: [

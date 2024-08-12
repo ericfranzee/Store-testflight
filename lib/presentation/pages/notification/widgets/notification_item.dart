@@ -3,21 +3,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/notification/notification_bloc.dart';
-import 'package:ibeauty/domain/model/model/blog_model.dart';
-import 'package:ibeauty/domain/model/model/order_model.dart';
-import 'package:ibeauty/domain/model/model/parcel_order_model.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/model/response/notification_response.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_parcel.dart';
-import 'package:ibeauty/presentation/route/app_route_service.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/notification/notification_bloc.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/model/model/parcel_order_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/response/notification_response.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_parcel.dart';
+import 'package:cea_zed/presentation/route/app_route_service.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class NotificationItem extends StatelessWidget {
   final CustomColorSet colors;
@@ -116,7 +116,7 @@ class NotificationItem extends StatelessWidget {
                 OrderShops(
                     id: notification.type == "order"
                         ? notification.orderData?.parentId ??
-                        notification.orderData?.id
+                            notification.orderData?.id
                         : notification.modelId));
             return;
           }
@@ -140,12 +140,16 @@ class NotificationItem extends StatelessWidget {
               AppConstants.bookingStatusChanged) {
             context.read<NotificationBloc>().add(NotificationEvent.readOne(
                 context: context, id: notification.id));
-            AppRouteService.goBookingPage(context: context, shop: ShopData(id: notification.shopId ?? 0), id: notification.modelId ?? 0);
+            AppRouteService.goBookingPage(
+                context: context,
+                shop: ShopData(id: notification.shopId ?? 0),
+                id: notification.modelId ?? 0);
             return;
           }
           context.read<NotificationBloc>().add(
               NotificationEvent.readOne(context: context, id: notification.id));
-          AppRouteSetting.goNotificationBottomSheet(context, notification, colors);
+          AppRouteSetting.goNotificationBottomSheet(
+              context, notification, colors);
         },
         child: Container(
           margin: EdgeInsets.only(bottom: 8.r, left: 16.r, right: 16.r),
@@ -162,7 +166,8 @@ class NotificationItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    TimeService.dateFormatForNotification(notification.createdAt),
+                    TimeService.dateFormatForNotification(
+                        notification.createdAt),
                     style: CustomStyle.interNormal(
                         color: colors.textHint, size: 12),
                   ),
@@ -179,7 +184,7 @@ class NotificationItem extends StatelessWidget {
               Text(
                 notification.body ?? "",
                 style:
-                CustomStyle.interNormal(color: colors.textBlack, size: 16),
+                    CustomStyle.interNormal(color: colors.textBlack, size: 16),
                 maxLines: 2,
               )
             ],

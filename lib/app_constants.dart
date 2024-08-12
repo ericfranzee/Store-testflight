@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter_remix/flutter_remix.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
 
 import 'presentation/style/style.dart';
 
@@ -9,24 +9,24 @@ class AppConstants {
   AppConstants._();
 
   /// api urls
-  static const String baseUrl = 'https://code.ericfranzee.com';
+  static const String baseUrl = 'https://code.incrat.com';
   static const String drawingBaseUrl = 'https://api.openrouteservice.org/';
-  static const String googleApiKey = 'AIzaSyBbfnvObzwcs6OLXOmSaG9CtIhwjmBwLTQ';
+  static const String googleApiKey = 'AIzaSyAn8vV-N21dD45LLidlBhuvx2JQf7d34l0';
   static const String privacyPolicyUrl = '$baseUrl/privacy-policy';
-  static const String adminPageUrl = 'https://admin.demand24.org';
-  static const String webUrl = 'https://demand24.org';
+  static const String adminPageUrl = 'https://store.ericfranzee.com';
+  static const String webUrl = 'https://ceazed.ericfranzee.com';
   static const String firebaseWebKey =
-      'AIzaSyDAPFJegc9HiNJbX-KHauDUR3_vVljfLYc';
-  static const String urlPrefix = 'https://ibeautyapp.page.link';
+      'AIzaSyBJS_7oVJUGpNMBo-YaDqc-SMU_J_PWjEk';
+  static const String urlPrefix = 'https://store-zee.page.link';
   static const String androidPackageName = 'com.ericfranzee.store';
   static const String iosPackageName = 'com.ericfranzee.store';
   static const String routingKey =
-      '5b3ce3597851110001cf6248ed52930792d447839b83083b296b7909';
+      '5b3ce3597851110001cf62482a0a2a48818847b1b2560cead8287ea6';
   static const String sellerAppAndroid =
-      'https://play.google.com/store/apps/details?id=uzmart.seller';
+      'https://play.google.com/store/apps/details?id=ceo.ericfranzee.com';
   static const String sellerAppIos =
-      'https://testflight.apple.com/join/1qqI50Pg';
-  static const bool isDemo = true;
+      'https://testflight.apple.com/join/ceo.ericfranzee.com';
+  static const bool isDemo = false;
 
   /// social sign-in
   static const socialSignIn = [
@@ -60,8 +60,8 @@ class AppConstants {
   static const freeShipping = "assets/images/coin.png";
 
   /// location
-  static const double demoLatitude = 41.304223;
-  static const double demoLongitude = 69.2348277;
+  static const double demoLatitude = 9.0563;
+  static const double demoLongitude = 7.4985;
   static const double pinLoadingMin = 0.116666667;
   static const double pinLoadingMax = 0.611111111;
 

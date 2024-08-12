@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class CustomTabBar extends StatelessWidget {
   final bool isScrollable;
@@ -31,10 +31,10 @@ class CustomTabBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.r),
                 color: colors.textBlack),
             labelColor: colors.textWhite,
-            unselectedLabelColor:  colors.textBlack,
+            unselectedLabelColor: colors.textBlack,
             unselectedLabelStyle: CustomStyle.interNoSemi(
               size: 14.sp,
-              color:  colors.textBlack,
+              color: colors.textBlack,
             ),
             labelStyle: CustomStyle.interSemi(
               size: 14.sp,

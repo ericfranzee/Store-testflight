@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/product_detail/product_detail_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/product_detail/product_detail_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:readmore/readmore.dart';
 
 class DescriptionTwoScreen extends StatelessWidget {
@@ -91,49 +91,49 @@ class DescriptionTwoScreen extends StatelessWidget {
                       radius: 2)),
             ),
           if (selectStock != null)
-          _item(
-              title: AppHelper.getTrn(TrKeys.inStock),
-              icon: Column(
-                children: [
-                  ((selectStock?.quantity ?? 0) > 0)
-                      ? SvgPicture.asset(
-                          "assets/svg/inStock.svg",
-                          height: 30.r,
-                        )
-                      : SvgPicture.asset(
-                          "assets/svg/outOfStock.svg",
-                          color: colors.textBlack,
-                          height: 30.r,
-                        ),
-                  4.verticalSpace,
-                  Text(
-                    (selectStock?.quantity ?? 0).toString(),
-                    style: CustomStyle.interNormal(
-                        color: colors.textHint, size: 12),
-                  )
-                ],
-              )),
+            _item(
+                title: AppHelper.getTrn(TrKeys.inStock),
+                icon: Column(
+                  children: [
+                    ((selectStock?.quantity ?? 0) > 0)
+                        ? SvgPicture.asset(
+                            "assets/svg/inStock.svg",
+                            height: 30.r,
+                          )
+                        : SvgPicture.asset(
+                            "assets/svg/outOfStock.svg",
+                            color: colors.textBlack,
+                            height: 30.r,
+                          ),
+                    4.verticalSpace,
+                    Text(
+                      (selectStock?.quantity ?? 0).toString(),
+                      style: CustomStyle.interNormal(
+                          color: colors.textHint, size: 12),
+                    )
+                  ],
+                )),
           if (product?.shop != null)
-          ButtonEffectAnimation(
-            onTap: () async {
-              if (product?.shop != null) {
-                await AppRouteShop.goShopPage(
-                    context: context, shop: product?.shop);
-                if (context.mounted) {
-                  context
-                      .read<ProductDetailBloc>()
-                      .add(const ProductDetailEvent.updateState());
+            ButtonEffectAnimation(
+              onTap: () async {
+                if (product?.shop != null) {
+                  await AppRouteShop.goShopPage(
+                      context: context, shop: product?.shop);
+                  if (context.mounted) {
+                    context
+                        .read<ProductDetailBloc>()
+                        .add(const ProductDetailEvent.updateState());
+                  }
                 }
-              }
-            },
-            child: _item(
-                title: product?.shop?.translation?.title,
-                icon: CustomNetworkImage(
-                    url: product?.shop?.logoImg ?? "",
-                    height: 40,
-                    width: 40,
-                    radius: 2)),
-          ),
+              },
+              child: _item(
+                  title: product?.shop?.translation?.title,
+                  icon: CustomNetworkImage(
+                      url: product?.shop?.logoImg ?? "",
+                      height: 40,
+                      width: 40,
+                      radius: 2)),
+            ),
         ],
       ),
     );

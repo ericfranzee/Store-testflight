@@ -5,14 +5,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/product_detail/product_detail_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/product_detail/product_detail_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:readmore/readmore.dart';
 
 class ProductTitleOne extends StatelessWidget {
@@ -63,7 +63,7 @@ class ProductTitleOne extends StatelessWidget {
           ),
           16.verticalSpace,
           SizedBox(
-            width: MediaQuery.sizeOf(context).width ,
+            width: MediaQuery.sizeOf(context).width,
             child: Text(
               product?.translation?.title ?? "",
               style: CustomStyle.interSemi(color: colors.textBlack, size: 22),

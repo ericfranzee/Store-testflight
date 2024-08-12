@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/service/service_bloc.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/model/service_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/route/app_route_service.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/service/service_bloc.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/route/app_route_service.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ServiceItem extends StatelessWidget {
   final CustomColorSet colors;
@@ -61,7 +61,7 @@ class ServiceItem extends StatelessWidget {
           Wrap(
             children: [
               Container(
-                margin: EdgeInsets.only(right: 8.r,top: 8.r),
+                margin: EdgeInsets.only(right: 8.r, top: 8.r),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50.r),
                     border: Border.all(color: colors.textHint)),
@@ -73,7 +73,7 @@ class ServiceItem extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(right: 8.r,top: 8.r),
+                margin: EdgeInsets.only(right: 8.r, top: 8.r),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50.r),
                     border: Border.all(color: colors.textHint)),
@@ -86,20 +86,20 @@ class ServiceItem extends StatelessWidget {
               ),
               if (service.type != null)
                 Container(
-                  margin: EdgeInsets.only(right: 8.r,top: 8.r),
+                  margin: EdgeInsets.only(right: 8.r, top: 8.r),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50.r),
                       border: Border.all(color: colors.textHint)),
                   padding:
                       EdgeInsets.symmetric(horizontal: 16.r, vertical: 8.r),
                   child: Text(
-                   AppHelper.getTrn(service.type ?? ""),
+                    AppHelper.getTrn(service.type ?? ""),
                     style: CustomStyle.interNormal(
                         color: colors.textHint, size: 12),
                   ),
                 ),
               Container(
-                margin: EdgeInsets.only(right: 8.r,top: 8.r),
+                margin: EdgeInsets.only(right: 8.r, top: 8.r),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50.r),
                     border: Border.all(color: colors.textHint)),
@@ -143,7 +143,8 @@ class ServiceItem extends StatelessWidget {
                         .add(ServiceEvent.selectService(service: service));
                     return;
                   }
-                  AppRouteService.goServiceListPage(context: context, shopId: shopId);
+                  AppRouteService.goServiceListPage(
+                      context: context, shopId: shopId);
                 },
                 child: bookButton
                     ? Container(

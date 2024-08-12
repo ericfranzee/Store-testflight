@@ -6,32 +6,32 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/booking/booking_bloc.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/application/notification/notification_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/booking/booking_list.dart';
-import 'package:ibeauty/presentation/pages/cart/cart_page.dart';
-import 'package:ibeauty/presentation/pages/home/home_page.dart';
-import 'package:ibeauty/presentation/pages/home_one/home_one_page.dart';
-import 'package:ibeauty/presentation/pages/home_three/home_three_page.dart';
-import 'package:ibeauty/presentation/pages/home_two/home_two_page.dart';
-import 'package:ibeauty/presentation/pages/like/like_page.dart';
-import 'package:ibeauty/presentation/pages/search/main_seach_page.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/booking/booking_bloc.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/application/notification/notification_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/booking/booking_list.dart';
+import 'package:cea_zed/presentation/pages/cart/cart_page.dart';
+import 'package:cea_zed/presentation/pages/home/home_page.dart';
+import 'package:cea_zed/presentation/pages/home_one/home_one_page.dart';
+import 'package:cea_zed/presentation/pages/home_three/home_three_page.dart';
+import 'package:cea_zed/presentation/pages/home_two/home_two_page.dart';
+import 'package:cea_zed/presentation/pages/like/like_page.dart';
+import 'package:cea_zed/presentation/pages/search/main_seach_page.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:proste_indexed_stack/proste_indexed_stack.dart';
 
 import '../drawer/drawer_page.dart';
@@ -560,7 +560,9 @@ class _MainPageState extends State<MainPage> {
                   icon: SvgPicture.asset(
                     "assets/svg/booking1.svg",
                     colorFilter: ColorFilter.mode(
-                        state.selectIndex == 2 ? colors.primary : colors.textHint,
+                        state.selectIndex == 2
+                            ? colors.primary
+                            : colors.textHint,
                         BlendMode.srcIn),
                   ),
                   label: AppHelper.getTrn(TrKeys.booking)),
@@ -570,7 +572,9 @@ class _MainPageState extends State<MainPage> {
                       return SvgPicture.asset(
                         "assets/svg/like.svg",
                         colorFilter: ColorFilter.mode(
-                            state.selectIndex == 3 ? colors.primary : colors.textHint,
+                            state.selectIndex == 3
+                                ? colors.primary
+                                : colors.textHint,
                             BlendMode.srcIn),
                       );
                     },
@@ -589,7 +593,9 @@ class _MainPageState extends State<MainPage> {
                     child: SvgPicture.asset(
                       "assets/svg/bag1.svg",
                       colorFilter: ColorFilter.mode(
-                          state.selectIndex == 4 ? colors.primary : colors.textHint,
+                          state.selectIndex == 4
+                              ? colors.primary
+                              : colors.textHint,
                           BlendMode.srcIn),
                     ),
                   ),

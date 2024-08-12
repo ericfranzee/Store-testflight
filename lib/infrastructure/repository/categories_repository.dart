@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/category.dart';
-import 'package:ibeauty/domain/model/response/categories_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/category.dart';
+import 'package:cea_zed/domain/model/response/categories_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class CategoryRepository implements CategoryInterface {
   @override
@@ -66,7 +66,8 @@ class CategoryRepository implements CategoryInterface {
   }
 
   @override
-  Future<Either<CategoriesPaginateResponse, dynamic>> getAllService({required int page, String? query}) async {
+  Future<Either<CategoriesPaginateResponse, dynamic>> getAllService(
+      {required int page, String? query}) async {
     final data = {
       'per_page': 10,
       "page": page,

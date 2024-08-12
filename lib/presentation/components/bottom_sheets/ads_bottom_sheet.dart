@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 import '../blur_wrap.dart';
 import '../custom_network_image.dart';
@@ -76,9 +76,12 @@ class AdsBottomSheet extends StatelessWidget {
                                 return VerticalProductItem(
                                   product: state.shopAds[index]
                                           .shopAdsProducts?[productIndex] ??
-                                      ProductData(), addAndRemove: () {
-                                    context.read<BannerBloc>().add(const BannerEvent.updateProduct());
-                                },
+                                      ProductData(),
+                                  addAndRemove: () {
+                                    context
+                                        .read<BannerBloc>()
+                                        .add(const BannerEvent.updateProduct());
+                                  },
                                 );
                               });
                         });

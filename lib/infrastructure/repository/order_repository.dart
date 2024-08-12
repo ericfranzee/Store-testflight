@@ -4,15 +4,15 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/order.dart';
-import 'package:ibeauty/domain/model/model/create_order_model.dart';
-import 'package:ibeauty/domain/model/model/order_model.dart';
-import 'package:ibeauty/domain/model/response/order_pagenation_response.dart';
-import 'package:ibeauty/domain/model/response/refund_pagination_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/order.dart';
+import 'package:cea_zed/domain/model/model/create_order_model.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/model/response/order_pagenation_response.dart';
+import 'package:cea_zed/domain/model/response/refund_pagination_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 import 'package:path_provider/path_provider.dart';
 
 class OrderRepository implements OrderInterface {
@@ -22,7 +22,7 @@ class OrderRepository implements OrderInterface {
     {
       try {
         final client = dioHttp.client(requireAuth: true);
-         await client.post(
+        await client.post(
           '/api/v1/dashboard/user/orders',
           data: order.toJson(),
         );

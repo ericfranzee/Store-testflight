@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/components/product_items/product_item.dart';
-import 'package:ibeauty/presentation/pages/home_one/widgets/ads_one_item.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/components/product_items/product_item.dart';
+import 'package:cea_zed/presentation/pages/home_one/widgets/ads_one_item.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class AllProductOneList extends StatelessWidget {
   final CustomColorSet colors;
@@ -38,7 +38,8 @@ class AllProductOneList extends StatelessWidget {
                             colorIndex: addAdsIndex % 6,
                             banner: stateBanner.shopListAds[addAdsIndex],
                             bannerProducts: stateBanner
-                                    .shopListAds[addAdsIndex].shopAdsPackages ?? [],
+                                    .shopListAds[addAdsIndex].shopAdsPackages ??
+                                [],
                           ),
                         GridView.builder(
                             physics: const NeverScrollableScrollPhysics(),
@@ -57,7 +58,6 @@ class AllProductOneList extends StatelessWidget {
                                 : (state.allProductList.length -
                                     addAdsIndex * 6),
                             itemBuilder: (context, index) {
-
                               return Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 4.r),
                                 child: ProductItem(

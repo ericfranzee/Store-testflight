@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/gift_cart/gift_cart_bloc.dart';
-import 'package:ibeauty/domain/model/response/gift_cart_response.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/gift_cart/gift_cart_bloc.dart';
+import 'package:cea_zed/domain/model/response/gift_cart_response.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class GiftCartPaymentBottomSheet extends StatelessWidget {
   final CustomColorSet colors;
@@ -166,8 +166,7 @@ class GiftCartPaymentBottomSheet extends StatelessWidget {
                                 Navigator.popUntil(context, (route) {
                                   return route.isFirst;
                                 });
-                                AppRouteSetting.goMyGiftCart(
-                                    context: context);
+                                AppRouteSetting.goMyGiftCart(context: context);
                               }));
                     });
               },

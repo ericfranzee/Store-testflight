@@ -3,9 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 
 part 'form_event.dart';
 
@@ -33,7 +33,7 @@ class FormBloc extends Bloc<FormEvent, FormOptionsState> {
     });
 
     on<FetchSingleForms>((event, emit) async {
-      if(event.form != null) {
+      if (event.form != null) {
         emit(state.copyWith(formOptions: event.form));
         return;
       }

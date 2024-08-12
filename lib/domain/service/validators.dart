@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
 
 abstract class AppValidators {
   AppValidators._();
@@ -30,11 +30,10 @@ abstract class AppValidators {
     return null;
   }
 
-
   static String? isValidPrice(String? title) {
     if (title?.isEmpty ?? true) {
       return AppHelper.getTrn(TrKeys.thisFieldIsRequired);
-    } else  if ((num.tryParse(title ?? "0") ?? 0) <= 0 ) {
+    } else if ((num.tryParse(title ?? "0") ?? 0) <= 0) {
       return AppHelper.getTrn(TrKeys.thisFieldIsNotMinusOrZero);
     }
     return null;

@@ -4,11 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/banner.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/ads_response.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/banner.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/ads_response.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'banner_event.dart';
@@ -129,7 +129,7 @@ class BannerBloc extends Bloc<BannerEvent, BannerState> {
       });
     });
 
-    on<UpdateProduct>((event, emit)  {
+    on<UpdateProduct>((event, emit) {
       emit(state.copyWith(isLoadingProduct: true));
       emit(state.copyWith(isLoadingProduct: false));
     });

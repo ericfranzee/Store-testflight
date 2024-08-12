@@ -1,11 +1,11 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibeauty/application/game/game_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/game/models/board.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/game/game_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/game/models/board.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 import '../const/colors.dart';
 
@@ -78,7 +78,9 @@ class TileBoardWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        board.won ? AppHelper.getTrn(TrKeys.youWin) : AppHelper.getTrn(TrKeys.gameOver),
+                        board.won
+                            ? AppHelper.getTrn(TrKeys.youWin)
+                            : AppHelper.getTrn(TrKeys.gameOver),
                         style: const TextStyle(
                             color: textColor,
                             fontWeight: FontWeight.bold,
@@ -86,7 +88,9 @@ class TileBoardWidget extends StatelessWidget {
                       ),
                       ButtonWidget(
                         colors: colors,
-                        text: board.won ? AppHelper.getTrn(TrKeys.newGame) : AppHelper.getTrn(TrKeys.tryAgain),
+                        text: board.won
+                            ? AppHelper.getTrn(TrKeys.newGame)
+                            : AppHelper.getTrn(TrKeys.tryAgain),
                         onPressed: () {
                           context
                               .read<GameBloc>()

@@ -3,17 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/gift_cart/gift_cart_bloc.dart';
-import 'package:ibeauty/domain/model/response/my_gift_cart_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/gift_cart/gift_cart_bloc.dart';
+import 'package:cea_zed/domain/model/response/my_gift_cart_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class MyGiftCartPage extends StatefulWidget {
@@ -156,14 +156,13 @@ class _MyGiftCartPageState extends State<MyGiftCartPage> {
               ),
             ),
             Padding(
-              padding:  EdgeInsets.all(16.r),
+              padding: EdgeInsets.all(16.r),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     myGiftCart.giftCart?.translation?.title ?? "",
-                    style:
-                        CustomStyle.interRegular(color: colors.textBlack),
+                    style: CustomStyle.interRegular(color: colors.textBlack),
                   ),
                   6.verticalSpace,
                   Text(
@@ -172,8 +171,7 @@ class _MyGiftCartPageState extends State<MyGiftCartPage> {
                   ),
                   6.verticalSpace,
                   Text(
-                    AppHelper.numberFormat(
-                        number: myGiftCart.giftCart?.price),
+                    AppHelper.numberFormat(number: myGiftCart.giftCart?.price),
                     style: CustomStyle.interNormal(color: colors.textBlack),
                   ),
                 ],

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/response/membership_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/response/membership_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class MembershipBottomSheet extends StatelessWidget {
   final CustomColorSet colors;
@@ -21,7 +21,7 @@ class MembershipBottomSheet extends StatelessWidget {
     required this.colors,
     required this.controller,
     required this.membership,
-     this.enableBuy = true,
+    this.enableBuy = true,
   });
 
   @override
@@ -114,15 +114,15 @@ class MembershipBottomSheet extends StatelessWidget {
                   CustomStyle.interRegular(color: colors.textBlack, size: 16),
             ),
             24.verticalSpace,
-            if(enableBuy)
-            CustomButton(
-                title: AppHelper.getTrn(TrKeys.buyNow),
-                bgColor: colors.primary,
-                titleColor: colors.white,
-                onTap: () {
-                  AppRouteShop.goMembershipPaymentBottomSheet(
-                      context: context, model: membership, colors: colors);
-                })
+            if (enableBuy)
+              CustomButton(
+                  title: AppHelper.getTrn(TrKeys.buyNow),
+                  bgColor: colors.primary,
+                  titleColor: colors.white,
+                  onTap: () {
+                    AppRouteShop.goMembershipPaymentBottomSheet(
+                        context: context, model: membership, colors: colors);
+                  })
           ],
         ),
       ),

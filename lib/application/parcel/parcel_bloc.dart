@@ -3,16 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ibeauty/domain/interface/parcel.dart';
-import 'package:ibeauty/domain/interface/payments.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/parcel_order_model.dart';
-import 'package:ibeauty/domain/model/response/parcel_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/parcel_response.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_parcel.dart';
+import 'package:cea_zed/domain/interface/parcel.dart';
+import 'package:cea_zed/domain/interface/payments.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/parcel_order_model.dart';
+import 'package:cea_zed/domain/model/response/parcel_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/parcel_response.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_parcel.dart';
 
 part 'parcel_event.dart';
 

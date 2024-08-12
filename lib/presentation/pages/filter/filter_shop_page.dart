@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/filter/filter_bloc.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/model/model/filter_shop_model.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/tag_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/filter/filter_bloc.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/model/model/filter_shop_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/tag_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class FilterShopPage extends StatefulWidget {
   final ScrollController controller;

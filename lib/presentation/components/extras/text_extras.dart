@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/typed_extra.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/typed_extra.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class TextExtras extends StatelessWidget {
   final int groupIndex;

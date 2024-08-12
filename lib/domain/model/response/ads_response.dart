@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
 
 import '../model/translation_model.dart';
 
@@ -41,8 +41,10 @@ class AdsProductsResponse {
             : DateTime.parse(json["timestamp"]),
         status: json["status"],
         message: json["message"],
-        data: list ? null
-            : json["data"] == null ? null
+        data: list
+            ? null
+            : json["data"] == null
+                ? null
                 : AdModel.fromJson(json["data"]),
         listOfAds: list
             ? json["data"] == null

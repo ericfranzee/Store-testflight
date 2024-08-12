@@ -2,9 +2,9 @@
 //
 //     final cartModel = cartModelFromJson(jsonString);
 
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
 
 class CartModel {
   DateTime? timestamp;
@@ -33,20 +33,20 @@ class CartModel {
       );
 
   factory CartModel.fromJson(Map<String, dynamic> json) => CartModel(
-    timestamp: json["timestamp"] == null
-        ? null
-        : DateTime.parse(json["timestamp"]),
-    status: json["status"],
-    message: json["message"],
-    cart: json["data"] == null ? null : Cart.fromJson(json["data"]),
-  );
+        timestamp: json["timestamp"] == null
+            ? null
+            : DateTime.parse(json["timestamp"]),
+        status: json["status"],
+        message: json["message"],
+        cart: json["data"] == null ? null : Cart.fromJson(json["data"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "timestamp": timestamp?.toIso8601String(),
-    "status": status,
-    "message": message,
-    "data": cart?.toJson(),
-  };
+        "timestamp": timestamp?.toIso8601String(),
+        "status": status,
+        "message": message,
+        "data": cart?.toJson(),
+      };
 }
 
 class Cart {
@@ -100,39 +100,39 @@ class Cart {
       );
 
   factory Cart.fromJson(Map<String, dynamic> json) => Cart(
-    id: json["id"],
-    ownerId: json["owner_id"],
-    status: json["status"],
-    totalPrice: json["total_price"],
-    currencyId: json["currency_id"],
-    rate: json["rate"],
-    group: json["group"],
-    createdAt: json["created_at"] == null
-        ? null
-        : DateTime.parse(json["created_at"]),
-    updatedAt: json["updated_at"] == null
-        ? null
-        : DateTime.parse(json["updated_at"]),
-    userCarts: json["user_carts"] == null
-        ? []
-        : List<UserCart>.from(
-        json["user_carts"]!.map((x) => UserCart.fromJson(x))),
-  );
+        id: json["id"],
+        ownerId: json["owner_id"],
+        status: json["status"],
+        totalPrice: json["total_price"],
+        currencyId: json["currency_id"],
+        rate: json["rate"],
+        group: json["group"],
+        createdAt: json["created_at"] == null
+            ? null
+            : DateTime.parse(json["created_at"]),
+        updatedAt: json["updated_at"] == null
+            ? null
+            : DateTime.parse(json["updated_at"]),
+        userCarts: json["user_carts"] == null
+            ? []
+            : List<UserCart>.from(
+                json["user_carts"]!.map((x) => UserCart.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "owner_id": ownerId,
-    "status": status,
-    "total_price": totalPrice,
-    "currency_id": currencyId,
-    "rate": rate,
-    "group": group,
-    "created_at": createdAt?.toIso8601String(),
-    "updated_at": updatedAt?.toIso8601String(),
-    "user_carts": userCarts == null
-        ? []
-        : List<dynamic>.from(userCarts!.map((x) => x.toJson())),
-  };
+        "id": id,
+        "owner_id": ownerId,
+        "status": status,
+        "total_price": totalPrice,
+        "currency_id": currencyId,
+        "rate": rate,
+        "group": group,
+        "created_at": createdAt?.toIso8601String(),
+        "updated_at": updatedAt?.toIso8601String(),
+        "user_carts": userCarts == null
+            ? []
+            : List<dynamic>.from(userCarts!.map((x) => x.toJson())),
+      };
 }
 
 class UserCart {
@@ -174,29 +174,29 @@ class UserCart {
       );
 
   factory UserCart.fromJson(Map<String, dynamic> json) => UserCart(
-    id: json["id"],
-    cartId: json["cart_id"],
-    userId: json["user_id"],
-    status: json["status"],
-    name: json["name"],
-    uuid: json["uuid"],
-    cartDetails: json["cartDetails"] == null
-        ? []
-        : List<CartDetail>.from(
-        json["cartDetails"]!.map((x) => CartDetail.fromJson(x))),
-  );
+        id: json["id"],
+        cartId: json["cart_id"],
+        userId: json["user_id"],
+        status: json["status"],
+        name: json["name"],
+        uuid: json["uuid"],
+        cartDetails: json["cartDetails"] == null
+            ? []
+            : List<CartDetail>.from(
+                json["cartDetails"]!.map((x) => CartDetail.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "cart_id": cartId,
-    "user_id": userId,
-    "status": status,
-    "name": name,
-    "uuid": uuid,
-    "cartDetails": cartDetails == null
-        ? []
-        : List<dynamic>.from(cartDetails!.map((x) => x.toJson())),
-  };
+        "id": id,
+        "cart_id": cartId,
+        "user_id": userId,
+        "status": status,
+        "name": name,
+        "uuid": uuid,
+        "cartDetails": cartDetails == null
+            ? []
+            : List<dynamic>.from(cartDetails!.map((x) => x.toJson())),
+      };
 }
 
 class CartDetail {
@@ -246,35 +246,35 @@ class CartDetail {
       );
 
   factory CartDetail.fromJson(Map<String, dynamic> json) => CartDetail(
-    id: json["id"],
-    shopId: json["shop_id"],
-    updatedAt: json["updated_at"] == null
-        ? null
-        : DateTime.parse(json["updated_at"]),
-    shopTax: json["shop_tax"],
-    discount: json["discount"],
-    totalPrice: json["total_price"],
-    couponPrice: json["coupon_price"],
-    shop: json["shop"] == null ? null : ShopData.fromJson(json["shop"]),
-    cartDetailProducts: json["cartDetailProducts"] == null
-        ? []
-        : List<CartDetailProduct>.from(json["cartDetailProducts"]!
-        .map((x) => CartDetailProduct.fromJson(x))),
-  );
+        id: json["id"],
+        shopId: json["shop_id"],
+        updatedAt: json["updated_at"] == null
+            ? null
+            : DateTime.parse(json["updated_at"]),
+        shopTax: json["shop_tax"],
+        discount: json["discount"],
+        totalPrice: json["total_price"],
+        couponPrice: json["coupon_price"],
+        shop: json["shop"] == null ? null : ShopData.fromJson(json["shop"]),
+        cartDetailProducts: json["cartDetailProducts"] == null
+            ? []
+            : List<CartDetailProduct>.from(json["cartDetailProducts"]!
+                .map((x) => CartDetailProduct.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "shop_id": shopId,
-    "updated_at": updatedAt?.toIso8601String(),
-    "shop_tax": shopTax,
-    "discount": discount,
-    "total_price": totalPrice,
-    "coupon_price": couponPrice,
-    "shop": shop?.toJson(),
-    "cartDetailProducts": cartDetailProducts == null
-        ? []
-        : List<dynamic>.from(cartDetailProducts!.map((x) => x.toJson())),
-  };
+        "id": id,
+        "shop_id": shopId,
+        "updated_at": updatedAt?.toIso8601String(),
+        "shop_tax": shopTax,
+        "discount": discount,
+        "total_price": totalPrice,
+        "coupon_price": couponPrice,
+        "shop": shop?.toJson(),
+        "cartDetailProducts": cartDetailProducts == null
+            ? []
+            : List<dynamic>.from(cartDetailProducts!.map((x) => x.toJson())),
+      };
 }
 
 class CartDetailProduct {
@@ -354,20 +354,20 @@ class CartDetailProduct {
             : null,
         galleries: json["galleries"] != null
             ? List<Galleries>.from(
-            json["galleries"].map((x) => Galleries.fromJson(x)))
+                json["galleries"].map((x) => Galleries.fromJson(x)))
             : [],
       );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "quantity": quantity,
-    "bonus": bonus,
-    "price": price,
-    "note": note,
-    "discount": discount,
-    "updated_at": updatedAt?.toIso8601String(),
-    "stock": stocks?.toJson(),
-  };
+        "id": id,
+        "quantity": quantity,
+        "bonus": bonus,
+        "price": price,
+        "note": note,
+        "discount": discount,
+        "updated_at": updatedAt?.toIso8601String(),
+        "stock": stocks?.toJson(),
+      };
 }
 
 class ProductNote {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class NoInternetPage extends StatelessWidget {
   const NoInternetPage({super.key});
@@ -36,7 +36,7 @@ class NoInternetPage extends StatelessWidget {
                   vertical: 20.r,
                 ),
                 child: Center(
-                  child:Text(
+                  child: Text(
                     AppHelper.getTrn(TrKeys.retry),
                     style: CustomStyle.interNoSemi(color: CustomStyle.white),
                   ),

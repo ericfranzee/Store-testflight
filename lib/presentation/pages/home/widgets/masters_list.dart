@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/master_item/master_item.dart';
-import 'package:ibeauty/presentation/components/title.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/master_item/master_item.dart';
+import 'package:cea_zed/presentation/components/title.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../../components/shimmer/h_product_shimmer.dart';
@@ -22,7 +22,7 @@ class MastersList extends StatelessWidget {
       required this.colors,
       required this.controller,
       required this.onLoading,
-       this.isShop = false})
+      this.isShop = false})
       : super(key: key);
 
   @override

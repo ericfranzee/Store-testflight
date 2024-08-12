@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/auth/auth_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/second_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/auth/confirm_screen.dart';
-import 'package:ibeauty/presentation/pages/auth/forget_password.dart';
-import 'package:ibeauty/presentation/pages/auth/login_cart.dart';
-import 'package:ibeauty/presentation/pages/auth/sign_up_cart.dart';
-import 'package:ibeauty/presentation/pages/auth/sign_up_field_cart.dart';
-import 'package:ibeauty/presentation/pages/auth/update_password.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/auth/auth_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/second_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/auth/confirm_screen.dart';
+import 'package:cea_zed/presentation/pages/auth/forget_password.dart';
+import 'package:cea_zed/presentation/pages/auth/login_cart.dart';
+import 'package:cea_zed/presentation/pages/auth/sign_up_cart.dart';
+import 'package:cea_zed/presentation/pages/auth/sign_up_field_cart.dart';
+import 'package:cea_zed/presentation/pages/auth/update_password.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({Key? key}) : super(key: key);
@@ -98,7 +98,8 @@ class _AuthPageState extends State<AuthPage> {
                           AppRouteSetting.goSelectCountry(context: context);
                           return;
                         }
-                        if(AppConstants.isDemo && LocalStorage.getUiType() == null){
+                        if (AppConstants.isDemo &&
+                            LocalStorage.getUiType() == null) {
                           AppRouteSetting.goSelectUIType(context: context);
                           return;
                         }

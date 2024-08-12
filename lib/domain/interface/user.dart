@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/model/model/notification_data.dart';
-import 'package:ibeauty/domain/model/model/referral_model.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/count_of_notifications_data.dart';
-import 'package:ibeauty/domain/model/response/notification_response.dart';
-import 'package:ibeauty/domain/model/response/profile_response.dart';
-import 'package:ibeauty/domain/model/response/transaction_histories_response.dart';
-import 'package:ibeauty/domain/model/response/digital_list_response.dart';
+import 'package:cea_zed/domain/model/model/notification_data.dart';
+import 'package:cea_zed/domain/model/model/referral_model.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/count_of_notifications_data.dart';
+import 'package:cea_zed/domain/model/response/notification_response.dart';
+import 'package:cea_zed/domain/model/response/profile_response.dart';
+import 'package:cea_zed/domain/model/response/transaction_histories_response.dart';
+import 'package:cea_zed/domain/model/response/digital_list_response.dart';
 
 abstract class UserInterface {
   Future<Either<ProfileResponse, dynamic>> getProfileDetails(
@@ -67,7 +67,8 @@ abstract class UserInterface {
 
   Future<Either<NotificationResponse, dynamic>> readAll();
 
-  Future<Either<CountNotificationModel, dynamic>> getCount(BuildContext context);
+  Future<Either<CountNotificationModel, dynamic>> getCount(
+      BuildContext context);
 
   Future<Either<TransactionPaginationResponse, dynamic>> getTransactions(
       int page);

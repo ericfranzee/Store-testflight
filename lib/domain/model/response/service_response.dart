@@ -1,13 +1,10 @@
-
-import 'package:ibeauty/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
 
 class ServicePaginationResponse {
   List<ServiceModel>? data;
 
-
   ServicePaginationResponse({
     this.data,
-
   });
 
   ServicePaginationResponse copyWith({
@@ -17,15 +14,17 @@ class ServicePaginationResponse {
         data: data ?? this.data,
       );
 
-  factory ServicePaginationResponse.fromJson(Map<String, dynamic> json) => ServicePaginationResponse(
-    data: json["data"] == null ? [] : List<ServiceModel>.from(json["data"]!.map((x) => ServiceModel.fromJson(x))),
-  );
+  factory ServicePaginationResponse.fromJson(Map<String, dynamic> json) =>
+      ServicePaginationResponse(
+        data: json["data"] == null
+            ? []
+            : List<ServiceModel>.from(
+                json["data"]!.map((x) => ServiceModel.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "data": data == null ? [] : List<dynamic>.from(data!.map((x) => x.toJson())),
-  };
+        "data": data == null
+            ? []
+            : List<dynamic>.from(data!.map((x) => x.toJson())),
+      };
 }
-
-
-
-

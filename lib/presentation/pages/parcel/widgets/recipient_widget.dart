@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/map/map_bloc.dart';
-import 'package:ibeauty/application/parcel/parcel_bloc.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/pages/map/map_page.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/map/map_bloc.dart';
+import 'package:cea_zed/application/parcel/parcel_bloc.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/pages/map/map_page.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:phone_text_field/phone_text_field.dart';
 import 'custom_expanded.dart';
 
@@ -77,7 +77,10 @@ class RecipientWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 16.r),
               child: Row(
                 children: [
-                  Icon(FlutterRemix.map_pin_range_line,color: colors.textBlack,),
+                  Icon(
+                    FlutterRemix.map_pin_range_line,
+                    color: colors.textBlack,
+                  ),
                   12.horizontalSpace,
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,33 +163,33 @@ class RecipientWidget extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   errorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   disabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                 ),
               ),
               16.verticalSpace,
@@ -235,7 +238,8 @@ class RecipientWidget extends StatelessWidget {
                                   state.types[state.selectType]?.options?[index]
                                           .translation?.title ??
                                       "",
-                                  style: CustomStyle.interNormal(size: 14, color: colors.textBlack),
+                                  style: CustomStyle.interNormal(
+                                      size: 14, color: colors.textBlack),
                                 ),
                               ),
                             ),
@@ -254,33 +258,33 @@ class RecipientWidget extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   errorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   disabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.r),
                       borderSide: BorderSide.merge(
-                           BorderSide(color: colors.transparent),
-                           BorderSide(color: colors.transparent))),
+                          BorderSide(color: colors.transparent),
+                          BorderSide(color: colors.transparent))),
                 ),
               ),
               16.verticalSpace,

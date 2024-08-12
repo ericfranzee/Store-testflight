@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class CartItem extends StatelessWidget {
   final CustomColorSet colors;
@@ -27,7 +27,8 @@ class CartItem extends StatelessWidget {
       required this.colors,
       required this.cartItem,
       required this.note,
-      this.isAddAndRemove = true,  this.groupOrder = false});
+      this.isAddAndRemove = true,
+      this.groupOrder = false});
 
   @override
   Widget build(BuildContext context) {
@@ -175,21 +176,23 @@ class CartItem extends StatelessWidget {
                                     stock: cartItem?.stocks);
 
                                 if (AppHelper.getCountCart(
-                                        productId:
-                                            cartItem?.stocks?.product?.id,
-                                        stockId: cartItem?.stocks?.id) ==
-                                    0 && !groupOrder) {
-                                  if(LocalStorage.getToken().isEmpty){
+                                            productId:
+                                                cartItem?.stocks?.product?.id,
+                                            stockId: cartItem?.stocks?.id) ==
+                                        0 &&
+                                    !groupOrder) {
+                                  if (LocalStorage.getToken().isEmpty) {
                                     context
                                         .read<CartBloc>()
                                         .add(CartEvent.insertCart(
-                                      context: context,
-                                      refresh: true,
-                                      onSuccess: () {
-                                        context.read<ProductBloc>().add(
-                                            const ProductEvent.updateState());
-                                      },
-                                    ));
+                                          context: context,
+                                          refresh: true,
+                                          onSuccess: () {
+                                            context.read<ProductBloc>().add(
+                                                const ProductEvent
+                                                    .updateState());
+                                          },
+                                        ));
                                     return;
                                   }
                                   context.read<CartBloc>().add(
@@ -297,7 +300,8 @@ class CartItem extends StatelessWidget {
                                     product: cartItem?.stocks?.product,
                                     stock: cartItem?.stocks);
 
-                                if (LocalStorage.getToken().isNotEmpty && !groupOrder) {
+                                if (LocalStorage.getToken().isNotEmpty &&
+                                    !groupOrder) {
                                   context.read<CartBloc>().add(
                                       CartEvent.removeProductCart(
                                           context: context,

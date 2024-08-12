@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:collection/collection.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class AdsThreeList extends StatefulWidget {

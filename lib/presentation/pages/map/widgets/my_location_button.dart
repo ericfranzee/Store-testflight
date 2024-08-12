@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class MyLocationButton extends StatelessWidget {
   final IconData iconData;

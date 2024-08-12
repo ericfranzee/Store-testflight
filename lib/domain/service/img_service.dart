@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 import 'package:image_picker/image_picker.dart';
 
 import 'helper.dart';
@@ -46,7 +46,6 @@ abstract class ImgService {
     });
     return galleries;
   }
-
 
   static openDialogImagePicker({
     required BuildContext context,
@@ -135,6 +134,4 @@ abstract class ImgService {
       },
     );
   }
-
-
 }

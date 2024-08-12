@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-import 'package:ibeauty/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
 
 ShopImagesResponse shopImagesResponseFromJson(String str) =>
     ShopImagesResponse.fromJson(json.decode(str));

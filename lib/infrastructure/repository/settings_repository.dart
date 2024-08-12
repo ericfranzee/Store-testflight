@@ -1,16 +1,16 @@
 import 'package:dartz/dartz.dart';
 
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/settings.dart';
-import 'package:ibeauty/domain/model/response/currencies_response.dart';
-import 'package:ibeauty/domain/model/response/global_settings_response.dart';
-import 'package:ibeauty/domain/model/response/help_response.dart';
-import 'package:ibeauty/domain/model/response/languages_response.dart';
-import 'package:ibeauty/domain/model/response/mobile_translations_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/http_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/settings.dart';
+import 'package:cea_zed/domain/model/response/currencies_response.dart';
+import 'package:cea_zed/domain/model/response/global_settings_response.dart';
+import 'package:cea_zed/domain/model/response/help_response.dart';
+import 'package:cea_zed/domain/model/response/languages_response.dart';
+import 'package:cea_zed/domain/model/response/mobile_translations_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/http_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 import '../../domain/model/model/translation_model.dart';
 
@@ -50,7 +50,8 @@ class SettingsRepository implements SettingsInterface {
   }
 
   @override
-  Future<Either<LanguagesResponse, dynamic>> getLanguages({bool arg = false}) async {
+  Future<Either<LanguagesResponse, dynamic>> getLanguages(
+      {bool arg = false}) async {
     try {
       final dioHttp = HttpService();
       final client = dioHttp.client(requireAuth: false);
@@ -130,8 +131,7 @@ class SettingsRepository implements SettingsInterface {
   @override
   Future<Either<Translation, dynamic>> getPolicy() async {
     try {
-      final client =
-      dioHttp.client(requireAuth: false);
+      final client = dioHttp.client(requireAuth: false);
       final res = await client.get('/api/v1/rest/policy');
 
       return left(Translation.fromJson(res.data["data"]["translation"]));
@@ -144,8 +144,7 @@ class SettingsRepository implements SettingsInterface {
   @override
   Future<Either<Translation, dynamic>> getTerm() async {
     try {
-      final client =
-      dioHttp.client(requireAuth: false);
+      final client = dioHttp.client(requireAuth: false);
       final res = await client.get('/api/v1/rest/term');
 
       return left(Translation.fromJson(res.data?["data"]?["translation"]));

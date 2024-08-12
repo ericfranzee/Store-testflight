@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/response/categories_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/service_response.dart';
+import 'package:cea_zed/domain/model/response/categories_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/service_response.dart';
 
 abstract class ServiceInterface {
   Future<Either<ServicePaginationResponse, dynamic>> getAllService({

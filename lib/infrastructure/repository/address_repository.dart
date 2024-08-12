@@ -2,17 +2,17 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/address.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/response/city_pagination_response.dart';
-import 'package:ibeauty/domain/model/response/country_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/delivery_point_response.dart';
-import 'package:ibeauty/domain/model/response/draw_routing_response.dart';
-import 'package:ibeauty/domain/model/response/user_address_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/address.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/response/city_pagination_response.dart';
+import 'package:cea_zed/domain/model/response/country_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/delivery_point_response.dart';
+import 'package:cea_zed/domain/model/response/draw_routing_response.dart';
+import 'package:cea_zed/domain/model/response/user_address_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class AddressRepository implements AddressInterface {
   @override
@@ -176,10 +176,9 @@ class AddressRepository implements AddressInterface {
       "city_id": city,
       "additional_details": detail,
       "street_house_number": homeNumber,
-
-      if( LocalStorage.getAddress()?.countryId != null)
+      if (LocalStorage.getAddress()?.countryId != null)
         "country_id": LocalStorage.getAddress()?.countryId,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       "location": locationModel?.toJson()
     };
@@ -201,12 +200,12 @@ class AddressRepository implements AddressInterface {
       {required int page}) async {
     final data = {
       'perPage': 10,
-      if( LocalStorage.getAddress()?.cityId != null)
-      "city_id": LocalStorage.getAddress()?.cityId,
-      if( LocalStorage.getAddress()?.countryId != null)
-      "country_id": LocalStorage.getAddress()?.countryId,
-      if( LocalStorage.getAddress()?.regionId != null)
-      "region_id": LocalStorage.getAddress()?.regionId,
+      if (LocalStorage.getAddress()?.cityId != null)
+        "city_id": LocalStorage.getAddress()?.cityId,
+      if (LocalStorage.getAddress()?.countryId != null)
+        "country_id": LocalStorage.getAddress()?.countryId,
+      if (LocalStorage.getAddress()?.regionId != null)
+        "region_id": LocalStorage.getAddress()?.regionId,
       'page': page,
       'lang': LocalStorage.getLanguage()?.locale,
     };

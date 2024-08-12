@@ -1,5 +1,4 @@
-
-import 'package:ibeauty/domain/model/response/gift_cart_response.dart';
+import 'package:cea_zed/domain/model/response/gift_cart_response.dart';
 
 class MyGiftCartResponse {
   List<MyGiftCartModel>? data;
@@ -13,17 +12,21 @@ class MyGiftCartResponse {
   }) =>
       MyGiftCartResponse(
         data: data ?? this.data,
-
       );
 
-  factory MyGiftCartResponse.fromJson(Map<String, dynamic> json) => MyGiftCartResponse(
-    data: json["data"] == null ? [] : List<MyGiftCartModel>.from(json["data"]!.map((x) => MyGiftCartModel.fromJson(x))),
-
-  );
+  factory MyGiftCartResponse.fromJson(Map<String, dynamic> json) =>
+      MyGiftCartResponse(
+        data: json["data"] == null
+            ? []
+            : List<MyGiftCartModel>.from(
+                json["data"]!.map((x) => MyGiftCartModel.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "data": data == null ? [] : List<dynamic>.from(data!.map((x) => x.toJson())),
-  };
+        "data": data == null
+            ? []
+            : List<dynamic>.from(data!.map((x) => x.toJson())),
+      };
 }
 
 class MyGiftCartModel {
@@ -60,22 +63,26 @@ class MyGiftCartModel {
         giftCart: giftCart ?? this.giftCart,
       );
 
-  factory MyGiftCartModel.fromJson(Map<String, dynamic> json) => MyGiftCartModel(
-    id: json["id"],
-    giftCartId: json["gift_cart_id"],
-    userId: json["user_id"],
-    price: json["price"],
-    expiredAt: json["expired_at"] == null ? null : DateTime.parse(json["expired_at"]).toLocal(),
-    giftCart: json["giftCart"] == null ? null : GiftCartModel.fromJson(json["giftCart"]),
-  );
+  factory MyGiftCartModel.fromJson(Map<String, dynamic> json) =>
+      MyGiftCartModel(
+        id: json["id"],
+        giftCartId: json["gift_cart_id"],
+        userId: json["user_id"],
+        price: json["price"],
+        expiredAt: json["expired_at"] == null
+            ? null
+            : DateTime.parse(json["expired_at"]).toLocal(),
+        giftCart: json["giftCart"] == null
+            ? null
+            : GiftCartModel.fromJson(json["giftCart"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "gift_cart_id": giftCartId,
-    "user_id": userId,
-    "price": price,
-    "expired_at": expiredAt?.toIso8601String(),
-    "giftCart": giftCart?.toJson(),
-  };
+        "id": id,
+        "gift_cart_id": giftCartId,
+        "user_id": userId,
+        "price": price,
+        "expired_at": expiredAt?.toIso8601String(),
+        "giftCart": giftCart?.toJson(),
+      };
 }
-

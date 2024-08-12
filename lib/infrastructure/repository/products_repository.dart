@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/products.dart';
-import 'package:ibeauty/domain/model/response/compare_response.dart';
-import 'package:ibeauty/domain/model/response/filter_response.dart';
-import 'package:ibeauty/domain/model/response/products_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/single_product_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/products.dart';
+import 'package:cea_zed/domain/model/response/compare_response.dart';
+import 'package:cea_zed/domain/model/response/filter_response.dart';
+import 'package:cea_zed/domain/model/response/products_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/single_product_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class ProductsRepository implements ProductsInterface {
   @override
@@ -46,7 +46,7 @@ class ProductsRepository implements ProductsInterface {
       if (isNew ?? false) 'sort': 'desc',
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -68,15 +68,15 @@ class ProductsRepository implements ProductsInterface {
 
   @override
   Future<Either<SingleProductResponse, dynamic>> getProductDetails(
-      String uuid,
-      ) async {
+    String uuid,
+  ) async {
     final data = {
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'lang': LocalStorage.getLanguage()?.locale,
     };
     try {
       final client =
-      dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
+          dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
       final response = await client.get(
         '/api/v1/rest/products/$uuid',
         queryParameters: data,
@@ -119,7 +119,7 @@ class ProductsRepository implements ProductsInterface {
       'perPage': 10,
       "column": "od_count",
       "sort": "desc",
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -141,8 +141,8 @@ class ProductsRepository implements ProductsInterface {
 
   @override
   Future<Either<ProductsPaginateResponse, dynamic>> getProductsByIds(
-      List<int> ids,
-      ) async {
+    List<int> ids,
+  ) async {
     Map<String, Object?> data;
     if (LocalStorage.getToken().isEmpty) {
       data = {
@@ -163,7 +163,7 @@ class ProductsRepository implements ProductsInterface {
         'currency_id': LocalStorage.getSelectedCurrency()?.id,
         'lang': LocalStorage.getLanguage()?.locale,
         'type': "product",
-        if( LocalStorage.getAddress()?.regionId != null)
+        if (LocalStorage.getAddress()?.regionId != null)
           "region_id": LocalStorage.getAddress()?.regionId,
         if (LocalStorage.getAddress()?.countryId != null)
           'country_id': LocalStorage.getAddress()?.countryId,
@@ -174,7 +174,7 @@ class ProductsRepository implements ProductsInterface {
 
     try {
       final client =
-      dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
+          dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
       final response = await client.get(
         LocalStorage.getToken().isEmpty
             ? '/api/v1/rest/products/ids'
@@ -203,11 +203,11 @@ class ProductsRepository implements ProductsInterface {
 
   @override
   Future addReview(
-      String productUuid,
-      String comment,
-      double rating,
-      String? imageUrl,
-      ) async {
+    String productUuid,
+    String comment,
+    double rating,
+    String? imageUrl,
+  ) async {
     final data = {
       'rating': rating,
       'comment': comment,
@@ -237,7 +237,7 @@ class ProductsRepository implements ProductsInterface {
       'perPage': 10,
       'has_discount': 1,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -270,7 +270,7 @@ class ProductsRepository implements ProductsInterface {
   }) async {
     List listOfCategory = [];
     listOfCategory.addAll(categoryId ?? []);
-    if(parentId != null){
+    if (parentId != null) {
       listOfCategory.add(parentId);
     }
 
@@ -288,7 +288,7 @@ class ProductsRepository implements ProductsInterface {
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'lang': LocalStorage.getLanguage()?.locale,
       'type': type,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -316,7 +316,7 @@ class ProductsRepository implements ProductsInterface {
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'perPage': 10,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -345,7 +345,7 @@ class ProductsRepository implements ProductsInterface {
       'perPage': 10,
       "id": productId,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -372,7 +372,7 @@ class ProductsRepository implements ProductsInterface {
     final data = {
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -385,7 +385,7 @@ class ProductsRepository implements ProductsInterface {
 
     try {
       final client =
-      dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
+          dioHttp.client(requireAuth: LocalStorage.getToken().isNotEmpty);
       final response = await client.get(
         "/api/v1/rest/compare",
         queryParameters: data,
@@ -426,7 +426,7 @@ class ProductsRepository implements ProductsInterface {
       'lang': LocalStorage.getLanguage()?.locale,
       "page": page,
       'perPage': 10,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
@@ -454,7 +454,7 @@ class ProductsRepository implements ProductsInterface {
       'currency_id': LocalStorage.getSelectedCurrency()?.id,
       'perPage': 10,
       'lang': LocalStorage.getLanguage()?.locale,
-      if( LocalStorage.getAddress()?.regionId != null)
+      if (LocalStorage.getAddress()?.regionId != null)
         "region_id": LocalStorage.getAddress()?.regionId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,

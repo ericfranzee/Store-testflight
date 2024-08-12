@@ -4,15 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
 import 'package:google_place/google_place.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
 
 // import 'package:google_place/google_place.dart';
-import 'package:ibeauty/domain/interface/address.dart';
-import 'package:ibeauty/domain/model/model/country_model.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/response/city_pagination_response.dart';
-import 'package:ibeauty/domain/model/response/user_address_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/address.dart';
+import 'package:cea_zed/domain/model/model/country_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/response/city_pagination_response.dart';
+import 'package:cea_zed/domain/model/response/user_address_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'address_event.dart';
@@ -35,16 +35,15 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
     on<EditAddress>((event, emit) async {
       emit(state.copyWith(isButtonLoading: true));
       final res = await _addressRepo.editUserAddress(
-        firstName: event.firstName ?? "",
-        lastName: event.lastName ?? "",
-        phone: event.phone ?? "",
-        zipcode: event.zipcode ?? "",
-        city: event.city ?? "",
-        detail: event.detail ?? "",
-        homeNumber: event.homeNumber ?? "",
-        addressId: event.addressId ?? 0,
-        locationModel: event.locationModel
-      );
+          firstName: event.firstName ?? "",
+          lastName: event.lastName ?? "",
+          phone: event.phone ?? "",
+          zipcode: event.zipcode ?? "",
+          city: event.city ?? "",
+          detail: event.detail ?? "",
+          homeNumber: event.homeNumber ?? "",
+          addressId: event.addressId ?? 0,
+          locationModel: event.locationModel);
       res.fold((l) {
         return event.onSuccess?.call();
       }, (r) => AppHelper.errorSnackBar(context: event.context, message: r));
@@ -92,7 +91,6 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
         emit(state.copyWith(isLoading: false));
         if (event.isRefresh ?? false) {
           event.controller?.refreshFailed();
-
         }
         event.controller?.loadFailed();
 
@@ -166,7 +164,6 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
         emit(state.copyWith(isCityLoading: false));
         if (event.isRefresh ?? false) {
           event.controller?.refreshFailed();
-
         }
         event.controller?.loadFailed();
 

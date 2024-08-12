@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route_service.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route_service.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class MasterAvatar extends StatelessWidget {
   final CustomColorSet colors;
@@ -58,9 +58,10 @@ class MasterAvatar extends StatelessWidget {
                                   shop: state.master?.invite?.shop);
                             },
                             child: SizedBox(
-                              width: MediaQuery.sizeOf(context).width-150.r,
+                              width: MediaQuery.sizeOf(context).width - 150.r,
                               child: Text(
-                                state.master?.invite?.shop?.translation?.title ??
+                                state.master?.invite?.shop?.translation
+                                        ?.title ??
                                     "",
                                 style: CustomStyle.interNoSemi(
                                     color: colors.textHint, size: 14),

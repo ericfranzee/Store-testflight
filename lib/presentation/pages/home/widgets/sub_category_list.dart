@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/category/category_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/sub_category_item.dart';
-import 'package:ibeauty/presentation/components/title.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/category/category_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/sub_category_item.dart';
+import 'package:cea_zed/presentation/components/title.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class SubCategoryList extends StatelessWidget {
   final CustomColorSet colors;
@@ -63,12 +63,12 @@ class SubCategoryList extends StatelessWidget {
                                       SvgPicture.asset("assets/svg/filter.svg"),
                                 )
                               : Padding(
-                                padding: EdgeInsets.only(right: 8.r),
-                                child: SubCategoryItem(
-                                  categoryData: state
-                                      .selectCategory?.children?[index - 1],
-                                ),
-                              );
+                                  padding: EdgeInsets.only(right: 8.r),
+                                  child: SubCategoryItem(
+                                    categoryData: state
+                                        .selectCategory?.children?[index - 1],
+                                  ),
+                                );
                         }),
                   ),
                 ],

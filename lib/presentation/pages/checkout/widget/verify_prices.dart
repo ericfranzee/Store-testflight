@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/response/cart_calculate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/price_item.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/response/cart_calculate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/price_item.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class VerifyPrices extends StatelessWidget {
   final CustomColorSet colors;
@@ -17,9 +17,17 @@ class VerifyPrices extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PriceItem(title: TrKeys.productsSubtotal, price: cart?.price,colors: colors,),
+        PriceItem(
+          title: TrKeys.productsSubtotal,
+          price: cart?.price,
+          colors: colors,
+        ),
         if (cart?.totalShopTax != 0 && cart?.totalShopTax != null)
-          PriceItem(title: TrKeys.totalTax, price: cart?.totalShopTax,colors: colors,),
+          PriceItem(
+            title: TrKeys.totalTax,
+            price: cart?.totalShopTax,
+            colors: colors,
+          ),
         if (cart?.serviceFee != 0 && cart?.serviceFee != null)
           PriceItem(
             title: TrKeys.serviceFee,

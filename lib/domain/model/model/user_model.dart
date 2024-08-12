@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
 
 import 'currency_model.dart';
 import 'notification_data.dart';
@@ -216,11 +216,16 @@ class UserModel {
       map['phone'] =
           _phone?.replaceAll("+", "").replaceAll(" ", "").replaceAll("-", "");
     }
-    if (_referral != null && (_referral?.isNotEmpty ?? false)) map['my_referral'] = _referral;
-    if (_referralFromWithdrawPrice != null) map['referral_from_withdraw_price'] = _referralFromWithdrawPrice;
-    if (_referralFromWithdrawCount != null) map['referral_from_withdraw_count'] = _referralFromWithdrawCount;
-    if (_referralFromCount != null) map['referral_from_topup_count'] = _referralFromCount;
-    if (_referralFromPrice != null) map['referral_from_topup_price'] = _referralFromPrice;
+    if (_referral != null && (_referral?.isNotEmpty ?? false))
+      map['my_referral'] = _referral;
+    if (_referralFromWithdrawPrice != null)
+      map['referral_from_withdraw_price'] = _referralFromWithdrawPrice;
+    if (_referralFromWithdrawCount != null)
+      map['referral_from_withdraw_count'] = _referralFromWithdrawCount;
+    if (_referralFromCount != null)
+      map['referral_from_topup_count'] = _referralFromCount;
+    if (_referralFromPrice != null)
+      map['referral_from_topup_price'] = _referralFromPrice;
     if (_birthday != null) map['birthday'] = _birthday;
     if (_gender != null) map['gender'] = _gender;
     if (_emailVerifiedAt != null) map['email_verified_at'] = _emailVerifiedAt;

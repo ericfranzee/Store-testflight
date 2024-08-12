@@ -1574,13 +1574,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "ibeauty",
+      "name": "cea_zed",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-08-02T23:46:35.148710Z",
+  "generated": "2024-08-12T00:54:10.464082Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///home/user/flutter",

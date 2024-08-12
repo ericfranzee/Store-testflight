@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/custom_toggle.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/custom_toggle.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ChangeThemeButton extends StatelessWidget {
   final CustomColorSet colors;
@@ -26,9 +26,7 @@ class ChangeThemeButton extends StatelessWidget {
           Expanded(
             child: Text(
               AppHelper.getTrn(TrKeys.appTheme),
-              style: CustomStyle.interNormal(
-                  color: colors.textBlack,
-                  size:  16),
+              style: CustomStyle.interNormal(color: colors.textBlack, size: 16),
             ),
           ),
           CustomToggle(

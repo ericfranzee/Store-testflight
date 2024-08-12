@@ -7,8 +7,8 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_login_facebook/flutter_login_facebook.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/components/join_dialog.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/components/join_dialog.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 

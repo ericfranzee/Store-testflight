@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/domain/service/validators.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/validators.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class NoteProduct extends StatefulWidget {
   final CartDetailProduct? cartItem;
@@ -119,8 +119,7 @@ class _NoteProductState extends State<NoteProduct> {
             ),
             4.verticalSpace,
             Text(
-              AppHelper.numberFormat(
-                  number: widget.cartItem?.price ?? 0),
+              AppHelper.numberFormat(number: widget.cartItem?.price ?? 0),
               style: CustomStyle.interBold(color: colors.textBlack, size: 16),
             ),
           ],

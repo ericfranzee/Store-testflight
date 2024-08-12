@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/order_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 import '../../../style/style.dart';
 
@@ -30,8 +30,8 @@ class OrderTitle extends StatelessWidget {
             const Spacer(),
             ButtonEffectAnimation(
               onTap: () async {
-                final res =
-                    await ordersRepository.getOrderInvoice(id: order?.parentId ?? 0);
+                final res = await ordersRepository.getOrderInvoice(
+                    id: order?.parentId ?? 0);
                 res.fold((l) {
                   Future.delayed(const Duration(seconds: 2), () {
                     AppHelper.errorSnackBar(

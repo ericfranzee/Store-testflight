@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/app_constants.dart';
+import 'package:cea_zed/app_constants.dart';
 
 class UiExtra {
   final int index;

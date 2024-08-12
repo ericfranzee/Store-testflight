@@ -1,16 +1,16 @@
 import 'dart:convert';
 
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/address_model.dart';
-import 'package:ibeauty/domain/model/model/currency_model.dart';
-import 'package:ibeauty/domain/model/model/local_cart_model.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/delivery_point_response.dart';
-import 'package:ibeauty/domain/model/response/global_settings_response.dart';
-import 'package:ibeauty/domain/model/response/languages_response.dart';
-import 'package:ibeauty/game/models/board.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/address_model.dart';
+import 'package:cea_zed/domain/model/model/currency_model.dart';
+import 'package:cea_zed/domain/model/model/local_cart_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/delivery_point_response.dart';
+import 'package:cea_zed/domain/model/response/global_settings_response.dart';
+import 'package:cea_zed/domain/model/response/languages_response.dart';
+import 'package:cea_zed/game/models/board.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class LocalStorage {

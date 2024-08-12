@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/model/model/stepper_steps.dart';
+import 'package:cea_zed/domain/model/model/stepper_steps.dart';
 
 class CasaVerticalStepperView extends StatefulWidget {
   final List<StepperStep> steps;
@@ -64,7 +64,7 @@ class _CasaVerticalStepperViewState extends State<CasaVerticalStepperView> {
       if (step.visible) steps.add(step);
     }
     _keys =
-    List<GlobalKey>.generate(widget.steps.length, (int i) => GlobalKey());
+        List<GlobalKey>.generate(widget.steps.length, (int i) => GlobalKey());
     return _buildVertical();
   }
 
@@ -72,23 +72,23 @@ class _CasaVerticalStepperViewState extends State<CasaVerticalStepperView> {
     return widget.isExpandable
         ? _buildPanel()
         : ListView(
-      shrinkWrap: true,
-      padding: EdgeInsets.zero,
-      physics: widget.physics ?? const NeverScrollableScrollPhysics(),
-      children: steps
-          .map((step) => Visibility(
-        visible: step.visible,
-        child: Column(
-          key: _keys[steps.indexOf(step)],
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            _buildVerticalHeader(step),
-            _buildVerticalBody(step),
-          ],
-        ),
-      ))
-          .toList(),
-    );
+            shrinkWrap: true,
+            padding: EdgeInsets.zero,
+            physics: widget.physics ?? const NeverScrollableScrollPhysics(),
+            children: steps
+                .map((step) => Visibility(
+                      visible: step.visible,
+                      child: Column(
+                        key: _keys[steps.indexOf(step)],
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          _buildVerticalHeader(step),
+                          _buildVerticalBody(step),
+                        ],
+                      ),
+                    ))
+                .toList(),
+          );
   }
 
   Widget _buildPanel() {
@@ -109,7 +109,7 @@ class _CasaVerticalStepperViewState extends State<CasaVerticalStepperView> {
           },
           body: _buildVerticalBody(step),
           isExpanded:
-          !step.isExpandedShow ? step.isExpandedShow : step.isExpanded,
+              !step.isExpandedShow ? step.isExpandedShow : step.isExpanded,
         );
       }).toList(),
     );

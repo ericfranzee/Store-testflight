@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
 
 class SingleProductResponse {
   SingleProductResponse({

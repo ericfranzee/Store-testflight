@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class CustomRoundRangeSliderThumbShape extends RangeSliderThumbShape {
   const CustomRoundRangeSliderThumbShape({
@@ -53,7 +53,6 @@ class CustomRoundRangeSliderThumbShape extends RangeSliderThumbShape {
       ..color = CustomStyle.primary
       ..style = PaintingStyle.fill;
 
-
     if (isOnTop ?? false) {
       final Paint strokePaint = Paint()
         ..color = sliderTheme.overlappingShapeStrokeColor!
@@ -62,19 +61,14 @@ class CustomRoundRangeSliderThumbShape extends RangeSliderThumbShape {
       canvas.drawRRect(
           RRect.fromRectAndRadius(
               Rect.fromCenter(center: center, width: 36.r, height: 20.r),
-               Radius.circular(10.r)),
+              Radius.circular(10.r)),
           strokePaint);
     }
-
-
 
     final double evaluatedElevation =
         isPressed! ? elevationTween.evaluate(activationAnimation) : elevation;
     final Path shadowPath = Path()
-      ..addArc(
-          Rect.fromCenter(
-              center: center, width: 36.r, height: 20.r),
-          0,
+      ..addArc(Rect.fromCenter(center: center, width: 36.r, height: 20.r), 0,
           math.pi * 2);
 
     bool paintShadows = true;
@@ -87,20 +81,23 @@ class CustomRoundRangeSliderThumbShape extends RangeSliderThumbShape {
     }());
 
     if (paintShadows) {
-      canvas.drawShadow(shadowPath, CustomStyle.black, evaluatedElevation, true);
+      canvas.drawShadow(
+          shadowPath, CustomStyle.black, evaluatedElevation, true);
     }
 
-    canvas..drawRRect(
-        RRect.fromRectAndRadius(
-            Rect.fromCenter(center: center, width: 36.r, height: 20.r),
-             Radius.circular(10.r)),
-        sliderPaint)..drawRRect(
-        RRect.fromRectAndRadius(
-            Rect.fromCenter(center: center, width: 30.r, height: 12.r),
-             Radius.circular(10.r)),
-        Paint()
-          ..color = CustomStyle.white
-          ..style = PaintingStyle.fill);
+    canvas
+      ..drawRRect(
+          RRect.fromRectAndRadius(
+              Rect.fromCenter(center: center, width: 36.r, height: 20.r),
+              Radius.circular(10.r)),
+          sliderPaint)
+      ..drawRRect(
+          RRect.fromRectAndRadius(
+              Rect.fromCenter(center: center, width: 30.r, height: 12.r),
+              Radius.circular(10.r)),
+          Paint()
+            ..color = CustomStyle.white
+            ..style = PaintingStyle.fill);
   }
 }
 

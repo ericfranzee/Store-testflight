@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/pages/no_internet/no_internet.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/pages/no_internet/no_internet.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 import '../../app_constants.dart';
 import 'keyboard_dismisser.dart';

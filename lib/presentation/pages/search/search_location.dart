@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/map/map_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tpying_delay.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/pages/map/widgets/main_list_shimmer.dart';
-import 'package:ibeauty/presentation/pages/map/widgets/searched_location_item.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/map/map_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tpying_delay.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/pages/map/widgets/main_list_shimmer.dart';
+import 'package:cea_zed/presentation/pages/map/widgets/searched_location_item.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class SearchLocationPage extends StatefulWidget {
   const SearchLocationPage({super.key});
@@ -89,8 +89,8 @@ class _SearchLocationPageState extends State<SearchLocationPage> {
                                 isLast:
                                     state.searchedPlaces.length - 1 == index,
                                 onTap: () {
-                                  Navigator.pop(context,
-                                      state.searchedPlaces[index]);
+                                  Navigator.pop(
+                                      context, state.searchedPlaces[index]);
                                 },
                                 colors: colors,
                               );

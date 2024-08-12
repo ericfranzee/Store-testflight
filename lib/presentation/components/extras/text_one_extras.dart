@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/typed_extra.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/typed_extra.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class TextOneExtras extends StatelessWidget {
   final int groupIndex;
@@ -55,14 +55,14 @@ class TextOneExtras extends StatelessWidget {
                           border: Border.all(
                               color: uiExtra.isSelected
                                   ? CustomStyle.primary
-                                  :  colors.icon),
+                                  : colors.icon),
                         ),
                         padding: REdgeInsets.all(12),
                         child: Text(
                           uiExtra.value,
                           style: CustomStyle.interNormal(
                             size: 14,
-                            color:  colors.textBlack,
+                            color: colors.textBlack,
                             letterSpacing: -14 * 0.01,
                           ),
                         ),

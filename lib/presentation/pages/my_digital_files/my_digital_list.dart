@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/profile/profile_bloc.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/my_digital_files/digital_item.dart';
-import 'package:ibeauty/presentation/pages/notification/widgets/notification_shimmer.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/profile/profile_bloc.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/my_digital_files/digital_item.dart';
+import 'package:cea_zed/presentation/pages/notification/widgets/notification_shimmer.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
@@ -60,8 +60,7 @@ class _MyDigitalListState extends State<MyDigitalList> {
           children: [
             Text(
               AppHelper.getTrn(TrKeys.myDigitalList),
-              style: CustomStyle.interNoSemi(
-                  color: colors.textBlack, size: 18),
+              style: CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
             ),
             8.verticalSpace,
             BlocBuilder<ProfileBloc, ProfileState>(
@@ -95,8 +94,8 @@ class _MyDigitalListState extends State<MyDigitalList> {
                                               id: state.digitalList[index].id ??
                                                   0);
                                       res.fold((l) {
-                                        Future.delayed(const Duration(seconds: 2),
-                                            () {
+                                        Future.delayed(
+                                            const Duration(seconds: 2), () {
                                           AppHelper.errorSnackBar(
                                               context: context,
                                               message: AppHelper.getTrn(TrKeys

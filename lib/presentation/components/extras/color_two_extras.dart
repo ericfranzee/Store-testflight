@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/product_detail/product_detail_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/typed_extra.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/img_service.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/product_detail/product_detail_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/typed_extra.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/img_service.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ColorTwoExtras extends StatelessWidget {
   final int groupIndex;
@@ -27,7 +27,8 @@ class ColorTwoExtras extends StatelessWidget {
     required this.uiExtras,
     required this.onUpdate,
     required this.stocks,
-    required this.selectStock, required this.colors,
+    required this.selectStock,
+    required this.colors,
   }) : super(key: key);
 
   @override
@@ -37,7 +38,8 @@ class ColorTwoExtras extends StatelessWidget {
       runSpacing: 10.r,
       children: uiExtras
           .map(
-            (uiExtra) => (ImgService.checkIfImage(uiExtra.value, stocks) != null)
+            (uiExtra) => (ImgService.checkIfImage(uiExtra.value, stocks) !=
+                    null)
                 ? Container(
                     foregroundDecoration: BoxDecoration(
                         color: (selectStock?.quantity ?? 0) <= 0 &&

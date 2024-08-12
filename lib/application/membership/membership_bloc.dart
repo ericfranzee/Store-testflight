@@ -3,13 +3,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/payments.dart';
-import 'package:ibeauty/domain/interface/shop.dart';
-import 'package:ibeauty/domain/model/response/membership_response.dart';
-import 'package:ibeauty/domain/model/response/my_membership_response.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/domain/interface/payments.dart';
+import 'package:cea_zed/domain/interface/shop.dart';
+import 'package:cea_zed/domain/model/response/membership_response.dart';
+import 'package:cea_zed/domain/model/response/my_membership_response.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'membership_event.dart';

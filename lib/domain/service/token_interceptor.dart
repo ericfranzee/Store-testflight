@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class TokenInterceptor extends Interceptor {
   final bool requireAuth;

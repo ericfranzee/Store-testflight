@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/compare/widgets/additional_info.dart';
-import 'package:ibeauty/presentation/pages/compare/widgets/main_info.dart';
-import 'package:ibeauty/presentation/pages/compare/widgets/price_compare.dart';
-import 'package:ibeauty/presentation/pages/compare/widgets/review_compare.dart';
-import 'package:ibeauty/presentation/pages/compare/widgets/title_compare.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/compare/widgets/additional_info.dart';
+import 'package:cea_zed/presentation/pages/compare/widgets/main_info.dart';
+import 'package:cea_zed/presentation/pages/compare/widgets/price_compare.dart';
+import 'package:cea_zed/presentation/pages/compare/widgets/review_compare.dart';
+import 'package:cea_zed/presentation/pages/compare/widgets/title_compare.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class CompareProductPage extends StatelessWidget {
   final List<ProductData> list;

@@ -1,20 +1,18 @@
-
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/booking.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/response/blog_details_response.dart';
-import 'package:ibeauty/domain/model/response/booking_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/booking_response.dart';
-import 'package:ibeauty/domain/model/response/check_time_response.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/model/response/service_of_master_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/booking.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/response/blog_details_response.dart';
+import 'package:cea_zed/domain/model/response/booking_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/booking_response.dart';
+import 'package:cea_zed/domain/model/response/check_time_response.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/model/response/service_of_master_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class BookingRepository implements BookingInterface {
   @override
@@ -231,23 +229,18 @@ class BookingRepository implements BookingInterface {
   }
 
   @override
-  Future<Either<bool, dynamic>> saveForm({required List<FormOptionsData?> form,required int id}) async {
+  Future<Either<bool, dynamic>> saveForm(
+      {required List<FormOptionsData?> form, required int id}) async {
     try {
       final client = dioHttp.client(requireAuth: true);
 
-      await client.put('/api/v1/dashboard/user/bookings/$id',
-          data: {
-        "data":{
-          "form": List<dynamic>.from(form.map((x) => x?.toJson()))
-        }
-          });
+      await client.put('/api/v1/dashboard/user/bookings/$id', data: {
+        "data": {"form": List<dynamic>.from(form.map((x) => x?.toJson()))}
+      });
       return left(true);
     } catch (e) {
       debugPrint('==> create book details failure: $e');
       return right(AppHelper.errorHandler(e));
     }
   }
-
-
-
 }

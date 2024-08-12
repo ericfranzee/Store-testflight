@@ -3,10 +3,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/service.dart';
-import 'package:ibeauty/domain/model/model/service_model.dart';
-import 'package:ibeauty/domain/model/response/categories_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/service.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/model/response/categories_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'service_event.dart';
@@ -119,6 +119,5 @@ class ServiceBloc extends Bloc<ServiceEvent, ServiceState> {
       list.add(event.service);
       emit(state.copyWith(selectServices: list));
     });
-
   }
 }

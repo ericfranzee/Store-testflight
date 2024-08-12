@@ -1,8 +1,8 @@
-import 'package:ibeauty/application/story/story_bloc.dart';
-import 'package:ibeauty/presentation/pages/category/widgets/story_item.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/story/story_bloc.dart';
+import 'package:cea_zed/presentation/pages/category/widgets/story_item.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,40 +21,40 @@ class StoryList extends StatelessWidget {
       builder: (context, state) {
         return state.story.isNotEmpty
             ? SizedBox(
-          height: 180.r,
-          child: SmartRefresher(
-            enablePullDown: false,
-            enablePullUp: true,
-            controller: storyRefresh,
-            scrollDirection: Axis.horizontal,
-            onLoading: () {
-              context.read<StoryBloc>().add(StoryEvent.fetchStory(
-                  context: context, controller: storyRefresh));
-            },
-            child: ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 16.r),
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: state.story.length,
-                itemBuilder: (context, index) {
-                  return StoryItem(
-                    colors: colors,
-                    story: (state.story[index]?.isNotEmpty ?? false)
-                        ? (state.story[index]?.first)
-                        : null,
-                    onTap: () {
-                      AppRouteShop.goStoryPage(
-                          context: context,
-                          controller: storyRefresh,
-                          index: index);
-                    },
-                  );
-                }),
-          ),
-        )
+                height: 180.r,
+                child: SmartRefresher(
+                  enablePullDown: false,
+                  enablePullUp: true,
+                  controller: storyRefresh,
+                  scrollDirection: Axis.horizontal,
+                  onLoading: () {
+                    context.read<StoryBloc>().add(StoryEvent.fetchStory(
+                        context: context, controller: storyRefresh));
+                  },
+                  child: ListView.builder(
+                      padding: EdgeInsets.symmetric(horizontal: 16.r),
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: state.story.length,
+                      itemBuilder: (context, index) {
+                        return StoryItem(
+                          colors: colors,
+                          story: (state.story[index]?.isNotEmpty ?? false)
+                              ? (state.story[index]?.first)
+                              : null,
+                          onTap: () {
+                            AppRouteShop.goStoryPage(
+                                context: context,
+                                controller: storyRefresh,
+                                index: index);
+                          },
+                        );
+                      }),
+                ),
+              )
             : state.isLoading
-            ? _shimmer()
-            : const SizedBox.shrink();
+                ? _shimmer()
+                : const SizedBox.shrink();
       },
     );
   }

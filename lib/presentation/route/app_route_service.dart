@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibeauty/application/booking/booking_bloc.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/application/form_option/form_bloc.dart';
-import 'package:ibeauty/application/gift_cart/gift_cart_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/application/membership/membership_bloc.dart';
-import 'package:ibeauty/application/review/review_bloc.dart';
-import 'package:ibeauty/application/service/service_bloc.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/model/service_model.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/model/response/booking_response.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/pages/booking/add_note_page.dart';
-import 'package:ibeauty/presentation/pages/booking/booking_payment_page.dart';
-import 'package:ibeauty/presentation/pages/booking/booking_screen.dart';
-import 'package:ibeauty/presentation/pages/booking/confirm_page.dart';
-import 'package:ibeauty/presentation/pages/booking/form_page.dart';
-import 'package:ibeauty/presentation/pages/booking/select_book_time.dart';
-import 'package:ibeauty/presentation/pages/booking/select_master.dart';
-import 'package:ibeauty/presentation/pages/booking/widget/add_review_booking.dart';
-import 'package:ibeauty/presentation/pages/booking/widget/select_gift_screen.dart';
-import 'package:ibeauty/presentation/pages/booking/widget/select_master_bottom.dart';
-import 'package:ibeauty/presentation/pages/master_page/master_page.dart';
-import 'package:ibeauty/presentation/pages/booking/widget/select_membership_screen.dart';
-import 'package:ibeauty/presentation/pages/service/service_list_page.dart';
+import 'package:cea_zed/application/booking/booking_bloc.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/application/form_option/form_bloc.dart';
+import 'package:cea_zed/application/gift_cart/gift_cart_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/application/membership/membership_bloc.dart';
+import 'package:cea_zed/application/review/review_bloc.dart';
+import 'package:cea_zed/application/service/service_bloc.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/response/booking_response.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/pages/booking/add_note_page.dart';
+import 'package:cea_zed/presentation/pages/booking/booking_payment_page.dart';
+import 'package:cea_zed/presentation/pages/booking/booking_screen.dart';
+import 'package:cea_zed/presentation/pages/booking/confirm_page.dart';
+import 'package:cea_zed/presentation/pages/booking/form_page.dart';
+import 'package:cea_zed/presentation/pages/booking/select_book_time.dart';
+import 'package:cea_zed/presentation/pages/booking/select_master.dart';
+import 'package:cea_zed/presentation/pages/booking/widget/add_review_booking.dart';
+import 'package:cea_zed/presentation/pages/booking/widget/select_gift_screen.dart';
+import 'package:cea_zed/presentation/pages/booking/widget/select_master_bottom.dart';
+import 'package:cea_zed/presentation/pages/master_page/master_page.dart';
+import 'package:cea_zed/presentation/pages/booking/widget/select_membership_screen.dart';
+import 'package:cea_zed/presentation/pages/service/service_list_page.dart';
 
 import '../pages/service/service_bottom_sheet.dart';
 import '../style/theme/theme.dart';
@@ -331,7 +331,9 @@ abstract class AppRouteService {
   }
 
   static goFormOptionPage(
-      {required BuildContext context, required int? formOptionId, FormOptionsData? form}) {
+      {required BuildContext context,
+      required int? formOptionId,
+      FormOptionsData? form}) {
     return Navigator.of(context).push(
       MaterialPageRoute(
         builder: (_) => MultiBlocProvider(
@@ -340,7 +342,7 @@ abstract class AppRouteService {
               value: context.read<FormBloc>()
                 ..add(
                   FormEvent.fetchSingleForms(
-                      context: context, id: formOptionId,form: form),
+                      context: context, id: formOptionId, form: form),
                 ),
             ),
             BlocProvider.value(value: context.read<BookingBloc>()),

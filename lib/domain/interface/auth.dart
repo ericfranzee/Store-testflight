@@ -1,10 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/login_response.dart';
-import 'package:ibeauty/domain/model/response/verify_phone_response.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/login_response.dart';
+import 'package:cea_zed/domain/model/response/verify_phone_response.dart';
 
 abstract class AuthInterface {
-
   Future<Either<bool, dynamic>> checkPhone({
     required String phone,
   });
@@ -25,13 +24,11 @@ abstract class AuthInterface {
     required UserModel user,
   });
 
-
   Future<Either<LoginResponse, dynamic>> forgotPasswordAfter({
     required String phone,
     required String verificationId,
     required String password,
   });
-
 
   Future updateSetting();
 

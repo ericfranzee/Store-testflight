@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ibeauty/domain/interface/cart.dart';
-import 'package:ibeauty/domain/model/model/local_cart_model.dart';
-import 'package:ibeauty/domain/model/response/cart_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/model/response/product_calculate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/interface/cart.dart';
+import 'package:cea_zed/domain/model/model/local_cart_model.dart';
+import 'package:cea_zed/domain/model/response/cart_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/model/response/product_calculate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 part 'cart_event.dart';
 

@@ -3,9 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/brands.dart';
-import 'package:ibeauty/domain/model/model/brand_data.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/brands.dart';
+import 'package:cea_zed/domain/model/model/brand_data.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'brand_event.dart';
@@ -27,8 +27,8 @@ class BrandBloc extends Bloc<BrandEvent, BrandState> {
         emit(state.copyWith(brands: [], isLoading: true));
       }
 
-      final res = await _brandsRepo.getAllBrands(
-          page: ++page, shopId: event.shopId);
+      final res =
+          await _brandsRepo.getAllBrands(page: ++page, shopId: event.shopId);
 
       res.fold((l) {
         List<BrandData> list = List.from(state.brands);

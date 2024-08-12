@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
 
 import '../model/meta_model.dart';
 

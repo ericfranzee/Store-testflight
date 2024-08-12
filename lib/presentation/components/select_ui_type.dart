@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 
 class SelectUITypePage extends StatelessWidget {
   const SelectUITypePage({super.key});
@@ -84,7 +84,8 @@ class SelectUITypePage extends StatelessWidget {
                                           ? colors.primary
                                           : colors.transparent),
                                   image: const DecorationImage(
-                                      image: AssetImage("assets/images/ui_three.png"),
+                                      image: AssetImage(
+                                          "assets/images/ui_three.png"),
                                       fit: BoxFit.cover)),
                             ),
                           ),
@@ -106,7 +107,8 @@ class SelectUITypePage extends StatelessWidget {
                                           ? colors.primary
                                           : colors.transparent),
                                   image: const DecorationImage(
-                                      image: AssetImage("assets/images/ui_four.png"),
+                                      image: AssetImage(
+                                          "assets/images/ui_four.png"),
                                       fit: BoxFit.cover)),
                             ),
                           ),

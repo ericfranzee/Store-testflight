@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/map/map_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tpying_delay.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/pages/map/widgets/main_list_shimmer.dart';
-import 'package:ibeauty/presentation/pages/map/widgets/searched_location_item.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/map/map_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tpying_delay.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/pages/map/widgets/main_list_shimmer.dart';
+import 'package:cea_zed/presentation/pages/map/widgets/searched_location_item.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class SearchWidget extends StatefulWidget {
   final CustomColorSet colors;
@@ -78,10 +78,9 @@ class _SearchWidgetState extends State<SearchWidget> {
                           ),
                         ),
                         IconButton(
-                          onPressed: () =>
-                              context
-                                  .read<MapBloc>()
-                                  .add(const MapEvent.clearSearchField()),
+                          onPressed: () => context
+                              .read<MapBloc>()
+                              .add(const MapEvent.clearSearchField()),
                           splashRadius: 20.r,
                           padding: EdgeInsets.zero,
                           icon: Icon(
@@ -107,23 +106,23 @@ class _SearchWidgetState extends State<SearchWidget> {
                 child: state.isSearchLoading
                     ? const MainListShimmer()
                     : ListView.builder(
-                  physics: const BouncingScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: state.searchedPlaces.length,
-                  padding: EdgeInsets.zero,
-                  itemBuilder: (context, index) {
-                    return SearchedLocationItem(
-                      place: state.searchedPlaces[index],
-                      isLast: state.searchedPlaces.length - 1 == index,
-                      onTap: () {
-                        FocusManager.instance.primaryFocus?.unfocus();
-                        context.read<MapBloc>().add(MapEvent.goToLocation(
-                            place: state.searchedPlaces[index]));
-                      },
-                      colors: widget.colors,
-                    );
-                  },
-                ),
+                        physics: const BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: state.searchedPlaces.length,
+                        padding: EdgeInsets.zero,
+                        itemBuilder: (context, index) {
+                          return SearchedLocationItem(
+                            place: state.searchedPlaces[index],
+                            isLast: state.searchedPlaces.length - 1 == index,
+                            onTap: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              context.read<MapBloc>().add(MapEvent.goToLocation(
+                                  place: state.searchedPlaces[index]));
+                            },
+                            colors: widget.colors,
+                          );
+                        },
+                      ),
               ),
           ],
         );

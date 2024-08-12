@@ -4,20 +4,20 @@ import 'package:dio/dio.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/model/model/notification_data.dart';
-import 'package:ibeauty/domain/model/model/referral_model.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/search_user_response.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/user.dart';
-import 'package:ibeauty/domain/model/response/count_of_notifications_data.dart';
-import 'package:ibeauty/domain/model/response/notification_response.dart';
-import 'package:ibeauty/domain/model/response/profile_response.dart';
-import 'package:ibeauty/domain/model/response/transaction_histories_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/model/model/notification_data.dart';
+import 'package:cea_zed/domain/model/model/referral_model.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/search_user_response.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/user.dart';
+import 'package:cea_zed/domain/model/response/count_of_notifications_data.dart';
+import 'package:cea_zed/domain/model/response/notification_response.dart';
+import 'package:cea_zed/domain/model/response/profile_response.dart';
+import 'package:cea_zed/domain/model/response/transaction_histories_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../../domain/model/response/digital_list_response.dart';
@@ -64,8 +64,8 @@ class UserRepository implements UserInterface {
     final data = {
       'firstname': firstName,
       'lastname': lastName,
-     if(phone.isNotEmpty) 'phone': phone,
-      if(email.isNotEmpty)   'email': email,
+      if (phone.isNotEmpty) 'phone': phone,
+      if (email.isNotEmpty) 'email': email,
       if (imageUrl != null) 'images': [imageUrl],
     };
     try {
@@ -265,7 +265,8 @@ class UserRepository implements UserInterface {
   }
 
   @override
-  Future<Either<CountNotificationModel, dynamic>> getCount(BuildContext context) async {
+  Future<Either<CountNotificationModel, dynamic>> getCount(
+      BuildContext context) async {
     try {
       final client = dioHttp.client(requireAuth: true);
       final response = await client.get(
@@ -372,7 +373,7 @@ class UserRepository implements UserInterface {
           headers: {"Authorization": "Bearer ${LocalStorage.getToken()}"},
           savedDir: localPath,
           showNotification: true,
-          saveInPublicStorage: true );
+          saveInPublicStorage: true);
       return left(taskId ?? "");
     } catch (e) {
       debugPrint('==> FlutterDownloader.enqueue failure: $e');

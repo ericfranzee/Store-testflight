@@ -6,14 +6,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/auth.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/auth.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 part 'auth_event.dart';
 
@@ -104,8 +104,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               phone: event.phone,
               refreshToken: refreshToken,
               password: event.password,
-              referral: event.referral
-          ));
+              referral: event.referral));
       res.fold((l) async {
         await LocalStorage.setToken(l.token ?? "");
         LocalStorage.setUser(l.user);

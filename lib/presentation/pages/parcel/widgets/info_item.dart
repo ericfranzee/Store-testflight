@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/route/app_route_parcel.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/route/app_route_parcel.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class InfoItem extends StatelessWidget {
   final int index;
@@ -21,7 +21,8 @@ class InfoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        AppRouteParcel.goInfoScreen(context: context, index: index, colors: colors);
+        AppRouteParcel.goInfoScreen(
+            context: context, index: index, colors: colors);
       },
       child: Container(
         margin: EdgeInsets.only(bottom: 10.r),

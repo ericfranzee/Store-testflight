@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class CustomRatingBar extends StatefulWidget {
   final CustomColorSet colors;
@@ -27,11 +27,11 @@ class _CustomRatingBarState extends State<CustomRatingBar> {
 
   @override
   void initState() {
-    list = [key,GlobalKey(),GlobalKey(),GlobalKey(),GlobalKey()];
+    list = [key, GlobalKey(), GlobalKey(), GlobalKey(), GlobalKey()];
     for (var element in widget.counts) {
       total += element;
     }
-    if(total == 0){
+    if (total == 0) {
       total = 1;
     }
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -47,11 +47,11 @@ class _CustomRatingBarState extends State<CustomRatingBar> {
         children: List.generate(
             widget.counts.length,
             (index) => Padding(
-              padding: EdgeInsets.only(bottom: 8.r),
-              child: Row(
+                  padding: EdgeInsets.only(bottom: 8.r),
+                  child: Row(
                     children: [
                       Text(
-                        "${5-index} ${AppHelper.getTrn(TrKeys.star)}",
+                        "${5 - index} ${AppHelper.getTrn(TrKeys.star)}",
                         style: CustomStyle.interNormal(
                             color: widget.colors.textBlack, size: 12),
                       ),
@@ -79,11 +79,12 @@ class _CustomRatingBarState extends State<CustomRatingBar> {
                         ),
                       ),
                       8.horizontalSpace,
-                      Text("${((widget.counts[index] / total) * 100).toInt().toString()} %",
+                      Text(
+                          "${((widget.counts[index] / total) * 100).toInt().toString()} %",
                           style: CustomStyle.interNoSemi(
                               color: widget.colors.textBlack, size: 12)),
                     ],
                   ),
-            )));
+                )));
   }
 }

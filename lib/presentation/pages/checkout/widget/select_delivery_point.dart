@@ -3,17 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:ibeauty/application/checkout/checkout_bloc.dart';
-import 'package:ibeauty/domain/model/response/delivery_point_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/checkout/checkout_bloc.dart';
+import 'package:cea_zed/domain/model/response/delivery_point_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class SelectDeliveryPoint extends StatelessWidget {
   final List<DeliveryPoint> list;
@@ -44,18 +44,18 @@ class SelectDeliveryPoint extends StatelessWidget {
                 markerId: MarkerId(e.id.toString()),
                 position: LatLng(
                   double.tryParse(e.location?.latitude ?? "") ??
-                       AppHelper.getInitialLatitude(),
+                      AppHelper.getInitialLatitude(),
                   double.tryParse(e.location?.longitude ?? "") ??
-                       AppHelper.getInitialLongitude(),
+                      AppHelper.getInitialLongitude(),
                 )))
             .toSet(),
         initialCameraPosition: CameraPosition(
           bearing: 0,
           target: LatLng(
             double.tryParse(list.first.location?.latitude ?? "") ??
-                 AppHelper.getInitialLatitude(),
+                AppHelper.getInitialLatitude(),
             double.tryParse(list.first.location?.longitude ?? "") ??
-                 AppHelper.getInitialLongitude(),
+                AppHelper.getInitialLongitude(),
           ),
           tilt: 0,
           zoom: 12,

@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
 
 class BlogsPaginateResponse {
   BlogsPaginateResponse({
@@ -16,7 +14,6 @@ class BlogsPaginateResponse {
         _data?.add(BlogData.fromJson(v));
       });
     }
-
   }
 
   List<BlogData>? _data;
@@ -30,7 +27,6 @@ class BlogsPaginateResponse {
 
   List<BlogData>? get data => _data;
 
-
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     if (_data != null) {
@@ -39,4 +35,3 @@ class BlogsPaginateResponse {
     return map;
   }
 }
-

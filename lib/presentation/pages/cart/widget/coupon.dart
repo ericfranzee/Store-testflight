@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tpying_delay.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tpying_delay.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class CouponWidget extends StatefulWidget {
   final CustomColorSet colors;
@@ -35,8 +35,8 @@ class _CouponWidgetState extends State<CouponWidget> {
       hint: AppHelper.getTrn(TrKeys.coupon),
       onChanged: (text) {
         _delayed.run(() {
-          context.read<CartBloc>().add(
-              CartEvent.checkCoupon(context: context, coupon: text.trim(),shopId: widget.shopId));
+          context.read<CartBloc>().add(CartEvent.checkCoupon(
+              context: context, coupon: text.trim(), shopId: widget.shopId));
         });
       },
       suffixIcon: BlocBuilder<CartBloc, CartState>(

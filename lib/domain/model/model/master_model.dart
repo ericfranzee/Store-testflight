@@ -1,6 +1,6 @@
-import 'package:ibeauty/domain/model/model/service_model.dart';
-import 'package:ibeauty/domain/model/model/translation_model.dart';
-import 'package:ibeauty/domain/model/response/my_membership_response.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/model/model/translation_model.dart';
+import 'package:cea_zed/domain/model/response/my_membership_response.dart';
 
 import 'shop_model.dart';
 

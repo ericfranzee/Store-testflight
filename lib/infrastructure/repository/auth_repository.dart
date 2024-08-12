@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/auth.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/login_response.dart';
-import 'package:ibeauty/domain/model/response/verify_phone_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/auth.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/login_response.dart';
+import 'package:cea_zed/domain/model/response/verify_phone_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class AuthRepository implements AuthInterface {
   @override

@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
 
 class MasterPaginationResponse {
   List<MasterModel>? data;

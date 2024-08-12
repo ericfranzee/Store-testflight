@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:ibeauty/presentation/app_widget.dart';
+import 'package:cea_zed/presentation/app_widget.dart';
 
 import 'domain/di/dependency_manager.dart';
 import 'infrastructure/local_storage/local_storage.dart';

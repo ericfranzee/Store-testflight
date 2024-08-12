@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ProductInfoTwo extends StatelessWidget {
   final CustomColorSet colors;
@@ -27,60 +27,59 @@ class ProductInfoTwo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         10.verticalSpace,
-        if(product.stocks?.isNotEmpty ?? false)
-        AppHelper.numberFormat(number: product.stocks?.first.price ?? 0)
-                    .length <
-                9
-            ? Row(
-                children: [
-                  Text(
-                    AppHelper.numberFormat(
-                        number: product.stocks?.first.totalPrice ?? 0),
-                    style: CustomStyle.interSemi(
-                        color: colors.textBlack, size: 18),
-                  ),
-                  if (product.stocks?.first.discount != null)
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.r),
-                      child: Text(
-                        AppHelper.numberFormat(
-                            number: product.stocks?.first.price ?? 0),
-                        style: CustomStyle.interRegular(
-                            color: CustomStyle.textHint,
-                            size: 14,
-                            textDecoration: TextDecoration.lineThrough),
-                      ),
+        if (product.stocks?.isNotEmpty ?? false)
+          AppHelper.numberFormat(number: product.stocks?.first.price ?? 0)
+                      .length <
+                  9
+              ? Row(
+                  children: [
+                    Text(
+                      AppHelper.numberFormat(
+                          number: product.stocks?.first.totalPrice ?? 0),
+                      style: CustomStyle.interSemi(
+                          color: colors.textBlack, size: 18),
                     ),
-                ],
-              )
-            : Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppHelper.numberFormat(
-                        number: product.stocks?.first.totalPrice ?? 0),
-                    style: CustomStyle.interSemi(
-                        color: colors.textBlack, size: 18),
-                  ),
-                  if (product.stocks?.first.discount != null)
-                    Padding(
-                      padding: EdgeInsets.only(right: 10.r),
-                      child: Text(
-                        AppHelper.numberFormat(
-                            number: product.stocks?.first.price ?? 0),
-                        style: CustomStyle.interRegular(
-                            color: CustomStyle.textHint,
-                            size: 14,
-                            textDecoration: TextDecoration.lineThrough),
+                    if (product.stocks?.first.discount != null)
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.r),
+                        child: Text(
+                          AppHelper.numberFormat(
+                              number: product.stocks?.first.price ?? 0),
+                          style: CustomStyle.interRegular(
+                              color: CustomStyle.textHint,
+                              size: 14,
+                              textDecoration: TextDecoration.lineThrough),
+                        ),
                       ),
+                  ],
+                )
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppHelper.numberFormat(
+                          number: product.stocks?.first.totalPrice ?? 0),
+                      style: CustomStyle.interSemi(
+                          color: colors.textBlack, size: 18),
                     ),
-                ],
-              ),
-        if(product.stocks?.isEmpty ?? true)
+                    if (product.stocks?.first.discount != null)
+                      Padding(
+                        padding: EdgeInsets.only(right: 10.r),
+                        child: Text(
+                          AppHelper.numberFormat(
+                              number: product.stocks?.first.price ?? 0),
+                          style: CustomStyle.interRegular(
+                              color: CustomStyle.textHint,
+                              size: 14,
+                              textDecoration: TextDecoration.lineThrough),
+                        ),
+                      ),
+                  ],
+                ),
+        if (product.stocks?.isEmpty ?? true)
           Text(
             AppHelper.getTrn(TrKeys.outOfStock),
-            style: CustomStyle.interSemi(
-                color: colors.textBlack, size: 18),
+            style: CustomStyle.interSemi(color: colors.textBlack, size: 18),
           ),
         6.verticalSpace,
         SizedBox(

@@ -2,14 +2,14 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/review.dart';
-import 'package:ibeauty/domain/model/model/reivew_statistic_model.dart';
-import 'package:ibeauty/domain/model/response/review_check_response.dart';
-import 'package:ibeauty/domain/model/response/review_options_response.dart';
-import 'package:ibeauty/domain/model/response/review_pagination_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/review.dart';
+import 'package:cea_zed/domain/model/model/reivew_statistic_model.dart';
+import 'package:cea_zed/domain/model/response/review_check_response.dart';
+import 'package:cea_zed/domain/model/response/review_options_response.dart';
+import 'package:cea_zed/domain/model/response/review_pagination_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class ReviewRepository implements ReviewInterface {
   @override

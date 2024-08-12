@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/response/delivery_point_response.dart';
+import 'package:cea_zed/domain/model/response/delivery_point_response.dart';
 
 import 'location_model.dart';
 import 'shop_delivery_model.dart';
@@ -32,7 +32,7 @@ class ShopData {
       dynamic deletedAt,
       Translation? translation,
       Seller? seller,
-        DeliveryTime? deliveryTime,
+      DeliveryTime? deliveryTime,
       List<ShopDelivery>? deliveries,
       List<WorkingDay>? workingDays,
       List<ShopClosedDate>? shopClosedDate,
@@ -185,7 +185,7 @@ class ShopData {
           dynamic deletedAt,
           Translation? translation,
           Seller? seller,
-            DeliveryTime? deliveryTime,
+          DeliveryTime? deliveryTime,
           List<ShopDelivery>? deliveries,
           List<WorkingDay>? workingDays,
           List<ShopClosedDate>? shopClosedDate,
@@ -332,7 +332,8 @@ class ShopData {
     }
 
     if (_shopClosedDate != null) {
-      map['shop_closed_date'] = _shopClosedDate?.map((v) => v.toJson()).toList();
+      map['shop_closed_date'] =
+          _shopClosedDate?.map((v) => v.toJson()).toList();
     }
 
     if (_socials != null) {
@@ -354,18 +355,17 @@ class DeliveryTime {
   String? type;
 
   factory DeliveryTime.fromJson(Map<String, dynamic> json) => DeliveryTime(
-    to: json["to"].toString(),
-    from: json["from"].toString(),
-    type: json["type"] ?? "min",
-  );
+        to: json["to"].toString(),
+        from: json["from"].toString(),
+        type: json["type"] ?? "min",
+      );
 
   Map<String, dynamic> toJson() => {
-    "to": to,
-    "from": from,
-    "type": type,
-  };
+        "to": to,
+        "from": from,
+        "type": type,
+      };
 }
-
 
 class ShopClosedDate {
   ShopClosedDate({

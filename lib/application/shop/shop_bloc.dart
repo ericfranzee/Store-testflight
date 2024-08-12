@@ -4,13 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/shop.dart';
-import 'package:ibeauty/domain/model/model/filter_shop_model.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/interface/shop.dart';
+import 'package:cea_zed/domain/model/model/filter_shop_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'shop_event.dart';
@@ -32,7 +32,7 @@ class ShopBloc extends Bloc<ShopEvent, ShopState> {
       if (event.isRefresh ?? false) {
         event.controller?.resetNoData();
         page = 0;
-        emit(state.copyWith(shops: [], isLoading: true,filter: null));
+        emit(state.copyWith(shops: [], isLoading: true, filter: null));
       }
       final res =
           await _shopRepo.getAllShops(page: ++page, filter: event.filter);

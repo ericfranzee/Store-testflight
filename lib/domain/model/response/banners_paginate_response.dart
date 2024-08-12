@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/translation_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/translation_model.dart';
 
 class BannersPaginateResponse {
   BannersPaginateResponse({List<BannerData>? data}) {

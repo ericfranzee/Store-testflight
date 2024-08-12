@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/presentation/components/product_items/product_item.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/presentation/components/product_items/product_item.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class MostProductTwoList extends StatelessWidget {
   final CustomColorSet colors;

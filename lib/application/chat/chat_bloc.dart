@@ -3,13 +3,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/interface/chat.dart';
-import 'package:ibeauty/domain/interface/gallery.dart';
-import 'package:ibeauty/domain/model/model/chat_model.dart';
-import 'package:ibeauty/domain/model/model/message_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/interface/chat.dart';
+import 'package:cea_zed/domain/interface/gallery.dart';
+import 'package:cea_zed/domain/model/model/chat_model.dart';
+import 'package:cea_zed/domain/model/model/message_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 part 'chat_event.dart';
 

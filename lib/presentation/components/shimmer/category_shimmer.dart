@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/presentation/components/button/second_button.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/presentation/components/button/second_button.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class CategoryShimmer extends StatelessWidget {
   const CategoryShimmer({Key? key}) : super(key: key);
@@ -36,8 +36,8 @@ class CategoryShimmer extends StatelessWidget {
                       : Container(
                           height: 40,
                           width: 75,
-                          decoration: BoxDecoration(
-                              color: CustomStyle.shimmerBase),
+                          decoration:
+                              BoxDecoration(color: CustomStyle.shimmerBase),
                         ),
             );
           }),

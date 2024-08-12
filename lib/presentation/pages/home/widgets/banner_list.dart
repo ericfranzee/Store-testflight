@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/title.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/title.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -78,7 +78,8 @@ class BannerList extends StatelessWidget {
                               if (state.isLoadingBanner) const BannerShimmer(),
                             ],
                           ),
-                          if (state.banners.length > 2 && AppHelper.getType() == 2)
+                          if (state.banners.length > 2 &&
+                              AppHelper.getType() == 2)
                             Positioned(
                               bottom: 32.r,
                               left: 32.r,
@@ -132,13 +133,14 @@ class BannerList extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               border: Border.all(color: colors.icon),
-              borderRadius: BorderRadius.circular(  AppHelper.getType() == 3 ? 16.r : 24.r)),
+              borderRadius: BorderRadius.circular(
+                  AppHelper.getType() == 3 ? 16.r : 24.r)),
           child: CustomNetworkImage(
               url: state.banners[index].galleries?.first.path ?? "",
               preview: state.banners[index].galleries?.first.preview,
               height: double.infinity,
               width: double.infinity,
-              radius:  AppHelper.getType() == 3 ? 16 : 24),
+              radius: AppHelper.getType() == 3 ? 16 : 24),
         ),
       ),
     );

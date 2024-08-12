@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/product_items/product_info_two.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/product_items/product_info_two.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 import 'product_info.dart';
 
@@ -52,10 +52,10 @@ class OneProductItem extends StatelessWidget {
         padding: EdgeInsets.only(bottom: 8.r),
         child: InkWell(
           onTap: () async {
-           await AppRoute.goProductPage(context: context, product: product);
-           if (context.mounted) {
-             context.read<ProductBloc>().add(const ProductEvent.updateState());
-           }
+            await AppRoute.goProductPage(context: context, product: product);
+            if (context.mounted) {
+              context.read<ProductBloc>().add(const ProductEvent.updateState());
+            }
           },
           child: Container(
             decoration: BoxDecoration(
@@ -107,25 +107,28 @@ class OneProductItem extends StatelessWidget {
                             Row(
                               children: [
                                 16.horizontalSpace,
-                                if(product.stocks?.isNotEmpty ?? false)
-                                if (product.stocks?.first.discount != null)
-                                  AppHelper.getType() == 2
-                                      ? Container(
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 4.r, horizontal: 10.r),
-                                          decoration: BoxDecoration(
-                                              color: colors.primary,
-                                              borderRadius:
-                                                  BorderRadius.circular(100.r)),
-                                          child: Text(
-                                            AppHelper.getTrn(TrKeys.hot)
-                                                .toUpperCase(),
-                                            style: CustomStyle.interNoSemi(
-                                                color: colors.white, size: 12),
-                                          ),
-                                        )
-                                      : SvgPicture.asset(
-                                          "assets/svg/discount.svg"),
+                                if (product.stocks?.isNotEmpty ?? false)
+                                  if (product.stocks?.first.discount != null)
+                                    AppHelper.getType() == 2
+                                        ? Container(
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 4.r,
+                                                horizontal: 10.r),
+                                            decoration: BoxDecoration(
+                                                color: colors.primary,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        100.r)),
+                                            child: Text(
+                                              AppHelper.getTrn(TrKeys.hot)
+                                                  .toUpperCase(),
+                                              style: CustomStyle.interNoSemi(
+                                                  color: colors.white,
+                                                  size: 12),
+                                            ),
+                                          )
+                                        : SvgPicture.asset(
+                                            "assets/svg/discount.svg"),
                                 const Spacer(),
                                 IconButton(
                                     splashColor: CustomStyle.transparent,
@@ -150,9 +153,9 @@ class OneProductItem extends StatelessWidget {
                               ],
                             ),
                             const Spacer(),
-                            if(product.stocks?.isNotEmpty ?? false)
-                            if (AppHelper.getProductUiType())
-                              _addAndRemove(colors, context),
+                            if (product.stocks?.isNotEmpty ?? false)
+                              if (AppHelper.getProductUiType())
+                                _addAndRemove(colors, context),
                           ],
                         ),
                       )
@@ -256,9 +259,9 @@ class OneProductItem extends StatelessWidget {
                       12.horizontalSpace,
                       Text(
                         (AppHelper.getCountCart(
-                                productId: product.id,
-                                stockId: product.stocks?.first.id) *
-                            (product.interval ?? 1))
+                                    productId: product.id,
+                                    stockId: product.stocks?.first.id) *
+                                (product.interval ?? 1))
                             .toString(),
                         style: CustomStyle.interNormal(
                             color: CustomStyle.white, size: 16),

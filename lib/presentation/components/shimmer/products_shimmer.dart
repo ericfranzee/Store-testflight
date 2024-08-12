@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class ProductsShimmer extends StatelessWidget {
   const ProductsShimmer({Key? key}) : super(key: key);

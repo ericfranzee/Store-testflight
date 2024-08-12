@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/reivew_statistic_model.dart';
-import 'package:ibeauty/domain/model/response/review_check_response.dart';
-import 'package:ibeauty/domain/model/response/review_options_response.dart';
-import 'package:ibeauty/domain/model/response/review_pagination_response.dart';
+import 'package:cea_zed/domain/model/model/reivew_statistic_model.dart';
+import 'package:cea_zed/domain/model/response/review_check_response.dart';
+import 'package:cea_zed/domain/model/response/review_options_response.dart';
+import 'package:cea_zed/domain/model/response/review_pagination_response.dart';
 
 abstract class ReviewInterface {
   Future<Either<ReviewResponseModel, dynamic>> fetchReviewList({

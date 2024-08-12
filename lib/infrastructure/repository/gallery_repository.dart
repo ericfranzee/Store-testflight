@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/gallery.dart';
-import 'package:ibeauty/domain/model/response/gallary_list_response.dart';
-import 'package:ibeauty/domain/model/response/gallery_upload_response.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/gallery.dart';
+import 'package:cea_zed/domain/model/response/gallary_list_response.dart';
+import 'package:cea_zed/domain/model/response/gallery_upload_response.dart';
 
 class GalleryRepository implements GalleryInterface {
   @override

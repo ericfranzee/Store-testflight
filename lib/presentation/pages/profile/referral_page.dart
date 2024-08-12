@@ -6,17 +6,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_share/flutter_share.dart';
-import 'package:ibeauty/application/profile/profile_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/profile/profile_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ReferralPage extends StatelessWidget {
   const ReferralPage({super.key});
@@ -24,64 +24,59 @@ class ReferralPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-        body: (colors) => SafeArea(
-              child: Column(
-                children: [
-                  Text(
-                    AppHelper.getTrn(TrKeys.referral),
-                    style: CustomStyle.interNoSemi(
-                        color: colors.textBlack, size: 18),
-                  ),
-                  24.verticalSpace,
-                  BlocBuilder<ProfileBloc, ProfileState>(
-                    builder: (context, state) {
-                      return state.isReferralLoading
-                          ? const Loading()
-                          : Padding(
-                              padding: EdgeInsets.all(16.r),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  _info(state, colors,context),
-                                  CustomButton(
-                                    title: AppHelper.getTrn(TrKeys.share),
-                                    bgColor: colors.primary,
-                                    titleColor: colors.textWhite,
-                                    onTap: () {
-                                      FlutterShare.share(
-                                          title:
-                                              AppHelper.getTrn(TrKeys.referral),
-                                          linkUrl:
-                                              LocalStorage.getUser().referral ??
-                                                  "");
-                                    },
-                                  ),
-                                  16.verticalSpace,
-                                  CustomButton(
-                                    title: AppHelper.getTrn(TrKeys.copyCode),
-                                    bgColor: colors.textBlack,
-                                    titleColor: colors.textWhite,
-                                    onTap: () async {
-                                      await Clipboard.setData(ClipboardData(
-                                          text:
-                                              LocalStorage.getUser().referral ??
-                                                  ""));
-                                      AppHelper.errorSnackBar(
-                                          context: context,
-                                          message: AppHelper.getTrn(
-                                              TrKeys.copyCode));
-                                    },
-                                  ),
-                                  16.verticalSpace,
-                                  _balance(colors),
-                                ],
-                              ),
-                            );
-                    },
-                  ),
-                ],
-              ),
+      body: (colors) => SafeArea(
+        child: Column(
+          children: [
+            Text(
+              AppHelper.getTrn(TrKeys.referral),
+              style: CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
             ),
+            24.verticalSpace,
+            BlocBuilder<ProfileBloc, ProfileState>(
+              builder: (context, state) {
+                return state.isReferralLoading
+                    ? const Loading()
+                    : Padding(
+                        padding: EdgeInsets.all(16.r),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _info(state, colors, context),
+                            CustomButton(
+                              title: AppHelper.getTrn(TrKeys.share),
+                              bgColor: colors.primary,
+                              titleColor: colors.textWhite,
+                              onTap: () {
+                                FlutterShare.share(
+                                    title: AppHelper.getTrn(TrKeys.referral),
+                                    linkUrl:
+                                        LocalStorage.getUser().referral ?? "");
+                              },
+                            ),
+                            16.verticalSpace,
+                            CustomButton(
+                              title: AppHelper.getTrn(TrKeys.copyCode),
+                              bgColor: colors.textBlack,
+                              titleColor: colors.textWhite,
+                              onTap: () async {
+                                await Clipboard.setData(ClipboardData(
+                                    text:
+                                        LocalStorage.getUser().referral ?? ""));
+                                AppHelper.errorSnackBar(
+                                    context: context,
+                                    message: AppHelper.getTrn(TrKeys.copyCode));
+                              },
+                            ),
+                            16.verticalSpace,
+                            _balance(colors),
+                          ],
+                        ),
+                      );
+              },
+            ),
+          ],
+        ),
+      ),
       floatingButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingButton: (colors) => PopButton(colors: colors),
     );

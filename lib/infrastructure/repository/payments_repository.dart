@@ -2,13 +2,13 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/payments.dart';
-import 'package:ibeauty/domain/model/model/create_order_model.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/model/response/transactions_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/payments.dart';
+import 'package:cea_zed/domain/model/model/create_order_model.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/model/response/transactions_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class PaymentsRepository implements PaymentsInterface {
   @override

@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/checkout/checkout_bloc.dart';
-import 'package:ibeauty/application/parcel/parcel_bloc.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/pages/checkout/payment_screen.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/checkout/checkout_bloc.dart';
+import 'package:cea_zed/application/parcel/parcel_bloc.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/pages/checkout/payment_screen.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 import 'widgets/info_item.dart';
 import 'widgets/recipient_widget.dart';
@@ -56,8 +56,8 @@ class _ParcelPageState extends State<ParcelPage> {
             children: [
               Text(
                 AppHelper.getTrn(TrKeys.parcel),
-                style: CustomStyle.interNoSemi(
-                    color: colors.textBlack, size: 18),
+                style:
+                    CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
               ),
               AppHelper.getParcel()
                   ? Expanded(
@@ -200,10 +200,12 @@ class _ParcelPageState extends State<ParcelPage> {
                         ? BlocBuilder<CheckoutBloc, CheckoutState>(
                             builder: (context, stateCheckout) {
                               return CustomButton(
-                                bgColor:
-                                    !state.error ? colors.primary : colors.textHint,
-                                titleColor:
-                                    !state.error ? colors.white : colors.textWhite,
+                                bgColor: !state.error
+                                    ? colors.primary
+                                    : colors.textHint,
+                                titleColor: !state.error
+                                    ? colors.white
+                                    : colors.textWhite,
                                 title:
                                     "${state.expand ? AppHelper.getTrn(TrKeys.order) : AppHelper.getTrn(TrKeys.continueText)} ${AppHelper.numberFormat(number: state.calculate?.data?.price ?? 0)}",
                                 onTap: () {
@@ -215,7 +217,8 @@ class _ParcelPageState extends State<ParcelPage> {
                                         .read<ParcelBloc>()
                                         .add(const ParcelEvent.changeExpand());
                                   } else {
-                                    if (formKey.currentState?.validate() ?? false) {
+                                    if (formKey.currentState?.validate() ??
+                                        false) {
                                       context.read<ParcelBloc>().add(
                                           ParcelEvent.orderParcel(
                                               context: context,
@@ -231,12 +234,12 @@ class _ParcelPageState extends State<ParcelPage> {
                                               comment: comment.text,
                                               value: itemValue.text,
                                               instruction: instruction.text,
-                                              paymentData: stateCheckout
-                                                      .list
+                                              paymentData: stateCheckout.list
                                                       ?.firstWhere(
                                                           (element) =>
                                                               element.id ==
-                                                              stateCheckout.selectId,
+                                                              stateCheckout
+                                                                  .selectId,
                                                           orElse: () =>
                                                               PaymentData()) ??
                                                   PaymentData()));

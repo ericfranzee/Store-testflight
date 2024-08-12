@@ -1,6 +1,4 @@
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-
-
+import 'package:cea_zed/domain/model/model/shop_model.dart';
 
 class SingleShopResponse {
   SingleShopResponse({
@@ -10,7 +8,6 @@ class SingleShopResponse {
   }
 
   SingleShopResponse.fromJson(dynamic json) {
-
     _data = json['data'] != null ? ShopData.fromJson(json['data']) : null;
   }
 
@@ -22,7 +19,6 @@ class SingleShopResponse {
       SingleShopResponse(
         data: data ?? _data,
       );
-
 
   ShopData? get data => _data;
 

@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/model/model/meta_model.dart';
-import 'package:ibeauty/domain/model/model/parcel_order_model.dart';
+import 'package:cea_zed/domain/model/model/meta_model.dart';
+import 'package:cea_zed/domain/model/model/parcel_order_model.dart';
 
 class ParcelPaginateResponse {
   ParcelPaginateResponse({

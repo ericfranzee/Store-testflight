@@ -95,7 +95,7 @@
             android:value="@string/facebook_client_token" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCuDSljHjF4pKT9yJWtnJgsCXf6rxi40Tg" />
+            android:value="AIzaSyAn8vV-N21dD45LLidlBhuvx2JQf7d34l0" />
 
         <activity
             android:name="com.ericfranzee.store.MainActivity"

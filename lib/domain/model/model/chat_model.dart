@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class ChatModel {
   final int? senderId;
@@ -25,7 +25,7 @@ class ChatModel {
     UserModel? user,
   }) {
     List list = chat?["ids"];
-    if(!list.contains(LocalStorage.getUser().id ?? 0)){
+    if (!list.contains(LocalStorage.getUser().id ?? 0)) {
       list.clear();
       list.add(-1);
     }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/presentation/components/product_items/grid_product_item.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/presentation/components/product_items/grid_product_item.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class GridListPage extends StatelessWidget {
@@ -26,7 +26,7 @@ class GridListPage extends StatelessWidget {
       onLoading: onLoading,
       onRefresh: onRefresh,
       child: GridView.builder(
-        padding: EdgeInsets.only(right: 16.r,left: 16.r,top: 16.r),
+        padding: EdgeInsets.only(right: 16.r, left: 16.r, top: 16.r),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           childAspectRatio: 0.8.r,
           crossAxisCount: 3,

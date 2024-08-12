@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class CreateOrderModel {
   final int cartId;
@@ -50,25 +50,23 @@ class CreateOrderModel {
       if (deliveryType == DeliveryTypeEnum.delivery)
         "delivery_price_id": deliveryPriceId,
       "delivery_date": TimeService.dateFormatYMDHm(deliveryDate),
-
       'lang': LocalStorage.getLanguage()?.locale,
       if (addressId != null) "address_id": addressId,
-        "notes": {
-          if (notes?.isNotEmpty ?? false)
-            "product": {
-              for (int i = 0; i < (notes?.length ?? 0); i++)
-                if(notes?[i].comment?.isNotEmpty ?? false)
+      "notes": {
+        if (notes?.isNotEmpty ?? false)
+          "product": {
+            for (int i = 0; i < (notes?.length ?? 0); i++)
+              if (notes?[i].comment?.isNotEmpty ?? false)
                 "${notes?[i].stockId}": notes?[i].comment,
-            },
-
-          if (note != null && (note?.isNotEmpty ?? false))
-            "order": {
-              for (int i = 0; i < (note?.length ?? 0); i++)
-                if(note?.values.elementAt(i).text.isNotEmpty ?? false)
-                "${note?.keys.elementAt(i)}": "${note?.values.elementAt(i).text}"
-            },
-
-        }
+          },
+        if (note != null && (note?.isNotEmpty ?? false))
+          "order": {
+            for (int i = 0; i < (note?.length ?? 0); i++)
+              if (note?.values.elementAt(i).text.isNotEmpty ?? false)
+                "${note?.keys.elementAt(i)}":
+                    "${note?.values.elementAt(i).text}"
+          },
+      }
     };
   }
 }

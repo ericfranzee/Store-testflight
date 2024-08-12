@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
 
 class ProfileResponse {
   ProfileResponse({

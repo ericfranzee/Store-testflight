@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
 
 class SocialButton extends StatelessWidget {
   final Color bgColor;
@@ -12,7 +12,8 @@ class SocialButton extends StatelessWidget {
       {Key? key,
       required this.bgColor,
       required this.icon,
-      required this.onTap, required this.iconColor})
+      required this.onTap,
+      required this.iconColor})
       : super(key: key);
 
   @override
@@ -25,7 +26,10 @@ class SocialButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.r),
         ),
         padding: EdgeInsets.all(20.r),
-        child: Icon(icon,color: iconColor,),
+        child: Icon(
+          icon,
+          color: iconColor,
+        ),
       ),
     );
   }

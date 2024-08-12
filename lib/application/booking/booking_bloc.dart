@@ -3,21 +3,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/booking.dart';
-import 'package:ibeauty/domain/interface/payments.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/model/service_model.dart';
-import 'package:ibeauty/domain/model/response/booking_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/booking_response.dart';
-import 'package:ibeauty/domain/model/response/check_time_response.dart';
-import 'package:ibeauty/domain/model/response/form_options_response.dart';
-import 'package:ibeauty/domain/model/response/my_gift_cart_response.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/model/response/service_of_master_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/domain/interface/booking.dart';
+import 'package:cea_zed/domain/interface/payments.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/service_model.dart';
+import 'package:cea_zed/domain/model/response/booking_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/booking_response.dart';
+import 'package:cea_zed/domain/model/response/check_time_response.dart';
+import 'package:cea_zed/domain/model/response/form_options_response.dart';
+import 'package:cea_zed/domain/model/response/my_gift_cart_response.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/model/response/service_of_master_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'booking_event.dart';
@@ -284,19 +284,21 @@ class BookingBloc extends Bloc<BookingEvent, BookingState> {
 
     on<SaveForm>((event, emit) async {
       emit(state.copyWith(isButtonLoading: true));
-      List<FormOptionsData?> forms = List.from(state.upcoming.map((e) => e.address?.forms));
+      List<FormOptionsData?> forms =
+          List.from(state.upcoming.map((e) => e.address?.forms));
       List<int> ids = forms.map((e) => e?.id ?? 0).toList();
       ids.sort();
       int index = AppHelper.searchIndex(ids, event.form?.id ?? 0);
-      if(index != -1) {
+      if (index != -1) {
         forms.removeAt(index);
         forms.insert(index, event.form);
-      }else{
+      } else {
         forms.add(event.form);
       }
 
-      final res = await _bookingRepo.saveForm(form: forms, id: state.upcoming.first.id ?? 0);
-      res.fold((l)  {
+      final res = await _bookingRepo.saveForm(
+          form: forms, id: state.upcoming.first.id ?? 0);
+      res.fold((l) {
         emit(state.copyWith(isButtonLoading: false));
         event.onSuccess?.call();
       }, (r) {
@@ -304,6 +306,5 @@ class BookingBloc extends Bloc<BookingEvent, BookingState> {
         AppHelper.errorSnackBar(context: event.context, message: r);
       });
     });
-
   }
 }

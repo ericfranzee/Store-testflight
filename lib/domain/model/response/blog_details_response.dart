@@ -1,6 +1,4 @@
-
-
-import 'package:ibeauty/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
 
 class BlogDetailsResponse {
   BlogDetailsResponse({

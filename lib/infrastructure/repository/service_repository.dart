@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/service.dart';
-import 'package:ibeauty/domain/model/response/categories_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/service_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/service.dart';
+import 'package:cea_zed/domain/model/response/categories_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/service_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class ServiceRepository implements ServiceInterface {
   @override

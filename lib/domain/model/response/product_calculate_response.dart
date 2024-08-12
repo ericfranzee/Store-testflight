@@ -1,7 +1,5 @@
-
-
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
 
 import 'cart_calculate_response.dart';
 
@@ -31,22 +29,25 @@ class ProductCalculateResponse {
         data: data ?? this.data,
       );
 
-  factory ProductCalculateResponse.fromJson(Map<String, dynamic> json) => ProductCalculateResponse(
-    timestamp: json["timestamp"] == null ? null : DateTime.parse(json["timestamp"]),
-    status: json["status"],
-    message: json["message"],
-    data: json["data"] == null ? null : ProductCalculateResponseData.fromJson(json["data"]),
-  );
+  factory ProductCalculateResponse.fromJson(Map<String, dynamic> json) =>
+      ProductCalculateResponse(
+        timestamp: json["timestamp"] == null
+            ? null
+            : DateTime.parse(json["timestamp"]),
+        status: json["status"],
+        message: json["message"],
+        data: json["data"] == null
+            ? null
+            : ProductCalculateResponseData.fromJson(json["data"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "timestamp": timestamp?.toIso8601String(),
-    "status": status,
-    "message": message,
-    "data": data?.toJson(),
-  };
+        "timestamp": timestamp?.toIso8601String(),
+        "status": status,
+        "message": message,
+        "data": data?.toJson(),
+      };
 }
-
-
 
 class ProductCalculateResponseData {
   List<ShopElement>? shops;
@@ -98,31 +99,47 @@ class ProductCalculateResponseData {
         couponPrice: couponPrice ?? this.couponPrice,
       );
 
-  factory ProductCalculateResponseData.fromJson(Map<String, dynamic> json) => ProductCalculateResponseData(
-    shops: json["shops"] == null ? [] : List<ShopElement>.from(json["shops"]!.map((x) => ShopElement.fromJson(x))),
-    totalTax: json["total_tax"]?.toDouble(),
-    price: json["price"]?.toDouble(),
-    totalPrice: json["total_price"]?.toDouble(),
-    serviceFee: json["service_fee"],
-    totalDiscount: json["total_discount"]?.toDouble(),
-    deliveryFee: json["delivery_fee"] == null ? [] : List<DeliveryFee>.from(json["delivery_fee"]!.map((x) => DeliveryFee.fromJson(x))),
-    rate: json["rate"],
-    coupon: json["coupon"] == null ? [] : List<CouponElement>.from(json["coupon"]!.map((x) => CouponElement.fromJson(x))),
-    couponPrice: json["coupon_price"],
-  );
+  factory ProductCalculateResponseData.fromJson(Map<String, dynamic> json) =>
+      ProductCalculateResponseData(
+        shops: json["shops"] == null
+            ? []
+            : List<ShopElement>.from(
+                json["shops"]!.map((x) => ShopElement.fromJson(x))),
+        totalTax: json["total_tax"]?.toDouble(),
+        price: json["price"]?.toDouble(),
+        totalPrice: json["total_price"]?.toDouble(),
+        serviceFee: json["service_fee"],
+        totalDiscount: json["total_discount"]?.toDouble(),
+        deliveryFee: json["delivery_fee"] == null
+            ? []
+            : List<DeliveryFee>.from(
+                json["delivery_fee"]!.map((x) => DeliveryFee.fromJson(x))),
+        rate: json["rate"],
+        coupon: json["coupon"] == null
+            ? []
+            : List<CouponElement>.from(
+                json["coupon"]!.map((x) => CouponElement.fromJson(x))),
+        couponPrice: json["coupon_price"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "shops": shops == null ? [] : List<dynamic>.from(shops!.map((x) => x.toJson())),
-    "total_tax": totalTax,
-    "price": price,
-    "total_price": totalPrice,
-    "service_fee": serviceFee,
-    "total_discount": totalDiscount,
-    "delivery_fee": deliveryFee == null ? [] : List<dynamic>.from(deliveryFee!.map((x) => x.toJson())),
-    "rate": rate,
-    "coupon": coupon == null ? [] : List<dynamic>.from(coupon!.map((x) => x.toJson())),
-    "coupon_price": couponPrice,
-  };
+        "shops": shops == null
+            ? []
+            : List<dynamic>.from(shops!.map((x) => x.toJson())),
+        "total_tax": totalTax,
+        "price": price,
+        "total_price": totalPrice,
+        "service_fee": serviceFee,
+        "total_discount": totalDiscount,
+        "delivery_fee": deliveryFee == null
+            ? []
+            : List<dynamic>.from(deliveryFee!.map((x) => x.toJson())),
+        "rate": rate,
+        "coupon": coupon == null
+            ? []
+            : List<dynamic>.from(coupon!.map((x) => x.toJson())),
+        "coupon_price": couponPrice,
+      };
 }
 
 class ShopElement {
@@ -160,22 +177,27 @@ class ShopElement {
       );
 
   factory ShopElement.fromJson(Map<String, dynamic> json) => ShopElement(
-    price: json["price"]?.toDouble(),
-    totalPrice: json["total_price"]?.toDouble(),
-    tax: json["tax"]?.toDouble(),
-    shop: json["shop"] == null ? null : ShopData.fromJson(json["shop"]),
-    discount: json["discount"]?.toDouble(),
-    stocks: json["stocks"] == null ? [] : List<StockElement>.from(json["stocks"]!.map((x) => StockElement.fromJson(x))),
-  );
+        price: json["price"]?.toDouble(),
+        totalPrice: json["total_price"]?.toDouble(),
+        tax: json["tax"]?.toDouble(),
+        shop: json["shop"] == null ? null : ShopData.fromJson(json["shop"]),
+        discount: json["discount"]?.toDouble(),
+        stocks: json["stocks"] == null
+            ? []
+            : List<StockElement>.from(
+                json["stocks"]!.map((x) => StockElement.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "price": price,
-    "total_price": totalPrice,
-    "tax": tax,
-    "shop": shop?.toJson(),
-    "discount": discount,
-    "stocks": stocks == null ? [] : List<dynamic>.from(stocks!.map((x) => x.toJson())),
-  };
+        "price": price,
+        "total_price": totalPrice,
+        "tax": tax,
+        "shop": shop?.toJson(),
+        "discount": discount,
+        "stocks": stocks == null
+            ? []
+            : List<dynamic>.from(stocks!.map((x) => x.toJson())),
+      };
 }
 
 class StockElement {
@@ -229,30 +251,28 @@ class StockElement {
       );
 
   factory StockElement.fromJson(Map<String, dynamic> json) => StockElement(
-    id: json["id"],
-    shopId: json["shop_id"],
-    price: json["price"],
-    productPrice: json["product_price"]?.toDouble(),
-    quantity: json["quantity"],
-    productQuantity: json["product_quantity"],
-    tax: json["tax"],
-    discount: json["discount"]?.toDouble(),
-    totalPrice: json["total_price"]?.toDouble(),
-    stock: json["stock"] == null ? null : Stocks.fromJson(json["stock"]),
-  );
+        id: json["id"],
+        shopId: json["shop_id"],
+        price: json["price"],
+        productPrice: json["product_price"]?.toDouble(),
+        quantity: json["quantity"],
+        productQuantity: json["product_quantity"],
+        tax: json["tax"],
+        discount: json["discount"]?.toDouble(),
+        totalPrice: json["total_price"]?.toDouble(),
+        stock: json["stock"] == null ? null : Stocks.fromJson(json["stock"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "shop_id": shopId,
-    "price": price,
-    "product_price": productPrice,
-    "quantity": quantity,
-    "product_quantity": productQuantity,
-    "tax": tax,
-    "discount": discount,
-    "total_price": totalPrice,
-    "stock": stock?.toJson(),
-  };
+        "id": id,
+        "shop_id": shopId,
+        "price": price,
+        "product_price": productPrice,
+        "quantity": quantity,
+        "product_quantity": productQuantity,
+        "tax": tax,
+        "discount": discount,
+        "total_price": totalPrice,
+        "stock": stock?.toJson(),
+      };
 }
-
-

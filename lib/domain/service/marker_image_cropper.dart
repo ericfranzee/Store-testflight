@@ -7,17 +7,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' as m;
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:image/image.dart' as img;
 import 'dart:async';
 import 'dart:math';
 
- class ImageCropperForMarker {
-
+class ImageCropperForMarker {
   Future<BitmapDescriptor> getMarkerBitmap(int size, {String? text}) async {
-
     if (kIsWeb) size = (size / 2).floor();
 
     final PictureRecorder pictureRecorder = PictureRecorder();
@@ -46,8 +44,7 @@ import 'dart:math';
     }
 
     final img = await pictureRecorder.endRecording().toImage(size, size);
-    final data =
-    await img.toByteData(format: ImageByteFormat.png) as ByteData;
+    final data = await img.toByteData(format: ImageByteFormat.png) as ByteData;
 
     return BitmapDescriptor.fromBytes(data.buffer.asUint8List());
   }

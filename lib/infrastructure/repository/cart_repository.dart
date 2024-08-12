@@ -3,15 +3,15 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/cart.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/cart_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/model/response/product_calculate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/cart.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/cart_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/model/response/product_calculate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class CartRepository implements CartInterface {
   @override
@@ -137,11 +137,11 @@ class CartRepository implements CartInterface {
   @override
   Future<Either<CartCalculateResponse, dynamic>> calculateCart(
       {required int cartId,
-        required bool fullDigital,
-        int? pointId,
-        Map<int, String>? coupon,
-        int? deliveryPriceId,
-        bool withoutDeliveryFee = false}) async {
+      required bool fullDigital,
+      int? pointId,
+      Map<int, String>? coupon,
+      int? deliveryPriceId,
+      bool withoutDeliveryFee = false}) async {
     final data = {
       'lang': LocalStorage.getLanguage()?.locale,
       "rate": LocalStorage.getSelectedCurrency()?.rate ?? 1,
@@ -156,8 +156,8 @@ class CartRepository implements CartInterface {
       "delivery_type": fullDigital
           ? "digital"
           : deliveryPriceId != null
-          ? "delivery"
-          : "point",
+              ? "delivery"
+              : "point",
       if (!withoutDeliveryFee && LocalStorage.getAddress()?.cityId != null)
         "city_id": LocalStorage.getAddress()?.cityId,
       if (pointId != null && pointId != -1) 'delivery_point_id': pointId,
@@ -178,7 +178,7 @@ class CartRepository implements CartInterface {
 
   @override
   Future<Either<ProductCalculateResponse, dynamic>>
-  productCalculateCart() async {
+      productCalculateCart() async {
     final listCart = LocalStorage.getCartList();
     final data = {
       'lang': LocalStorage.getLanguage()?.locale,
@@ -340,8 +340,8 @@ class CartRepository implements CartInterface {
   @override
   Future joinGroupOrder(
       {required int cartId,
-        required String name,
-        required BuildContext context}) async {
+      required String name,
+      required BuildContext context}) async {
     final data = {"name": name, "cart_id": cartId};
     try {
       final client = dioHttp.client(requireAuth: false);
@@ -383,7 +383,7 @@ class CartRepository implements CartInterface {
     try {
       final client = dioHttp.client(requireAuth: false);
       final response =
-      await client.post('/api/v1/rest/cart/insert-product', data: data);
+          await client.post('/api/v1/rest/cart/insert-product', data: data);
       return left(CartModel.fromJson(response.data));
     } catch (e) {
       if ((e.runtimeType == DioException) &&

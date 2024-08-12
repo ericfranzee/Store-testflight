@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/create_order_model.dart';
-import 'package:ibeauty/domain/model/response/payments_response.dart';
-import 'package:ibeauty/domain/model/response/transactions_response.dart';
+import 'package:cea_zed/domain/model/model/create_order_model.dart';
+import 'package:cea_zed/domain/model/response/payments_response.dart';
+import 'package:cea_zed/domain/model/response/transactions_response.dart';
 
 abstract class PaymentsInterface {
   Future<Either<PaymentsResponse, dynamic>> getPayments();

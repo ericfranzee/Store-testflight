@@ -1,13 +1,8 @@
-
-
-
-import 'package:ibeauty/domain/model/model/translation_model.dart';
+import 'package:cea_zed/domain/model/model/translation_model.dart';
 
 class CategoriesPaginateResponse {
   CategoriesPaginateResponse({
     List<CategoryData>? data,
-
-
   }) {
     _data = data;
   }
@@ -19,7 +14,6 @@ class CategoriesPaginateResponse {
         _data?.add(CategoryData.fromJson(v));
       });
     }
-
   }
 
   List<CategoryData>? _data;

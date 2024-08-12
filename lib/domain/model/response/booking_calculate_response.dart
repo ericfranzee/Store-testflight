@@ -1,5 +1,4 @@
-
-import 'package:ibeauty/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
 
 class BookingCalculateResponse {
   DateTime? timestamp;
@@ -27,19 +26,22 @@ class BookingCalculateResponse {
         data: data ?? this.data,
       );
 
-  factory BookingCalculateResponse.fromJson(Map<String, dynamic> json) => BookingCalculateResponse(
-    timestamp: json["timestamp"] == null ? null : DateTime.parse(json["timestamp"]),
-    status: json["status"],
-    message: json["message"],
-    data: json["data"] == null ? null : Calculate.fromJson(json["data"]),
-  );
+  factory BookingCalculateResponse.fromJson(Map<String, dynamic> json) =>
+      BookingCalculateResponse(
+        timestamp: json["timestamp"] == null
+            ? null
+            : DateTime.parse(json["timestamp"]),
+        status: json["status"],
+        message: json["message"],
+        data: json["data"] == null ? null : Calculate.fromJson(json["data"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "timestamp": timestamp?.toIso8601String(),
-    "status": status,
-    "message": message,
-    "data": data?.toJson(),
-  };
+        "timestamp": timestamp?.toIso8601String(),
+        "status": status,
+        "message": message,
+        "data": data?.toJson(),
+      };
 }
 
 class Calculate {
@@ -89,28 +91,32 @@ class Calculate {
       );
 
   factory Calculate.fromJson(Map<String, dynamic> json) => Calculate(
-    status: json["status"],
-    price: json["price"],
-    totalPrice: json["total_price"],
-    totalDiscount: json["total_discount"],
-    totalCommissionFee: json["total_commission_fee"],
-    totalServiceFee: json["total_service_fee"],
-    totalGiftCartPrice: json["total_gift_cart_price"],
-    rate: json["rate"],
-    items: json["items"] == null ? [] : List<Item>.from(json["items"]!.map((x) => Item.fromJson(x))),
-  );
+        status: json["status"],
+        price: json["price"],
+        totalPrice: json["total_price"],
+        totalDiscount: json["total_discount"],
+        totalCommissionFee: json["total_commission_fee"],
+        totalServiceFee: json["total_service_fee"],
+        totalGiftCartPrice: json["total_gift_cart_price"],
+        rate: json["rate"],
+        items: json["items"] == null
+            ? []
+            : List<Item>.from(json["items"]!.map((x) => Item.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "status": status,
-    "price": price,
-    "total_price": totalPrice,
-    "total_discount": totalDiscount,
-    "total_commission_fee": totalCommissionFee,
-    "total_service_fee": totalServiceFee,
-    "total_gift_cart_price": totalGiftCartPrice,
-    "rate": rate,
-    "items": items == null ? [] : List<dynamic>.from(items!.map((x) => x.toJson())),
-  };
+        "status": status,
+        "price": price,
+        "total_price": totalPrice,
+        "total_discount": totalDiscount,
+        "total_commission_fee": totalCommissionFee,
+        "total_service_fee": totalServiceFee,
+        "total_gift_cart_price": totalGiftCartPrice,
+        "rate": rate,
+        "items": items == null
+            ? []
+            : List<dynamic>.from(items!.map((x) => x.toJson())),
+      };
 }
 
 class Item {
@@ -152,22 +158,27 @@ class Item {
       );
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
-    serviceMaster: json["service_master"] == null ? null : ServiceMaster.fromJson(json["service_master"]),
-    serviceFee: json["service_fee"],
-    giftCartPrice: json["gift_cart_price"],
-    totalPrice: json["total_price"],
-    startDate: json["start_date"],
-    errors: json["errors"] == null ? [] : List<String>.from(json["errors"] ?? []),
-    endDate: json["end_date"] == null ? null : DateTime.parse(json["end_date"]),
-  );
+        serviceMaster: json["service_master"] == null
+            ? null
+            : ServiceMaster.fromJson(json["service_master"]),
+        serviceFee: json["service_fee"],
+        giftCartPrice: json["gift_cart_price"],
+        totalPrice: json["total_price"],
+        startDate: json["start_date"],
+        errors: json["errors"] == null
+            ? []
+            : List<String>.from(json["errors"] ?? []),
+        endDate:
+            json["end_date"] == null ? null : DateTime.parse(json["end_date"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "service_master": serviceMaster?.toJson(),
-    "service_fee": serviceFee,
-    "gift_cart_price": giftCartPrice,
-    "total_price": totalPrice,
-    "start_date": startDate,
-    "errors": errors == null ? [] : List<dynamic>.from(errors ?? []),
-    "end_date": endDate?.toIso8601String(),
-  };
+        "service_master": serviceMaster?.toJson(),
+        "service_fee": serviceFee,
+        "gift_cart_price": giftCartPrice,
+        "total_price": totalPrice,
+        "start_date": startDate,
+        "errors": errors == null ? [] : List<dynamic>.from(errors ?? []),
+        "end_date": endDate?.toIso8601String(),
+      };
 }

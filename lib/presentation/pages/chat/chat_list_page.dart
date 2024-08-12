@@ -1,19 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/chat_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/chat_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 
 import 'widget/chat_item.dart';
@@ -63,15 +63,17 @@ class _ChatListPageState extends State<ChatListPage> {
             children: [
               Text(
                 AppHelper.getTrn(TrKeys.chats),
-                style: CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
+                style:
+                    CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
               ),
               24.verticalSpace,
               Expanded(
                 child: StreamBuilder(
-                    stream: FirebaseService.store.collection("chat").where("ids",
-                        arrayContainsAny: [
-                          LocalStorage.getUser().id
-                        ]).snapshots(),
+                    stream: FirebaseService.store
+                        .collection("chat")
+                        .where("ids", arrayContainsAny: [
+                      LocalStorage.getUser().id
+                    ]).snapshots(),
                     builder: (context, snapshot) {
                       if (!snapshot.hasData) {
                         return const Center(child: Loading());
@@ -94,13 +96,15 @@ class _ChatListPageState extends State<ChatListPage> {
                                           AppRouteSetting.goChat(
                                               context: context,
                                               senderId:
-                                                  data.data?[index].senderId ?? 0,
-                                              chatId:
-                                                  data.data?[index].docId ?? "");
+                                                  data.data?[index].senderId ??
+                                                      0,
+                                              chatId: data.data?[index].docId ??
+                                                  "");
                                         },
                                         child: ChatItem(
                                           colors: colors,
-                                          chat: data.data?[index] ?? ChatModel(),
+                                          chat:
+                                              data.data?[index] ?? ChatModel(),
                                         ),
                                       );
                                     })

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/filter/filter_bloc.dart';
-import 'package:ibeauty/domain/model/response/filter_response.dart';
-import 'package:ibeauty/presentation/pages/filter/widgets/extras_item.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/filter/filter_bloc.dart';
+import 'package:cea_zed/domain/model/response/filter_response.dart';
+import 'package:cea_zed/presentation/pages/filter/widgets/extras_item.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 import 'package:provider/provider.dart';
 
 import '../../../style/theme/theme.dart';
@@ -77,7 +77,3 @@ class ExtrasScreen extends StatelessWidget {
         });
   }
 }
-
-
-
-

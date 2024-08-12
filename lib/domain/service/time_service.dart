@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/model/response/delivery_point_response.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/response/delivery_point_response.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
 import 'package:intl/intl.dart';
 
 import 'helper.dart';

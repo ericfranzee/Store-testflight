@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/shop/widgets/connect_button.dart';
-import 'package:ibeauty/presentation/pages/shop_one/widgets/ads_shop_one.dart';
-import 'package:ibeauty/presentation/pages/shop_one/widgets/category_shop_one.dart';
-import 'package:ibeauty/presentation/pages/shop_one/widgets/looks_shop_one.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/shop/widgets/connect_button.dart';
+import 'package:cea_zed/presentation/pages/shop_one/widgets/ads_shop_one.dart';
+import 'package:cea_zed/presentation/pages/shop_one/widgets/category_shop_one.dart';
+import 'package:cea_zed/presentation/pages/shop_one/widgets/looks_shop_one.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../../components/blur_wrap.dart';
@@ -134,5 +134,4 @@ class _ShopOnePageState extends State<ShopOnePage> {
       floatingButton: (colors) => ConnectButtonShop(colors: colors),
     );
   }
-
 }

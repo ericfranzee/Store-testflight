@@ -3,29 +3,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/booking/booking_bloc.dart';
-import 'package:ibeauty/application/gift_cart/gift_cart_bloc.dart';
-import 'package:ibeauty/application/map/map_bloc.dart';
-import 'package:ibeauty/application/membership/membership_bloc.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/master_model.dart';
-import 'package:ibeauty/domain/model/response/booking_calculate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/components/price_item.dart';
-import 'package:ibeauty/presentation/pages/map/map_page.dart';
-import 'package:ibeauty/presentation/route/app_route_service.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/booking/booking_bloc.dart';
+import 'package:cea_zed/application/gift_cart/gift_cart_bloc.dart';
+import 'package:cea_zed/application/map/map_bloc.dart';
+import 'package:cea_zed/application/membership/membership_bloc.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/master_model.dart';
+import 'package:cea_zed/domain/model/response/booking_calculate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/components/price_item.dart';
+import 'package:cea_zed/presentation/pages/map/map_page.dart';
+import 'package:cea_zed/presentation/route/app_route_service.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 import '../../components/loading.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class AddNotePage extends StatelessWidget {
   final DateTime startTime;
@@ -233,8 +233,10 @@ class AddNotePage extends StatelessWidget {
                     AppHelper.numberFormat(
                         number: (item?.giftCartPrice ?? 0) +
                             (item?.totalPrice ?? 0)),
-                    style:
-                        CustomStyle.interNormal(color: colors.error, size: 12,textDecoration: TextDecoration.lineThrough),
+                    style: CustomStyle.interNormal(
+                        color: colors.error,
+                        size: 12,
+                        textDecoration: TextDecoration.lineThrough),
                   ),
                 Text(
                   AppHelper.numberFormat(number: item?.totalPrice),

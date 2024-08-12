@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/model/model/blog_model.dart';
-import 'package:ibeauty/domain/model/model/order_model.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/model/model/order_model.dart';
 
 class NotificationResponse {
   List<NotificationModel>? data;
@@ -96,28 +96,28 @@ class NotificationModel {
 
   factory NotificationModel.fromJson(Map<String, dynamic> json) {
     return NotificationModel(
-        id: json["id"],
-        modelId: json["model_id"],
-        type: json["type"],
-        title: json["title"],
-        body: json["body"],
-        data: json["data"] == null ? null : Data.fromJson(json["data"]),
-        userId: json["user_id"],
-        shopId: json["model"] == null ? null : json["model"]["shop_id"],
-        createdAt: json["created_at"] == null
-            ? null
-            : DateTime.tryParse(json["created_at"])?.toLocal(),
-        updatedAt: json["updated_at"] == null
-            ? null
-            : DateTime.tryParse(json["updated_at"])?.toLocal(),
-        readAt: json["read_at"] == null
-            ? null
-            : DateTime.tryParse(json["read_at"])?.toUtc().toLocal(),
-        client: json["client"] == null ? null : Client.fromJson(json["client"]),
-        orderData:
-            json["order"] == null ? null : OrderShops.fromJson(json["order"]),
-        blogData: json["blog"] == null ? null : BlogData.fromJson(json["blog"]),
-      );
+      id: json["id"],
+      modelId: json["model_id"],
+      type: json["type"],
+      title: json["title"],
+      body: json["body"],
+      data: json["data"] == null ? null : Data.fromJson(json["data"]),
+      userId: json["user_id"],
+      shopId: json["model"] == null ? null : json["model"]["shop_id"],
+      createdAt: json["created_at"] == null
+          ? null
+          : DateTime.tryParse(json["created_at"])?.toLocal(),
+      updatedAt: json["updated_at"] == null
+          ? null
+          : DateTime.tryParse(json["updated_at"])?.toLocal(),
+      readAt: json["read_at"] == null
+          ? null
+          : DateTime.tryParse(json["read_at"])?.toUtc().toLocal(),
+      client: json["client"] == null ? null : Client.fromJson(json["client"]),
+      orderData:
+          json["order"] == null ? null : OrderShops.fromJson(json["order"]),
+      blogData: json["blog"] == null ? null : BlogData.fromJson(json["blog"]),
+    );
   }
 
   Map<String, dynamic> toJson() => {

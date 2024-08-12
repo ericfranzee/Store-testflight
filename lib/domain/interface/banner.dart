@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/ads_response.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/ads_response.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
 
 abstract class BannersInterface {
   Future<Either<BannersPaginateResponse, dynamic>> getBannersPaginate({

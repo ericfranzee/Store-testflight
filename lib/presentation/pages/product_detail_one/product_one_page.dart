@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/product_detail/product_detail_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/product_detail/widgets/bottom_widget.dart';
-import 'package:ibeauty/presentation/pages/product_detail_one/widgets/product_extras_one.dart';
-import 'package:ibeauty/presentation/pages/product_detail_one/widgets/product_info_one.dart';
-import 'package:ibeauty/presentation/pages/product_detail_one/widgets/product_title_one.dart';
-import 'package:ibeauty/presentation/pages/product_detail_one/widgets/related_and_viewed_products_one.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/product_detail/product_detail_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/product_detail/widgets/bottom_widget.dart';
+import 'package:cea_zed/presentation/pages/product_detail_one/widgets/product_extras_one.dart';
+import 'package:cea_zed/presentation/pages/product_detail_one/widgets/product_info_one.dart';
+import 'package:cea_zed/presentation/pages/product_detail_one/widgets/product_title_one.dart';
+import 'package:cea_zed/presentation/pages/product_detail_one/widgets/related_and_viewed_products_one.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'widgets/image_screen_one.dart';
 
 class ProductOnePage extends StatefulWidget {
@@ -99,8 +99,8 @@ class _ProductOnePageState extends State<ProductOnePage> {
                               RelatedAndViewedProductsOne(
                                 colors: colors,
                                 list: state.buyWithProduct,
-                                title:
-                                AppHelper.getTrn(TrKeys.withThisProductAlsoBuy),
+                                title: AppHelper.getTrn(
+                                    TrKeys.withThisProductAlsoBuy),
                               ),
                               RelatedAndViewedProductsOne(
                                 colors: colors,
@@ -188,7 +188,7 @@ class _ProductOnePageState extends State<ProductOnePage> {
                     : Icon(
                         FlutterRemix.heart_3_line,
                         size: 24.r,
-                  color: colors.textBlack,
+                        color: colors.textBlack,
                       )),
       ],
     );

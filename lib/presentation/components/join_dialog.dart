@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/model/model/address_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/domain/service/validators.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/model/model/address_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/validators.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 import 'button/custom_button.dart';
 
@@ -99,16 +99,17 @@ class _JoinDialogState extends State<JoinDialog> {
                     bgColor: CustomStyle.primary,
                     titleColor: CustomStyle.white,
                     onTap: () async {
-                      if(form.currentState?.validate() ?? false){
+                      if (form.currentState?.validate() ?? false) {
                         final cartId = widget.link.substring(
                             widget.link.indexOf("cart_id") + 8,
                             widget.link.indexOf("&"));
                         String country =
-                        widget.link.substring(widget.link.indexOf("&") + 1);
+                            widget.link.substring(widget.link.indexOf("&") + 1);
                         final countryId = country.substring(
                             country.indexOf("country_id") + 11,
                             country.indexOf("&"));
-                        String city = country.substring(country.indexOf("&") + 1);
+                        String city =
+                            country.substring(country.indexOf("&") + 1);
                         final cityId = city.substring(
                             city.indexOf("city_id") + 8, city.indexOf("&"));
                         String region = city.substring(city.indexOf("&") + 1);
@@ -122,11 +123,12 @@ class _JoinDialogState extends State<JoinDialog> {
                             regionId: int.tryParse(regionId),
                           ),
                         );
-                       await cartRepository.joinGroupOrder(
-                            cartId: int.tryParse(cartId) ?? 0, name: controller.text, context: context);
-                       AppRoute.goMain(context);
+                        await cartRepository.joinGroupOrder(
+                            cartId: int.tryParse(cartId) ?? 0,
+                            name: controller.text,
+                            context: context);
+                        AppRoute.goMain(context);
                       }
-
                     }),
               ),
             ],

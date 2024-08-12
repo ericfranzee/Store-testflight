@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/response/compare_response.dart';
-import 'package:ibeauty/domain/model/response/filter_response.dart';
-import 'package:ibeauty/domain/model/response/products_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/single_product_response.dart';
+import 'package:cea_zed/domain/model/response/compare_response.dart';
+import 'package:cea_zed/domain/model/response/filter_response.dart';
+import 'package:cea_zed/domain/model/response/products_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/single_product_response.dart';
 
 abstract class ProductsInterface {
   Future<Either<ProductsPaginateResponse, dynamic>> fetchProducts({

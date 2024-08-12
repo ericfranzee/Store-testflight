@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/user.dart';
-import 'package:ibeauty/domain/model/response/count_of_notifications_data.dart';
-import 'package:ibeauty/domain/model/response/notification_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/user.dart';
+import 'package:cea_zed/domain/model/response/count_of_notifications_data.dart';
+import 'package:cea_zed/domain/model/response/notification_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'notification_event.dart';

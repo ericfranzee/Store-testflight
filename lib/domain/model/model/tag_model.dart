@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/translation_model.dart';
+import 'package:cea_zed/domain/model/model/translation_model.dart';
 
 class TagModel {
   int? id;
@@ -10,11 +10,11 @@ class TagModel {
 
   TagModel(
       {this.id,
-        this.img,
-        this.createdAt,
-        this.updatedAt,
-        this.deletedAt,
-        this.translation});
+      this.img,
+      this.createdAt,
+      this.updatedAt,
+      this.deletedAt,
+      this.translation});
 
   TagModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];

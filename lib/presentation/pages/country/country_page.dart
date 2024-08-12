@@ -3,24 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/address/address_bloc.dart';
-import 'package:ibeauty/domain/model/model/address_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tpying_delay.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/address/address_bloc.dart';
+import 'package:cea_zed/domain/model/model/address_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tpying_delay.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class CountryPage extends StatefulWidget {
@@ -37,67 +37,67 @@ class _CountryPageState extends State<CountryPage> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-        body: (colors) => KeyboardDismisser(
-              isLtr: LocalStorage.getLangLtr(),
-              child: SafeArea(
-                bottom: false,
-                child: Column(
-                  children: [
-                    Text(
-                      AppHelper.getTrn(TrKeys.selectCountry),
-                      style: CustomStyle.interNoSemi(
-                          color: colors.textBlack, size: 18),
-                    ),
-                    8.verticalSpace,
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.r),
-                      child: CustomTextFormField(
-                        hint: AppHelper.getTrn(TrKeys.search),
-                        onChanged: (s) {
-                          if (s.trim().isNotEmpty) {
-                            delayed.run(() {
-                              context.read<AddressBloc>().add(
-                                  AddressEvent.searchCountry(
-                                      context: context, search: s));
-                            });
-                          }
-                        },
-                      ),
-                    ),
-                    BlocBuilder<AddressBloc, AddressState>(
-                      builder: (context, state) {
-                        return state.isLoading
-                            ? Padding(
-                                padding: EdgeInsets.only(top: 32.r),
-                                child: const Loading(),
-                              )
-                            : Expanded(
-                                child: SmartRefresher(
-                                  controller: controller,
-                                  enablePullDown: false,
-                                  enablePullUp: true,
-                                  onLoading: () {
-                                    context.read<AddressBloc>().add(
-                                        AddressEvent.fetchCountry(
-                                            context: context,
-                                            controller: controller));
-                                  },
-                                  child: ListView.builder(
-                                    shrinkWrap: true,
-                                    padding: EdgeInsets.all(16.r),
-                                    itemCount: state.countries.length,
-                                    itemBuilder: (context, index) {
-                                      return _countryItem(colors, state, index);
-                                    },
-                                  ),
-                                ),
-                              );
-                      },
-                    )
-                  ],
+      body: (colors) => KeyboardDismisser(
+        isLtr: LocalStorage.getLangLtr(),
+        child: SafeArea(
+          bottom: false,
+          child: Column(
+            children: [
+              Text(
+                AppHelper.getTrn(TrKeys.selectCountry),
+                style:
+                    CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
+              ),
+              8.verticalSpace,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.r),
+                child: CustomTextFormField(
+                  hint: AppHelper.getTrn(TrKeys.search),
+                  onChanged: (s) {
+                    if (s.trim().isNotEmpty) {
+                      delayed.run(() {
+                        context.read<AddressBloc>().add(
+                            AddressEvent.searchCountry(
+                                context: context, search: s));
+                      });
+                    }
+                  },
                 ),
               ),
-            ),
+              BlocBuilder<AddressBloc, AddressState>(
+                builder: (context, state) {
+                  return state.isLoading
+                      ? Padding(
+                          padding: EdgeInsets.only(top: 32.r),
+                          child: const Loading(),
+                        )
+                      : Expanded(
+                          child: SmartRefresher(
+                            controller: controller,
+                            enablePullDown: false,
+                            enablePullUp: true,
+                            onLoading: () {
+                              context.read<AddressBloc>().add(
+                                  AddressEvent.fetchCountry(
+                                      context: context,
+                                      controller: controller));
+                            },
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              padding: EdgeInsets.all(16.r),
+                              itemCount: state.countries.length,
+                              itemBuilder: (context, index) {
+                                return _countryItem(colors, state, index);
+                              },
+                            ),
+                          ),
+                        );
+                },
+              )
+            ],
+          ),
+        ),
+      ),
       floatingButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingButton: (colors) => PopButton(colors: colors),
     );

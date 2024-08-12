@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
 
 class ReviewResponseModel {
   List<ReviewModel>? data;

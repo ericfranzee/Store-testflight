@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/parcel/parcel_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/custom_toggle.dart';
-import 'package:ibeauty/presentation/pages/parcel/widgets/type_item.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/parcel/parcel_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/custom_toggle.dart';
+import 'package:cea_zed/presentation/pages/parcel/widgets/type_item.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 
 class TypeAndTime extends StatelessWidget {
@@ -146,11 +146,9 @@ class TypeAndTime extends StatelessWidget {
         state.types.isNotEmpty
             ? Container(
                 margin: EdgeInsets.only(top: 10.r, bottom: 24.r),
-
                 decoration: BoxDecoration(
-                  color: colors.newBoxColor,
-                  borderRadius: BorderRadius.circular(16.r)
-                ),
+                    color: colors.newBoxColor,
+                    borderRadius: BorderRadius.circular(16.r)),
                 padding: EdgeInsets.all(16.r),
                 child: GridView.builder(
                     padding: EdgeInsets.zero,

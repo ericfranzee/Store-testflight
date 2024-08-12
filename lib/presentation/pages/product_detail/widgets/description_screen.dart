@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class DescriptionScreen extends StatelessWidget {
   final ScrollController? controller;
@@ -15,7 +15,7 @@ class DescriptionScreen extends StatelessWidget {
       {super.key,
       required this.colors,
       required this.description,
-       this.controller});
+      this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class DescriptionScreen extends StatelessWidget {
             topLeft: Radius.circular(24.r),
           ),
         ),
-        padding: EdgeInsets.symmetric( horizontal: 16.r),
+        padding: EdgeInsets.symmetric(horizontal: 16.r),
         child: controller == null
             ? Column(
                 mainAxisSize: MainAxisSize.min,

@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/pages/checkout/widget/checkout_product_item.dart';
-import 'package:ibeauty/presentation/pages/checkout/widget/verify_prices.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/pages/checkout/widget/checkout_product_item.dart';
+import 'package:cea_zed/presentation/pages/checkout/widget/verify_prices.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class VerifyScreen extends StatelessWidget {
   final CustomColorSet colors;
   final DateTime? dateTime;
-  final Map<int,TextEditingController> controllers;
+  final Map<int, TextEditingController> controllers;
 
   const VerifyScreen(
       {super.key,
@@ -123,13 +123,12 @@ class VerifyScreen extends StatelessWidget {
         padding: EdgeInsets.only(top: 24.r),
         itemBuilder: (context, index) {
           final cartDetailProduct = cartDetails?[index].cartDetailProducts;
-          return  Theme(
+          return Theme(
             data: Theme.of(context).copyWith(
                 dividerColor: CustomStyle.transparent,
                 primaryColor: colors.textBlack,
                 colorScheme: Theme.of(context).colorScheme.copyWith(
-                    secondary: colors.textBlack,
-                    primary: colors.textBlack)),
+                    secondary: colors.textBlack, primary: colors.textBlack)),
             child: ExpansionTile(
               tilePadding: EdgeInsets.zero,
               title: Row(
@@ -147,15 +146,14 @@ class VerifyScreen extends StatelessWidget {
                   16.horizontalSpace,
                   Text(
                     cartDetails?[index].shop?.translation?.title ?? "",
-                    style:
-                    CustomStyle.interNormal(color: colors.textBlack),
+                    style: CustomStyle.interNormal(color: colors.textBlack),
                   ),
                   8.horizontalSpace,
                   if (cartDetails?[index].shop?.deliveryTime != null)
                     Text(
                       "(${AppHelper.getTrn(TrKeys.est)} ${cartDetails?[index].shop?.deliveryTime?.from} - ${cartDetails?[index].shop?.deliveryTime?.to} ${AppHelper.getTrn(cartDetails?[index].shop?.deliveryTime?.type ?? "")})",
-                      style:
-                      CustomStyle.interNormal(color: colors.textHint,size: 14),
+                      style: CustomStyle.interNormal(
+                          color: colors.textHint, size: 14),
                     ),
                 ],
               ),
@@ -185,5 +183,4 @@ class VerifyScreen extends StatelessWidget {
           );
         });
   }
-
 }

@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+
 class ProductTitleTwo extends StatelessWidget {
   final ProductData? product;
   final Stocks? selectStock;
@@ -80,7 +81,7 @@ class ProductTitleTwo extends StatelessWidget {
               Text(
                 product?.ratingAvg?.toStringAsPrecision(2) ?? "0.0",
                 style:
-                CustomStyle.interNormal(color: colors.textBlack, size: 14),
+                    CustomStyle.interNormal(color: colors.textBlack, size: 14),
               ),
               6.horizontalSpace,
               InkWell(
@@ -101,7 +102,6 @@ class ProductTitleTwo extends StatelessWidget {
               )
             ],
           ),
-
         ],
       ),
     );

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ShopName extends StatelessWidget {
   final CustomColorSet colors;
@@ -186,8 +186,8 @@ class ShopName extends StatelessWidget {
             if (shop?.distance != null)
               Text(
                 " (${AppHelper.getTrn(TrKeys.from)} ${shop!.distance!.toStringAsFixed(1)} ${AppHelper.getTrn(TrKeys.km)})",
-                style: CustomStyle.interRegular(
-                    color: colors.textBlack, size: 14),
+                style:
+                    CustomStyle.interRegular(color: colors.textBlack, size: 14),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),

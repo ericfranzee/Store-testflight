@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/presentation/components/loading.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/components/loading.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 import 'animation_button_effect.dart';
 
@@ -15,15 +15,16 @@ class CustomButton extends StatelessWidget {
   final Color borderColor;
   final VoidCallback onTap;
 
-  const CustomButton({Key? key,
-    required this.title,
-    this.radius = 10,
-    required this.bgColor,
-    required this.titleColor,
-    required this.onTap,
-    this.isLoading = false,
-    this.changeColor = false,
-    this.borderColor = CustomStyle.transparent})
+  const CustomButton(
+      {Key? key,
+      required this.title,
+      this.radius = 10,
+      required this.bgColor,
+      required this.titleColor,
+      required this.onTap,
+      this.isLoading = false,
+      this.changeColor = false,
+      this.borderColor = CustomStyle.transparent})
       : super(key: key);
 
   @override
@@ -35,23 +36,22 @@ class CustomButton extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(radius.r),
             color: bgColor,
-            border: Border.all(color: borderColor)
-        ),
+            border: Border.all(color: borderColor)),
         padding: EdgeInsets.symmetric(
           vertical: 16.r,
         ),
         child: Center(
           child: isLoading
               ? SizedBox(
-              height: 22.r,
-              width: 20.r,
-              child: Loading(
-                changeColor: changeColor,
-              ))
+                  height: 22.r,
+                  width: 20.r,
+                  child: Loading(
+                    changeColor: changeColor,
+                  ))
               : Text(
-            title,
-            style: CustomStyle.interNoSemi(color: titleColor),
-          ),
+                  title,
+                  style: CustomStyle.interNoSemi(color: titleColor),
+                ),
         ),
       ),
     );

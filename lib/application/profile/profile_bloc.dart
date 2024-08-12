@@ -3,19 +3,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/interface/gallery.dart';
-import 'package:ibeauty/domain/interface/settings.dart';
-import 'package:ibeauty/domain/interface/user.dart';
-import 'package:ibeauty/domain/model/model/currency_model.dart';
-import 'package:ibeauty/domain/model/model/referral_model.dart';
-import 'package:ibeauty/domain/model/model/translation_model.dart';
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/help_response.dart';
-import 'package:ibeauty/domain/model/response/languages_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/domain/model/response/digital_list_response.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/interface/gallery.dart';
+import 'package:cea_zed/domain/interface/settings.dart';
+import 'package:cea_zed/domain/interface/user.dart';
+import 'package:cea_zed/domain/model/model/currency_model.dart';
+import 'package:cea_zed/domain/model/model/referral_model.dart';
+import 'package:cea_zed/domain/model/model/translation_model.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/help_response.dart';
+import 'package:cea_zed/domain/model/response/languages_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/model/response/digital_list_response.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 part 'profile_event.dart';
@@ -270,13 +270,13 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       emit(state.copyWith(isHelpLoading: state.term == null));
       final res = await _settingsRepository.getTerm();
       res.fold(
-            (l) {
+        (l) {
           emit(state.copyWith(
             isHelpLoading: false,
             term: l,
           ));
         },
-            (r) {
+        (r) {
           emit(state.copyWith(isHelpLoading: false));
           return AppHelper.errorSnackBar(
             context: event.context,
@@ -285,7 +285,5 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         },
       );
     });
-
-
   }
 }

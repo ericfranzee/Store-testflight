@@ -4,12 +4,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
-import 'package:ibeauty/game/models/tile.dart';
+import 'package:cea_zed/game/models/tile.dart';
 import 'package:uuid/uuid.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/game/models/board.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/game/models/board.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 part 'game_event.dart';
 

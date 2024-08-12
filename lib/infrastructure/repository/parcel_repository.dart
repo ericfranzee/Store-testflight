@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/parcel.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/parcel_order_model.dart';
-import 'package:ibeauty/domain/model/response/parcel_calculate_response.dart';
-import 'package:ibeauty/domain/model/response/parcel_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/parcel_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/parcel.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/parcel_order_model.dart';
+import 'package:cea_zed/domain/model/response/parcel_calculate_response.dart';
+import 'package:cea_zed/domain/model/response/parcel_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/parcel_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 import 'package:intl/intl.dart';
 
 class ParcelRepository implements ParcelInterface {
@@ -118,7 +118,8 @@ class ParcelRepository implements ParcelInterface {
         if (houseTo.isNotEmpty) 'house': houseTo,
       },
       'rate': LocalStorage.getSelectedCurrency()?.rate,
-      'delivery_date': "${DateFormat("yyyy-MM-dd").format(DateTime.now())} $time",
+      'delivery_date':
+          "${DateFormat("yyyy-MM-dd").format(DateTime.now())} $time",
       if (comment.isNotEmpty) 'note': comment,
       if (instruction.isNotEmpty) 'instruction': instruction,
       if (note.isNotEmpty) 'description': note,

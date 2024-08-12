@@ -1,7 +1,5 @@
-
-
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/response/parcel_response.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/response/parcel_response.dart';
 
 import 'user_model.dart';
 
@@ -149,7 +147,9 @@ class ParcelOrder {
           ? null
           : DateTime.parse(json["updated_at"]).toLocal(),
       km: json["km"]?.toDouble(),
-      deliveryman: json["deliveryman"] == null ? null : UserModel.fromJson(json["deliveryman"]),
+      deliveryman: json["deliveryman"] == null
+          ? null
+          : UserModel.fromJson(json["deliveryman"]),
       currency:
           json["currency"] == null ? null : Currency.fromJson(json["currency"]),
       user: json["user"] == null ? null : UserModel.fromJson(json["user"]),

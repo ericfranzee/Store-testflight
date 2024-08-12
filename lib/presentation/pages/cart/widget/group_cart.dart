@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/cart/cart_bloc.dart';
-import 'package:ibeauty/domain/model/response/cart_response.dart';
-import 'package:ibeauty/domain/model/response/product_calculate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/pages/cart/widget/cart_item.dart';
-import 'package:ibeauty/presentation/pages/cart/widget/coupon.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-
+import 'package:cea_zed/application/cart/cart_bloc.dart';
+import 'package:cea_zed/domain/model/response/cart_response.dart';
+import 'package:cea_zed/domain/model/response/product_calculate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/pages/cart/widget/cart_item.dart';
+import 'package:cea_zed/presentation/pages/cart/widget/coupon.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class GroupCartScreen extends StatelessWidget {
   final CustomColorSet colors;
@@ -59,8 +58,7 @@ class GroupCartScreen extends StatelessWidget {
                         .add(CartEvent.getCart(context: context));
                     if (LocalStorage.getToken().isNotEmpty) {
                       context.read<CartBloc>().add(
-                          CartEvent.calculateCartWithCoupon(
-                              context: context));
+                          CartEvent.calculateCartWithCoupon(context: context));
                     }
                   },
                   icon: Icon(
@@ -106,7 +104,7 @@ class GroupCartScreen extends StatelessWidget {
                     itemCount: cartUser?.cartDetails?.length ?? 0,
                     itemBuilder: (context, userIndex) {
                       final cartDetail = cartUser?.cartDetails?[userIndex];
-                      return  Theme(
+                      return Theme(
                         data: Theme.of(context).copyWith(
                             dividerColor: CustomStyle.transparent,
                             primaryColor: colors.textBlack,
@@ -130,15 +128,15 @@ class GroupCartScreen extends StatelessWidget {
                               16.horizontalSpace,
                               Text(
                                 cartDetail?.shop?.translation?.title ?? "",
-                                style:
-                                CustomStyle.interNormal(color: colors.textBlack),
+                                style: CustomStyle.interNormal(
+                                    color: colors.textBlack),
                               ),
                               8.horizontalSpace,
                               if (cartDetail?.shop?.deliveryTime != null)
                                 Text(
                                   "(${AppHelper.getTrn(TrKeys.est)} ${cartDetail?.shop?.deliveryTime?.from} - ${cartDetail?.shop?.deliveryTime?.to} ${AppHelper.getTrn(cartDetail?.shop?.deliveryTime?.type ?? "")})",
-                                  style:
-                                  CustomStyle.interNormal(color: colors.textHint,size: 14),
+                                  style: CustomStyle.interNormal(
+                                      color: colors.textHint, size: 14),
                                 ),
                             ],
                           ),
@@ -147,18 +145,20 @@ class GroupCartScreen extends StatelessWidget {
                                 padding: EdgeInsets.only(top: 16.r),
                                 shrinkWrap: true,
                                 physics: const NeverScrollableScrollPhysics(),
-                                itemCount:  cartDetail?.cartDetailProducts?.length ?? 0,
+                                itemCount:
+                                    cartDetail?.cartDetailProducts?.length ?? 0,
                                 itemBuilder: (context, i) {
                                   return CartItem(
                                     colors: colors,
-                                    cartItem: cartDetail?.cartDetailProducts?[i],
+                                    cartItem:
+                                        cartDetail?.cartDetailProducts?[i],
                                     note: notes?.firstWhere(
-                                            (e) =>
-                                        e.stockId ==
-                                            cartDetail?.cartDetailProducts?[i].stocks?.id,
-                                        orElse: () {
-                                          return ProductNote();
-                                        }).comment,
+                                        (e) =>
+                                            e.stockId ==
+                                            cartDetail?.cartDetailProducts?[i]
+                                                .stocks?.id, orElse: () {
+                                      return ProductNote();
+                                    }).comment,
                                   );
                                 }),
                             if (LocalStorage.getToken().isNotEmpty)
@@ -175,7 +175,6 @@ class GroupCartScreen extends StatelessWidget {
                         ),
                       );
                     }),
-
               ],
             ),
           );

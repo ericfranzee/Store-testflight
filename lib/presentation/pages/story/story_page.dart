@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibeauty/application/story/story_bloc.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/application/story/story_bloc.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'widgets/story_image.dart';

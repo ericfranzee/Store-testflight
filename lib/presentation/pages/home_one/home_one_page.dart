@@ -4,33 +4,33 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/banner/banner_bloc.dart';
-import 'package:ibeauty/application/blog/blog_bloc.dart';
-import 'package:ibeauty/application/booking/booking_bloc.dart';
-import 'package:ibeauty/application/brand/brand_bloc.dart';
-import 'package:ibeauty/application/category/category_bloc.dart';
-import 'package:ibeauty/application/main/main_bloc.dart';
-import 'package:ibeauty/application/master/master_bloc.dart';
-import 'package:ibeauty/application/notification/notification_bloc.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/all_shop_list.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/banner_list.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/blog_list.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/new_shop.dart';
-import 'package:ibeauty/presentation/pages/home/widgets/popular_shop.dart';
-import 'package:ibeauty/presentation/pages/home_one/widgets/for_you_and_discount.dart';
-import 'package:ibeauty/presentation/pages/home_one/widgets/upcoming_one_list.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/banner/banner_bloc.dart';
+import 'package:cea_zed/application/blog/blog_bloc.dart';
+import 'package:cea_zed/application/booking/booking_bloc.dart';
+import 'package:cea_zed/application/brand/brand_bloc.dart';
+import 'package:cea_zed/application/category/category_bloc.dart';
+import 'package:cea_zed/application/main/main_bloc.dart';
+import 'package:cea_zed/application/master/master_bloc.dart';
+import 'package:cea_zed/application/notification/notification_bloc.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/all_shop_list.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/banner_list.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/blog_list.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/new_shop.dart';
+import 'package:cea_zed/presentation/pages/home/widgets/popular_shop.dart';
+import 'package:cea_zed/presentation/pages/home_one/widgets/for_you_and_discount.dart';
+import 'package:cea_zed/presentation/pages/home_one/widgets/upcoming_one_list.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'widgets/category_one_list.dart';
@@ -128,10 +128,11 @@ class _HomeOnePageState extends State<HomeOnePage> {
                 controller: shopRefresh,
                 enablePullUp: true,
                 onRefresh: () {
-                  context.read<CategoryBloc>().add(CategoryEvent.fetchCategoryOfService(
-                      context: context,
-                      isRefresh: true,
-                      controller: shopRefresh));
+                  context.read<CategoryBloc>().add(
+                      CategoryEvent.fetchCategoryOfService(
+                          context: context,
+                          isRefresh: true,
+                          controller: shopRefresh));
                   context.read<ProductBloc>()
                     ..add(ProductEvent.fetchMostSaleProduct(
                         context: context,
@@ -147,24 +148,43 @@ class _HomeOnePageState extends State<HomeOnePage> {
                         controller: shopRefresh));
                   context.read<ShopBloc>()
                     ..add(ShopEvent.fetchShops(
-                        context: context, isRefresh: true, controller: shopRefresh))
+                        context: context,
+                        isRefresh: true,
+                        controller: shopRefresh))
                     ..add(ShopEvent.fetchNewShops(
-                        context: context, isRefresh: true, controller: shopRefresh))
+                        context: context,
+                        isRefresh: true,
+                        controller: shopRefresh))
                     ..add(ShopEvent.fetchPopularShops(
-                        context: context, isRefresh: true, controller: shopRefresh));
+                        context: context,
+                        isRefresh: true,
+                        controller: shopRefresh));
                   context.read<BlogBloc>().add(BlogEvent.fetchBlog(
-                      context: context, isRefresh: true, controller: shopRefresh));
+                      context: context,
+                      isRefresh: true,
+                      controller: shopRefresh));
                   context.read<BrandBloc>().add(BrandEvent.fetchBrands(
-                      context: context, isRefresh: true, controller: shopRefresh));
+                      context: context,
+                      isRefresh: true,
+                      controller: shopRefresh));
                   context.read<BannerBloc>()
                     ..add(BannerEvent.fetchBanner(
-                        context: context, isRefresh: true, controller: shopRefresh))
+                        context: context,
+                        isRefresh: true,
+                        controller: shopRefresh))
                     ..add(BannerEvent.fetchAdsBanner(
-                        context: context, isRefresh: true, controller: shopRefresh));
+                        context: context,
+                        isRefresh: true,
+                        controller: shopRefresh));
                   context.read<MasterBloc>().add(MasterEvent.fetchMasters(
-                      context: context, isRefresh: true, controller: shopRefresh));
-                  context.read<BookingBloc>().add(BookingEvent.fetchBookUpcoming(
-                      context: context, isRefresh: true, controller: shopRefresh));
+                      context: context,
+                      isRefresh: true,
+                      controller: shopRefresh));
+                  context.read<BookingBloc>().add(
+                      BookingEvent.fetchBookUpcoming(
+                          context: context,
+                          isRefresh: true,
+                          controller: shopRefresh));
                   shopRefresh.resetNoData();
                 },
                 onLoading: () {

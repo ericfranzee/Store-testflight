@@ -197,7 +197,7 @@
 91-->/home/user/Store-testfligt/android/app/src/main/AndroidManifest.xml:42:9-43:70
 92            android:name="com.google.android.geo.API_KEY"
 92-->/home/user/Store-testfligt/android/app/src/main/AndroidManifest.xml:42:20-65
-93            android:value="AIzaSyCuDSljHjF4pKT9yJWtnJgsCXf6rxi40Tg" />
+93            android:value="AIzaSyAn8vV-N21dD45LLidlBhuvx2JQf7d34l0" />
 93-->/home/user/Store-testfligt/android/app/src/main/AndroidManifest.xml:43:13-68
 94
 95        <activity

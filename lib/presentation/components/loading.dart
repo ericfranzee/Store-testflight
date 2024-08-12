@@ -1,7 +1,7 @@
 import 'dart:io' show Platform;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class Loading extends StatelessWidget {
   final bool changeColor;

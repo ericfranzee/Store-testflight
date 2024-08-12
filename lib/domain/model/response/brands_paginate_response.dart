@@ -1,11 +1,8 @@
-
-
-import 'package:ibeauty/domain/model/model/brand_data.dart';
+import 'package:cea_zed/domain/model/model/brand_data.dart';
 
 class BrandsPaginateResponse {
   BrandsPaginateResponse({
     List<BrandData>? data,
-
   }) {
     _data = data;
   }
@@ -21,8 +18,6 @@ class BrandsPaginateResponse {
 
   List<BrandData>? _data;
 
-
-
   BrandsPaginateResponse copyWith({
     List<BrandData>? data,
   }) =>
@@ -31,7 +26,6 @@ class BrandsPaginateResponse {
       );
 
   List<BrandData>? get data => _data;
-
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

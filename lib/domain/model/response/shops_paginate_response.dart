@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
 
 class ShopsPaginateResponse {
   ShopsPaginateResponse({

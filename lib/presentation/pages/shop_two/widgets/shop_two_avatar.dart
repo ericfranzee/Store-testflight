@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibeauty/application/shop/shop_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/second_button.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/shop/shop_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/second_button.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ShopTwoAvatar extends StatelessWidget {
   final CustomColorSet colors;
@@ -30,7 +30,9 @@ class ShopTwoAvatar extends StatelessWidget {
               child: Stack(
                 children: [
                   CustomNetworkImage(
-                      url: state.shop?.backgroundImg ?? state.shop?.logoImg ?? "",
+                      url: state.shop?.backgroundImg ??
+                          state.shop?.logoImg ??
+                          "",
                       height: 280.r + MediaQuery.paddingOf(context).top,
                       width: double.infinity,
                       radius: 0),
@@ -53,7 +55,8 @@ class ShopTwoAvatar extends StatelessWidget {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Text(
-                                        TimeService.shopTime(state.shop?.workingDays),
+                                        TimeService.shopTime(
+                                            state.shop?.workingDays),
                                         style: CustomStyle.interNormal(
                                             color: colors.white, size: 16),
                                       ),
@@ -65,7 +68,7 @@ class ShopTwoAvatar extends StatelessWidget {
                                       4.horizontalSpace,
                                       Text(
                                         state.shop?.ratingAvg
-                                            ?.toStringAsPrecision(2) ??
+                                                ?.toStringAsPrecision(2) ??
                                             "0.0",
                                         style: CustomStyle.interNoSemi(
                                             color: colors.white, size: 12),

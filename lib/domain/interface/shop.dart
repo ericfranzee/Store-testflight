@@ -1,15 +1,15 @@
 import 'package:dartz/dartz.dart';
-import 'package:ibeauty/domain/model/model/filter_shop_model.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/model/model/review_data.dart';
-import 'package:ibeauty/domain/model/model/story_model.dart';
-import 'package:ibeauty/domain/model/response/gift_cart_response.dart';
-import 'package:ibeauty/domain/model/response/membership_response.dart';
-import 'package:ibeauty/domain/model/response/my_gift_cart_response.dart';
-import 'package:ibeauty/domain/model/response/my_membership_response.dart';
-import 'package:ibeauty/domain/model/response/shops_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/single_shop_response.dart';
-import 'package:ibeauty/domain/model/model/shop_filter_model.dart';
+import 'package:cea_zed/domain/model/model/filter_shop_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/review_data.dart';
+import 'package:cea_zed/domain/model/model/story_model.dart';
+import 'package:cea_zed/domain/model/response/gift_cart_response.dart';
+import 'package:cea_zed/domain/model/response/membership_response.dart';
+import 'package:cea_zed/domain/model/response/my_gift_cart_response.dart';
+import 'package:cea_zed/domain/model/response/my_membership_response.dart';
+import 'package:cea_zed/domain/model/response/shops_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/single_shop_response.dart';
+import 'package:cea_zed/domain/model/model/shop_filter_model.dart';
 
 abstract class ShopsInterface {
   Future<Either<ShopsPaginateResponse, dynamic>> getAllShops(

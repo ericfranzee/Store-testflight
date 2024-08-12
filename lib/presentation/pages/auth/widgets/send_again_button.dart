@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibeauty/application/auth/auth_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/auth/auth_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class SendAgainButton extends StatefulWidget {
   final bool isLoading;
@@ -76,11 +76,10 @@ class _SendAgainButtonState extends State<SendAgainButton> {
             ? widget.colors.textBlack.withOpacity(0.5)
             : widget.colors.textWhite,
         onTap: () {
-          if( timerText == "0"){
+          if (timerText == "0") {
             FirebaseService.sendCode(
                 phone: widget.phone,
                 onSuccess: (id) {
-
                   context
                       .read<AuthBloc>()
                       .add(AuthEvent.setVerificationId(id: id));
@@ -90,7 +89,6 @@ class _SendAgainButtonState extends State<SendAgainButton> {
                   AppHelper.errorSnackBar(context: context, message: e);
                 });
           }
-
         });
   }
 }

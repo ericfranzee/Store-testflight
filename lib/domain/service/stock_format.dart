@@ -1,6 +1,6 @@
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/typed_extra.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/typed_extra.dart';
 
 import 'helper.dart';
 

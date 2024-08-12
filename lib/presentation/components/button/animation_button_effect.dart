@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibeauty/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/style.dart';
 
 class ButtonEffectAnimation extends StatefulWidget {
   final bool disabled;

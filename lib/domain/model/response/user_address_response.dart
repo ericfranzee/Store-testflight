@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-import 'package:ibeauty/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
 
 import 'city_pagination_response.dart';
 
@@ -114,7 +114,8 @@ class UserAddress {
         zipcode: json["zipcode"],
         streetHouseNumber: json["street_house_number"],
         additionalDetails: json["additional_details"],
-        cityModel: json["city"] != null ? CityModel.fromJson(json["city"]) : null,
+        cityModel:
+            json["city"] != null ? CityModel.fromJson(json["city"]) : null,
         location: json["location"] != null
             ? LocationModel.fromJson(json["location"])
             : null,

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/pages/profile/widgets/button_item.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_setting.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/pages/profile/widgets/button_item.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_setting.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 class AppSettingPage extends StatelessWidget {
   const AppSettingPage({super.key});
@@ -26,8 +26,7 @@ class AppSettingPage extends StatelessWidget {
           children: [
             Text(
               AppHelper.getTrn(TrKeys.appSetting),
-              style: CustomStyle.interNoSemi(
-                  color: colors.textBlack, size: 18),
+              style: CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
             ),
             24.verticalSpace,
             ButtonItem(
@@ -111,8 +110,8 @@ class AppSettingPage extends StatelessWidget {
                     10.horizontalSpace,
                     Text(
                       AppHelper.getTrn(TrKeys.onlineChat),
-                      style:
-                          CustomStyle.interNoSemi(color: CustomStyle.white, size: 16),
+                      style: CustomStyle.interNoSemi(
+                          color: CustomStyle.white, size: 16),
                     )
                   ],
                 ),

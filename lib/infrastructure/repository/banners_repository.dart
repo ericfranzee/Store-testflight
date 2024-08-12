@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/banner.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/response/ads_response.dart';
-import 'package:ibeauty/domain/model/response/banners_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/products_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/banner.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/response/ads_response.dart';
+import 'package:cea_zed/domain/model/response/banners_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/products_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class BannersRepository implements BannersInterface {
   @override
@@ -107,7 +107,7 @@ class BannersRepository implements BannersInterface {
         'country_id': LocalStorage.getAddress()?.countryId,
       if (LocalStorage.getAddress()?.cityId != null)
         'city_id': LocalStorage.getAddress()?.cityId,
-       'banner_id': id,
+      'banner_id': id,
     };
     try {
       final client = dioHttp.client(requireAuth: false);
@@ -115,9 +115,7 @@ class BannersRepository implements BannersInterface {
         '/api/v1/rest/products/paginate',
         queryParameters: data,
       );
-      return left(
-          ProductsPaginateResponse.fromJson(response.data).data ??
-              []);
+      return left(ProductsPaginateResponse.fromJson(response.data).data ?? []);
     } catch (e) {
       debugPrint('==> get look by id failure: $e');
       return right(AppHelper.errorHandler(e));

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/reivew_statistic_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/domain/model/model/reivew_statistic_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 import 'rating_bar.dart';
 
@@ -80,7 +80,8 @@ class ReviewInfo extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.all(16.r),
             decoration: BoxDecoration(
-                color: colors.textWhite, borderRadius: BorderRadius.circular(16.r)),
+                color: colors.textWhite,
+                borderRadius: BorderRadius.circular(16.r)),
             child: CustomRatingBar(
               colors: colors,
               counts: [

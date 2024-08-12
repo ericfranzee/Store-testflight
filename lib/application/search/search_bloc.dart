@@ -3,15 +3,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/domain/interface/brands.dart';
-import 'package:ibeauty/domain/interface/category.dart';
-import 'package:ibeauty/domain/interface/products.dart';
-import 'package:ibeauty/domain/interface/shop.dart';
-import 'package:ibeauty/domain/model/model/brand_data.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/model/model/shop_model.dart';
-import 'package:ibeauty/domain/model/response/categories_paginate_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/domain/interface/brands.dart';
+import 'package:cea_zed/domain/interface/category.dart';
+import 'package:cea_zed/domain/interface/products.dart';
+import 'package:cea_zed/domain/interface/shop.dart';
+import 'package:cea_zed/domain/model/model/brand_data.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/shop_model.dart';
+import 'package:cea_zed/domain/model/response/categories_paginate_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 
 part 'search_event.dart';
 
@@ -45,13 +45,13 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     on<SetQuery>((event, emit) async {
       shopId = event.shopId;
       emit(state.copyWith(query: event.query));
-
     });
 
     on<SearchProduct>((event, emit) async {
       emit(state.copyWith(isProductLoading: true));
 
-      final res = await _productRepo.fetchProducts(query: state.query, page: 1,shopId: shopId);
+      final res = await _productRepo.fetchProducts(
+          query: state.query, page: 1, shopId: shopId);
       res.fold((l) {
         emit(state.copyWith(isProductLoading: false, products: l.data ?? []));
       }, (r) {

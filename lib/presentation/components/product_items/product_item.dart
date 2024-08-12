@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/components/product_items/product_info.dart';
-import 'package:ibeauty/presentation/components/product_items/product_info_two.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/components/product_items/product_info.dart';
+import 'package:cea_zed/presentation/components/product_items/product_info_two.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 import 'package:provider/provider.dart';
 
 import '../custom_network_image.dart';
@@ -184,41 +184,40 @@ class ProductItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.r)),
           child: !AppHelper.productInclude(
                   productId: product.id, stockId: product.stocks?.first.id)
-              ?  ButtonEffectAnimation(
-                      onTap: () {
-                        AppHelper.addProduct(
-                            context: context,
-                            product: product,
-                            stock: product.stocks?.first);
-                        onLike?.call();
-                      },
-                      child: Container(
-
-                        decoration: BoxDecoration(
-                          color: colors.transparent,
-                          borderRadius: BorderRadius.circular(8.r),
+              ? ButtonEffectAnimation(
+                  onTap: () {
+                    AppHelper.addProduct(
+                        context: context,
+                        product: product,
+                        stock: product.stocks?.first);
+                    onLike?.call();
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: colors.transparent,
+                      borderRadius: BorderRadius.circular(8.r),
+                    ),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 8.r, horizontal: 10.r),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          FlutterRemix.add_line,
+                          color: colors.white,
+                          size: 24.r,
                         ),
-                        padding: EdgeInsets.symmetric(
-                            vertical: 8.r, horizontal: 10.r),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              FlutterRemix.add_line,
-                              color: colors.white,
-                              size: 24.r,
-                            ),
-                            8.horizontalSpace,
-                            Text(
-                              AppHelper.numberFormat(number: product.stocks?.first.totalPrice),
-                              style: CustomStyle.interNormal(
-                                  color: colors.white, size: 14),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
-
+                        8.horizontalSpace,
+                        Text(
+                          AppHelper.numberFormat(
+                              number: product.stocks?.first.totalPrice),
+                          style: CustomStyle.interNormal(
+                              color: colors.white, size: 14),
+                        )
+                      ],
+                    ),
+                  ),
+                )
               : Padding(
                   padding: EdgeInsets.all(4.r),
                   child: Row(

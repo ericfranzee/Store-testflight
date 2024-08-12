@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:ibeauty/domain/di/dependency_manager.dart';
-import 'package:ibeauty/domain/interface/brands.dart';
-import 'package:ibeauty/domain/model/response/brands_paginate_response.dart';
-import 'package:ibeauty/domain/model/response/single_brand_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/domain/di/dependency_manager.dart';
+import 'package:cea_zed/domain/interface/brands.dart';
+import 'package:cea_zed/domain/model/response/brands_paginate_response.dart';
+import 'package:cea_zed/domain/model/response/single_brand_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 
 class BrandsRepository implements BrandsInterface {
   @override
@@ -27,8 +27,7 @@ class BrandsRepository implements BrandsInterface {
       'perPage': 10,
       'lang': LocalStorage.getLanguage()?.locale,
       "page": page,
-      if(shopId != null)
-      "shop_id": shopId,
+      if (shopId != null) "shop_id": shopId,
       if (LocalStorage.getAddress()?.countryId != null)
         'country_id': LocalStorage.getAddress()?.countryId,
       if (LocalStorage.getAddress()?.cityId != null)

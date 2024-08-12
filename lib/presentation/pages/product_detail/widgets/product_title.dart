@@ -5,15 +5,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/product_detail/product_detail_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/presentation/components/custom_network_image.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/route/app_route_shop.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/product_detail/product_detail_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/presentation/components/custom_network_image.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/route/app_route_shop.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 
 class ProductTitle extends StatelessWidget {
   final ProductData? product;
@@ -146,7 +146,7 @@ class ProductTitle extends StatelessWidget {
                       radius: 0),
                   10.horizontalSpace,
                   SizedBox(
-                    width: MediaQuery.sizeOf(context).width/2-80.r,
+                    width: MediaQuery.sizeOf(context).width / 2 - 80.r,
                     child: Text(
                       "${AppHelper.getTrn(TrKeys.brand)} - ${product?.brand?.title ?? AppHelper.getTrn(TrKeys.unKnow)}",
                       style: CustomStyle.interNormal(
@@ -183,7 +183,7 @@ class ProductTitle extends StatelessWidget {
                         ),
                         10.horizontalSpace,
                         SizedBox(
-                          width: MediaQuery.sizeOf(context).width/2-80.r,
+                          width: MediaQuery.sizeOf(context).width / 2 - 80.r,
                           child: Text(
                             product?.shop?.translation?.title ??
                                 AppHelper.getTrn(TrKeys.unKnow),

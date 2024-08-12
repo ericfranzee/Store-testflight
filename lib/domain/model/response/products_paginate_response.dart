@@ -1,5 +1,5 @@
-import 'package:ibeauty/domain/model/model/meta_model.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
+import 'package:cea_zed/domain/model/model/meta_model.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
 
 class ProductsPaginateResponse {
   ProductsPaginateResponse({List<ProductData>? data, Meta? meta}) {
@@ -17,7 +17,6 @@ class ProductsPaginateResponse {
     _meta = json['meta'] != null ? Meta.fromJson(json['meta']) : null;
   }
 
-
   ProductsPaginateResponse.fromJsonTwo(dynamic json) {
     if (json['products'] != null) {
       _data = [];
@@ -27,8 +26,6 @@ class ProductsPaginateResponse {
     }
     _meta = json['meta'] != null ? Meta.fromJson(json['meta']) : null;
   }
-
-
 
   List<ProductData>? _data;
 

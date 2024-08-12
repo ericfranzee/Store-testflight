@@ -3,13 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ibeauty/application/products/product_bloc.dart';
-import 'package:ibeauty/domain/model/model/product_model.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/product_items/product_info.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/application/products/product_bloc.dart';
+import 'package:cea_zed/domain/model/model/product_model.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/product_items/product_info.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 import 'package:provider/provider.dart';
 
 import '../custom_network_image.dart';
@@ -27,10 +27,10 @@ class NewProductItem extends StatelessWidget {
     return ThemeWrapper(builder: (colors, controller) {
       return InkWell(
         onTap: () async {
-         await AppRoute.goProductPage(context: context, product: product);
-         if (context.mounted) {
-           context.read<ProductBloc>().add(const ProductEvent.updateState());
-         }
+          await AppRoute.goProductPage(context: context, product: product);
+          if (context.mounted) {
+            context.read<ProductBloc>().add(const ProductEvent.updateState());
+          }
         },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,9 +59,9 @@ class NewProductItem extends StatelessWidget {
                         Row(
                           children: [
                             16.horizontalSpace,
-                            if(product.stocks?.isNotEmpty ?? false)
-                            if (product.stocks?.first.discount != null)
-                              SvgPicture.asset("assets/svg/discount.svg"),
+                            if (product.stocks?.isNotEmpty ?? false)
+                              if (product.stocks?.first.discount != null)
+                                SvgPicture.asset("assets/svg/discount.svg"),
                             const Spacer(),
                             IconButton(
                                 splashColor: CustomStyle.transparent,

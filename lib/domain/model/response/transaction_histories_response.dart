@@ -1,6 +1,5 @@
-
-import 'package:ibeauty/domain/model/model/user_model.dart';
-import 'package:ibeauty/domain/model/response/transactions_response.dart';
+import 'package:cea_zed/domain/model/model/user_model.dart';
+import 'package:cea_zed/domain/model/response/transactions_response.dart';
 
 class TransactionPaginationResponse {
   TransactionPaginationResponse({
@@ -40,22 +39,21 @@ class TransactionPaginationResponse {
 }
 
 class TransactionModel {
-  TransactionModel({
-    int? id,
-    String? uuid,
-    String? walletUuid,
-    int? transactionId,
-    String? type,
-    num? price,
-    String? note,
-    String? status,
-    String? statusDescription,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    UserModel? author,
-    UserModel? user,
-    TransactionData? transactionData
-  }) {
+  TransactionModel(
+      {int? id,
+      String? uuid,
+      String? walletUuid,
+      int? transactionId,
+      String? type,
+      num? price,
+      String? note,
+      String? status,
+      String? statusDescription,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      UserModel? author,
+      UserModel? user,
+      TransactionData? transactionData}) {
     _id = id;
     _uuid = uuid;
     _walletUuid = walletUuid;
@@ -92,7 +90,9 @@ class TransactionModel {
         json['author'] != null ? UserModel.fromJson(json['author']) : null;
     _user = json['user'] != null ? UserModel.fromJson(json['user']) : null;
 
-    _transactionData = json['transaction'] != null ? TransactionData.fromJson(json['transaction']) : null;
+    _transactionData = json['transaction'] != null
+        ? TransactionData.fromJson(json['transaction'])
+        : null;
   }
 
   int? _id;

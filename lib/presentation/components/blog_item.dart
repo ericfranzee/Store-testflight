@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/domain/model/model/blog_model.dart';
-import 'package:ibeauty/domain/service/time_service.dart';
-import 'package:ibeauty/presentation/components/button/animation_button_effect.dart';
-import 'package:ibeauty/presentation/route/app_route.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme_warpper.dart';
+import 'package:cea_zed/domain/model/model/blog_model.dart';
+import 'package:cea_zed/domain/service/time_service.dart';
+import 'package:cea_zed/presentation/components/button/animation_button_effect.dart';
+import 'package:cea_zed/presentation/route/app_route.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 import 'custom_network_image.dart';
 
@@ -30,7 +30,7 @@ class BlogItem extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.only(bottom: 8.r),
           height: 254.r,
-          width: MediaQuery.sizeOf(context).width-100,
+          width: MediaQuery.sizeOf(context).width - 100,
           decoration: BoxDecoration(
               border: Border.all(color: colors.icon),
               borderRadius: BorderRadius.circular(16.r),

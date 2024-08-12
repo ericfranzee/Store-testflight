@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "/home/user/.gradle/daemon/8.4/com.ericfranzee.store.app-mergeDebugResources-43:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "com.ericfranzee.store.app-mergeDebugResources-43:/values-port/values-port.xml",
             "map": [
                 {

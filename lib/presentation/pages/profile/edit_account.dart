@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/application/auth/auth_bloc.dart';
-import 'package:ibeauty/application/profile/profile_bloc.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/domain/service/validators.dart';
-import 'package:ibeauty/infrastructure/firebase/firebase_service.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/blur_wrap.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/pages/auth/confirm_screen.dart';
-import 'package:ibeauty/presentation/pages/profile/widgets/avatar_edit.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/application/auth/auth_bloc.dart';
+import 'package:cea_zed/application/profile/profile_bloc.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/validators.dart';
+import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/blur_wrap.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/pages/auth/confirm_screen.dart';
+import 'package:cea_zed/presentation/pages/profile/widgets/avatar_edit.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:phone_text_field/phone_text_field.dart';
 
 class EditAccountScreen extends StatefulWidget {
@@ -157,7 +157,7 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                             onTap: () {
                               if (_formKey.currentState?.validate() ?? false) {
                                 if (phone.text ==
-                                    (LocalStorage.getUser().phone ?? ""))  {
+                                    (LocalStorage.getUser().phone ?? "")) {
                                   context.read<ProfileBloc>().add(
                                         ProfileEvent.updateUser(
                                           firstName: firstName.text,

@@ -1,4 +1,4 @@
-import 'package:ibeauty/domain/model/model/country_model.dart';
+import 'package:cea_zed/domain/model/model/country_model.dart';
 
 class CountryPaginationResponse {
   List<CountryModel>? data;

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/application/become_seller/become_seller_bloc.dart';
-import 'package:ibeauty/application/map/map_bloc.dart';
-import 'package:ibeauty/domain/model/model/location_model.dart';
-import 'package:ibeauty/domain/service/helper.dart';
-import 'package:ibeauty/domain/service/tr_keys.dart';
-import 'package:ibeauty/domain/service/validators.dart';
-import 'package:ibeauty/infrastructure/local_storage/local_storage.dart';
-import 'package:ibeauty/presentation/components/button/custom_button.dart';
-import 'package:ibeauty/presentation/components/button/pop_button.dart';
-import 'package:ibeauty/presentation/components/custom_scaffold.dart';
-import 'package:ibeauty/presentation/components/custom_textformfield.dart';
-import 'package:ibeauty/presentation/components/keyboard_dismisser.dart';
-import 'package:ibeauty/presentation/pages/become_seller/widgets/bg_image_screen.dart';
-import 'package:ibeauty/presentation/pages/become_seller/widgets/delivery_info.dart';
-import 'package:ibeauty/presentation/pages/become_seller/widgets/logo_screen.dart';
-import 'package:ibeauty/presentation/pages/map/map_page.dart';
-import 'package:ibeauty/presentation/style/style.dart';
-import 'package:ibeauty/presentation/style/theme/theme.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/application/become_seller/become_seller_bloc.dart';
+import 'package:cea_zed/application/map/map_bloc.dart';
+import 'package:cea_zed/domain/model/model/location_model.dart';
+import 'package:cea_zed/domain/service/helper.dart';
+import 'package:cea_zed/domain/service/tr_keys.dart';
+import 'package:cea_zed/domain/service/validators.dart';
+import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
+import 'package:cea_zed/presentation/components/button/custom_button.dart';
+import 'package:cea_zed/presentation/components/button/pop_button.dart';
+import 'package:cea_zed/presentation/components/custom_scaffold.dart';
+import 'package:cea_zed/presentation/components/custom_textformfield.dart';
+import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
+import 'package:cea_zed/presentation/pages/become_seller/widgets/bg_image_screen.dart';
+import 'package:cea_zed/presentation/pages/become_seller/widgets/delivery_info.dart';
+import 'package:cea_zed/presentation/pages/become_seller/widgets/logo_screen.dart';
+import 'package:cea_zed/presentation/pages/map/map_page.dart';
+import 'package:cea_zed/presentation/style/style.dart';
+import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:io' show Platform;
@@ -115,8 +115,8 @@ class _BecomeSellerPageState extends State<BecomeSellerPage> {
             children: [
               Text(
                 AppHelper.getTrn(TrKeys.becomeSeller),
-                style: CustomStyle.interNoSemi(
-                    color: colors.textBlack, size: 18),
+                style:
+                    CustomStyle.interNoSemi(color: colors.textBlack, size: 18),
               ),
               BlocBuilder<BecomeSellerBloc, BecomeSellerState>(
                 builder: (context, state) {

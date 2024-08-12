@@ -5,13 +5,13 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:ibeauty/app_constants.dart';
-import 'package:ibeauty/domain/interface/products.dart';
-import 'package:ibeauty/domain/interface/shop.dart';
-import 'package:ibeauty/domain/model/model/filter_shop_model.dart';
-import 'package:ibeauty/domain/model/model/shop_filter_model.dart';
-import 'package:ibeauty/domain/model/response/filter_response.dart';
-import 'package:ibeauty/domain/service/helper.dart';
+import 'package:cea_zed/app_constants.dart';
+import 'package:cea_zed/domain/interface/products.dart';
+import 'package:cea_zed/domain/interface/shop.dart';
+import 'package:cea_zed/domain/model/model/filter_shop_model.dart';
+import 'package:cea_zed/domain/model/model/shop_filter_model.dart';
+import 'package:cea_zed/domain/model/response/filter_response.dart';
+import 'package:cea_zed/domain/service/helper.dart';
 
 part 'filter_event.dart';
 
