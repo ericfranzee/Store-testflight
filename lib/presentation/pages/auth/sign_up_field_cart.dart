@@ -35,7 +35,7 @@ class SignUpFieldCart extends StatefulWidget {
 
 class _SignUpFieldCartState extends State<SignUpFieldCart> {
   late TextEditingController firstName;
-  late TextEditingController userName;
+  late TextEditingController lastName;
   late TextEditingController phone;
   late TextEditingController email;
   late TextEditingController referral;
@@ -46,7 +46,7 @@ class _SignUpFieldCartState extends State<SignUpFieldCart> {
   @override
   void initState() {
     firstName = TextEditingController();
-    userName = TextEditingController();
+    lastName = TextEditingController();
     phone = TextEditingController();
     email = TextEditingController();
     confirmPassword = TextEditingController();
@@ -58,7 +58,7 @@ class _SignUpFieldCartState extends State<SignUpFieldCart> {
   @override
   void dispose() {
     firstName.dispose();
-    userName.dispose();
+    lastName.dispose();
     phone.dispose();
     email.dispose();
     confirmPassword.dispose();
@@ -88,13 +88,13 @@ class _SignUpFieldCartState extends State<SignUpFieldCart> {
                 CustomTextFormField(
                   validation: AppValidators.isNotEmptyValidator,
                   controller: firstName,
-                  hint: AppHelper.getTrn(TrKeys.fullName),
+                  hint: AppHelper.getTrn(TrKeys.firstName),
                 ),
                 16.verticalSpace,
                 CustomTextFormField(
                   validation: AppValidators.isNotEmptyValidator,
-                  controller: userName,
-                  hint: AppHelper.getTrn(TrKeys.userName),
+                  controller: lastName,
+                  hint: AppHelper.getTrn(TrKeys.lastName),
                 ),
                 16.verticalSpace,
                 if (!widget.isPhone)
@@ -188,7 +188,7 @@ class _SignUpFieldCartState extends State<SignUpFieldCart> {
                             context.read<AuthBloc>().add(AuthEvent.signUp(
                                   context: context,
                                   firstname: firstName.text,
-                                  lastname: userName.text,
+                                  lastname: lastName.text,
                                   email: email.text,
                                   phone: widget.phone,
                                   password: password.text,

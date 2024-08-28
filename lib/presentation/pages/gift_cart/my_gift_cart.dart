@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_remix/flutter_remix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:cea_zed/app_constants.dart';
 import 'package:cea_zed/application/gift_cart/gift_cart_bloc.dart';
 import 'package:cea_zed/domain/model/response/my_gift_cart_response.dart';
@@ -15,6 +14,7 @@ import 'package:cea_zed/presentation/components/loading.dart';
 import 'package:cea_zed/presentation/style/style.dart';
 import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:lottie/lottie.dart';
 
 class MyGiftCartPage extends StatefulWidget {
   const MyGiftCartPage({super.key});
@@ -88,14 +88,15 @@ class _MyGiftCartPageState extends State<MyGiftCartPage> {
                           : Column(
                               children: [
                                 32.verticalSpace,
-                                SvgPicture.asset("assets/svg/noMembership.svg"),
+                                Lottie.asset("assets/lottie/noData.json"),
                                 32.verticalSpace,
                                 Padding(
                                   padding:
                                       EdgeInsets.symmetric(horizontal: 32.r),
                                   child: Text(
                                     AppHelper.getTrn(
-                                        TrKeys.youHaveNoMembership),
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:843126201.
+                                        TrKeys.youHaveNoGiftCart),
                                     textAlign: TextAlign.center,
                                     style: CustomStyle.interNoSemi(
                                         color: colors.textBlack, size: 30),
@@ -107,7 +108,7 @@ class _MyGiftCartPageState extends State<MyGiftCartPage> {
                                       EdgeInsets.symmetric(horizontal: 32.r),
                                   child: Text(
                                     AppHelper.getTrn(TrKeys
-                                        .youDontHaveAnyMembershipMaybeYouWillGetMembershipSoon),
+                                        .youDontHaveAnyGiftCartMaybeYouWillGetSoon),
                                     textAlign: TextAlign.center,
                                     style: CustomStyle.interRegular(
                                         color: colors.textBlack, size: 16),

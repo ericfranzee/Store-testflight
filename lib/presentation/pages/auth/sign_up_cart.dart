@@ -5,15 +5,14 @@ import 'package:cea_zed/app_constants.dart';
 import 'package:cea_zed/application/auth/auth_bloc.dart';
 import 'package:cea_zed/domain/service/helper.dart';
 import 'package:cea_zed/domain/service/tr_keys.dart';
-import 'package:cea_zed/domain/service/validators.dart';
 import 'package:cea_zed/infrastructure/firebase/firebase_service.dart';
 import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
 import 'package:cea_zed/presentation/components/button/custom_button.dart';
-import 'package:cea_zed/presentation/components/custom_textformfield.dart';
 import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:cea_zed/presentation/route/app_route_setting.dart';
 import 'package:cea_zed/presentation/style/style.dart';
 import 'package:cea_zed/presentation/style/theme/theme.dart';
+import 'package:phone_text_field/phone_text_field.dart';
 
 import 'widgets/social_button.dart';
 
@@ -52,11 +51,49 @@ class _SignUpCartState extends State<SignUpCart> {
                       color: widget.colors.textBlack, size: 30),
                 ),
                 32.verticalSpace,
-                CustomTextFormField(
-                  validation: AppValidators.isNotEmptyValidator,
-                  controller: widget.phone,
-                  hint: AppHelper.getTrn(TrKeys.phoneNumber),
-                  inputType: TextInputType.phone,
+                PhoneTextField(
+                  initialValue: widget.phone.text,
+                  initialCountryCode: "NG",
+                  isRequired: false,
+                  textStyle:
+                      CustomStyle.interNormal(color: widget.colors.textBlack),
+                  locale: const Locale('en'),
+                  decoration: const InputDecoration(
+                    filled: true,
+                    contentPadding: EdgeInsets.zero,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      borderSide: BorderSide(),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      borderSide: BorderSide(),
+                    ),
+                    prefixIcon: Icon(Icons.phone),
+                    labelText: "Phone number",
+                  ),
+                  searchFieldInputDecoration: const InputDecoration(
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      borderSide: BorderSide(),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      borderSide: BorderSide(),
+                    ),
+                    suffixIcon: Icon(Icons.search),
+                    hintText: "Search country",
+                  ),
+                  onChanged: (s) {
+                    widget.phone.text = s.completeNumber;
+                  },
+                ),
+                16.verticalSpace,
+                Text(
+                  AppHelper.getTrn(TrKeys.hintNum),
+                  style: CustomStyle.interNoSemi(
+                      color: widget.colors.textHint, size: 10),
                 ),
                 16.verticalSpace,
                 BlocBuilder<AuthBloc, AuthState>(

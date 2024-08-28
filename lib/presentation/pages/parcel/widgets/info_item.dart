@@ -39,7 +39,7 @@ class InfoItem extends StatelessWidget {
             padding: EdgeInsets.only(left: 18.r, bottom: 12.r, right: 24.r),
             child: Text(
               AppHelper.getTrn(AppConstants.infoTitle[index]),
-              style: CustomStyle.interNoSemi(size: 16, color: colors.white),
+              style: CustomStyle.interNoSemi(size: 10, color: colors.white),
             ),
           ),
         ),

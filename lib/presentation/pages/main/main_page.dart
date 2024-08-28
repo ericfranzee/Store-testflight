@@ -25,7 +25,6 @@ import 'package:cea_zed/presentation/components/custom_scaffold.dart';
 import 'package:cea_zed/presentation/pages/booking/booking_list.dart';
 import 'package:cea_zed/presentation/pages/cart/cart_page.dart';
 import 'package:cea_zed/presentation/pages/home/home_page.dart';
-import 'package:cea_zed/presentation/pages/home_one/home_one_page.dart';
 import 'package:cea_zed/presentation/pages/home_three/home_three_page.dart';
 import 'package:cea_zed/presentation/pages/home_two/home_two_page.dart';
 import 'package:cea_zed/presentation/pages/like/like_page.dart';
@@ -56,7 +55,7 @@ class _MainPageState extends State<MainPage> {
         child: AppHelper.getType() == 0
             ? const HomePage()
             : AppHelper.getType() == 1
-                ? const HomeOnePage()
+                ? const HomePage()
                 : AppHelper.getType() == 2
                     ? const HomeTwoPage()
                     : const HomeThreePage()),

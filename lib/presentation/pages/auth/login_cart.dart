@@ -15,7 +15,7 @@ import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:cea_zed/presentation/route/app_route_setting.dart';
 import 'package:cea_zed/presentation/style/style.dart';
 import 'package:cea_zed/presentation/style/theme/theme.dart';
-
+import 'dart:async'; // Import for Timer
 import 'widgets/social_button.dart';
 
 class LoginCart extends StatefulWidget {
@@ -31,6 +31,8 @@ class _LoginCartState extends State<LoginCart> {
   late TextEditingController phone;
   late TextEditingController password;
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  OverlayEntry? _overlayEntry;
+  Timer? _timer; // Timer to control the auto-dismiss of the tooltip
 
   @override
   void initState() {
@@ -43,7 +45,64 @@ class _LoginCartState extends State<LoginCart> {
   void dispose() {
     phone.dispose();
     password.dispose();
+    _timer?.cancel(); // Cancel the timer if it's active
+    _overlayEntry?.remove(); // Remove the overlay if it's active
     super.dispose();
+  }
+
+  void _showCustomTooltip(BuildContext context) {
+    if (_overlayEntry != null) {
+      _hideCustomTooltip(); // Hide tooltip if it's already visible
+    } else {
+      _overlayEntry = _createOverlayEntry(context);
+      Overlay.of(context).insert(_overlayEntry!);
+
+      _timer?.cancel(); // Cancel any existing timer
+      _timer = Timer(const Duration(seconds: 3), () {
+        _hideCustomTooltip(); // Hide the tooltip after 10 seconds
+      });
+    }
+  }
+
+  void _hideCustomTooltip() {
+    _timer?.cancel();
+    _overlayEntry?.remove();
+    _overlayEntry = null;
+  }
+
+  OverlayEntry _createOverlayEntry(BuildContext context) {
+    RenderBox renderBox = context.findRenderObject() as RenderBox;
+    var size = renderBox.size;
+    var offset = renderBox.localToGlobal(Offset.zero);
+
+    return OverlayEntry(
+      builder: (context) => Positioned(
+        left: offset.dx,
+        bottom: offset.dy + size.height + -50.0,
+        child: Material(
+          borderRadius: BorderRadius.circular(10),
+          color: widget.colors.textWhite,
+          child: Container(
+            padding: const EdgeInsets.only(right: 8.0), // Padding to the right
+            decoration: BoxDecoration(
+              color: widget.colors.icon, // Ash background color
+              borderRadius: BorderRadius.circular(4), // Rounded corners
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                AppHelper.getTrn(TrKeys.hintNum),
+                style: TextStyle(
+                  color: widget.colors.textBlack, // Black text color
+                  fontSize: 12, // Text size 12
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -71,6 +130,15 @@ class _LoginCartState extends State<LoginCart> {
                       validation: AppValidators.isNotEmptyValidator,
                       controller: phone,
                       hint: AppHelper.getTrn(TrKeys.phoneNumberOrEmail),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          _showCustomTooltip(context); // Show tooltip on press
+                        },
+                        icon: Icon(
+                          Icons.info, // Info icon
+                          color: widget.colors.textHint, // White body
+                        ),
+                      ),
                     ),
                     16.verticalSpace,
                     BlocBuilder<AuthBloc, AuthState>(
@@ -94,7 +162,7 @@ class _LoginCartState extends State<LoginCart> {
                               !state.isShowPassword
                                   ? FlutterRemix.eye_close_line
                                   : FlutterRemix.eye_line,
-                              color: widget.colors.textBlack,
+                              color: widget.colors.textHint,
                             ),
                           ),
                         );

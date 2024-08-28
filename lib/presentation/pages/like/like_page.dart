@@ -179,7 +179,7 @@ class _LikePageState extends State<LikePage>
       child: Column(
         children: [
           56.verticalSpace,
-          Image.asset("assets/images/salonEmpty.png"),
+          Image.asset("assets/images/productEmpty.png"),
           16.verticalSpace,
           Text(
             AppHelper.getTrn(TrKeys.emptyInFavorites),

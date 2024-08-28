@@ -193,7 +193,7 @@ Widget _resultEmpty(CustomColorSet colors) {
   return Column(
     children: [
       24.verticalSpace,
-      Lottie.asset("assets/lottie/notification_empty.json"),
+      Lottie.asset("assets/lottie/noItem.json"),
       16.verticalSpace,
       Padding(
         padding: EdgeInsets.symmetric(

@@ -1095,9 +1095,9 @@
     },
     {
       "name": "phone_text_field",
-      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/phone_text_field-0.0.6",
+      "rootUri": "file:///home/user/.pub-cache/hosted/pub.dev/phone_text_field-0.0.7",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "photo_view",
@@ -1580,7 +1580,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-08-12T00:54:10.464082Z",
+  "generated": "2024-08-21T23:22:35.406608Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///home/user/flutter",

@@ -73,7 +73,7 @@ dependencies:
   auto_size_text: ^3.0.0
   grouped_list: ^5.1.2
   sms_autofill: ^2.3.0
-  phone_text_field: ^0.0.6
+  phone_text_field: ^0.0.7
   colornames: ^0.1.0
   map_launcher: ^2.5.0+1
   jiffy: ^6.2.1

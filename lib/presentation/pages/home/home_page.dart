@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
         builder: (context, state) {
           return Text(
             "${AppHelper.getTrn(TrKeys.hello)} 👋 \n${LocalStorage.getUser().firstname} ${LocalStorage.getUser().lastname ?? ""}",
-            style: CustomStyle.interNoSemi(color: colors.textBlack, size: 32),
+            style: CustomStyle.interNoSemi(color: colors.textBlack, size: 22),
           );
         },
       ),

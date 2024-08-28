@@ -12,14 +12,12 @@ import 'package:cea_zed/domain/di/dependency_manager.dart';
 import 'package:cea_zed/domain/service/helper.dart';
 import 'package:cea_zed/domain/service/tr_keys.dart';
 import 'package:cea_zed/infrastructure/local_storage/local_storage.dart';
-import 'package:cea_zed/presentation/components/button/custom_button.dart';
 import 'package:cea_zed/presentation/components/keyboard_dismisser.dart';
 import 'package:cea_zed/presentation/route/app_route.dart';
 import 'package:cea_zed/presentation/route/app_route_parcel.dart';
 import 'package:cea_zed/presentation/route/app_route_shop.dart';
 import 'package:cea_zed/presentation/route/app_route_setting.dart';
 import 'package:cea_zed/presentation/style/style.dart';
-import 'package:cea_zed/presentation/style/theme/theme.dart';
 import 'package:cea_zed/presentation/style/theme/theme_warpper.dart';
 
 import 'widgets/drawer_item.dart';
@@ -278,66 +276,12 @@ class DrawerPage extends StatelessWidget {
                       authRepository.logout();
                     },
                   ),
-                if (LocalStorage.getToken().isNotEmpty)
-                  DrawerItem(
-                    colors: colors,
-                    icon: FlutterRemix.logout_box_line,
-                    title: AppHelper.getTrn(TrKeys.deleteAccount),
-                    onTap: () {
-                      AppHelper.showCustomDialog(
-                          context: context,
-                          content: Container(
-                            decoration: BoxDecoration(
-                                color: colors.backgroundColor,
-                                borderRadius: BorderRadius.circular(8.r)),
-                            padding: EdgeInsets.all(16.r),
-                            child: _deleteAlert(colors, context),
-                          ));
-                    },
-                  ),
                 16.verticalSpace,
               ],
             ),
           ),
         );
       },
-    );
-  }
-
-  Widget _deleteAlert(CustomColorSet colors, BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          AppHelper.getTrn(TrKeys.areYouSureDeleteAccount),
-          style: CustomStyle.interNormal(color: colors.textBlack, size: 18),
-        ),
-        16.verticalSpace,
-        Row(
-          children: [
-            Expanded(
-              child: CustomButton(
-                  title: AppHelper.getTrn(TrKeys.back),
-                  bgColor: colors.newBoxColor,
-                  titleColor: colors.textBlack,
-                  onTap: () {
-                    Navigator.pop(context);
-                  }),
-            ),
-            16.horizontalSpace,
-            Expanded(
-              child: CustomButton(
-                  title: AppHelper.getTrn(TrKeys.yes),
-                  bgColor: colors.primary,
-                  titleColor: colors.white,
-                  onTap: () {
-                    AppRoute.goLogin(context);
-                    authRepository.deleteAccount();
-                  }),
-            )
-          ],
-        )
-      ],
     );
   }
 }

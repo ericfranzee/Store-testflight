@@ -9,7 +9,7 @@ import flutter_downloader
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-   GMSServices.provideAPIKey("AIzaSyCuDSljHjF4pKT9yJWtnJgsCXf6rxi40Tg")
+   GMSServices.provideAPIKey("AIzaSyDuAH807MtBHmUqgSskpMr1rt7IKLAko7k")
     GeneratedPluginRegistrant.register(with: self)
      FlutterDownloaderPlugin.setPluginRegistrantCallback(registerPlugins)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)

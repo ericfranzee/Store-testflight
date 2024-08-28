@@ -157,7 +157,7 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                             onTap: () {
                               if (_formKey.currentState?.validate() ?? false) {
                                 if (phone.text ==
-                                    (LocalStorage.getUser().phone ?? "")) {
+                                    (LocalStorage.getUser().phone ?? ""))  {
                                   context.read<ProfileBloc>().add(
                                         ProfileEvent.updateUser(
                                           firstName: firstName.text,

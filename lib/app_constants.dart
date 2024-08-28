@@ -11,7 +11,7 @@ class AppConstants {
   /// api urls
   static const String baseUrl = 'https://code.incrat.com';
   static const String drawingBaseUrl = 'https://api.openrouteservice.org/';
-  static const String googleApiKey = 'AIzaSyAn8vV-N21dD45LLidlBhuvx2JQf7d34l0';
+  static const String googleApiKey = 'AIzaSyDuAH807MtBHmUqgSskpMr1rt7IKLAko7k';
   static const String privacyPolicyUrl = '$baseUrl/privacy-policy';
   static const String adminPageUrl = 'https://store.ericfranzee.com';
   static const String webUrl = 'https://ceazed.ericfranzee.com';
@@ -23,9 +23,9 @@ class AppConstants {
   static const String routingKey =
       '5b3ce3597851110001cf62482a0a2a48818847b1b2560cead8287ea6';
   static const String sellerAppAndroid =
-      'https://play.google.com/store/apps/details?id=ceo.ericfranzee.com';
+      'https://play.google.com/store/apps/details?id=com.ericfranzee.shop';
   static const String sellerAppIos =
-      'https://testflight.apple.com/join/ceo.ericfranzee.com';
+      'https://testflight.apple.com/join/com.ericfranzee.shop';
   static const bool isDemo = false;
 
   /// social sign-in
@@ -113,8 +113,8 @@ class AppConstants {
 
   static const List infoImage = [
     "assets/images/save.png",
-    "assets/images/delivery.png",
     "assets/images/fast.png",
+    "assets/images/delivery.png",
     "assets/images/set.png",
   ];
 
@@ -148,10 +148,10 @@ class AppConstants {
   };
 
   static const List infoTitle = [
-    TrKeys.saveTime,
-    TrKeys.deliveryRestriction,
-    TrKeys.fast,
-    TrKeys.set,
+    TrKeys.createDelivery,
+    TrKeys.fastDelivery,
+    TrKeys.ontimeDelivery,
+    TrKeys.trackDelivery,
   ];
 
   static const List<Color> adsColor = [

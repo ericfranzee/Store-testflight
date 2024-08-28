@@ -170,7 +170,7 @@ class _OrdersListPageState extends State<OrdersListPage>
     return Column(
       children: [
         24.verticalSpace,
-        Lottie.asset("assets/lottie/notification_empty.json"),
+        Lottie.asset("assets/lottie/noItem.json"),
         16.verticalSpace,
         Padding(
           padding: EdgeInsets.symmetric(

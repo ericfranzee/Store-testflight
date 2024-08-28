@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "15350343199-cvn3cr2eece1jvj1d7lh06cofvvs40eu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ericfranzee.shop",
+            "certificate_hash": "8cb15cb95e683693b94677e6793ab8f35eb83c0e"
+          }
+        },
+        {
+          "client_id": "15350343199-np9avtmr0ovllue558ad28okg5t6qvvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ericfranzee.shop",
+            "certificate_hash": "6b68fd4749fc78c38960aa659dd97d8d99239913"
+          }
+        },
+        {
           "client_id": "15350343199-514m10690gdaj742cucn50aosc4if16n.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -50,19 +66,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "15350343199-h7ib59376cu9c891u4gs2nko5ekqbffh.apps.googleusercontent.com",
+          "client_id": "15350343199-5nuu9tia31nkuk5pskisndviufe4cuno.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ericfranzee.store",
-            "certificate_hash": "4f6e18bf19582b8c0d8ea903a5add3f84a252e32"
-          }
-        },
-        {
-          "client_id": "15350343199-ob9iocu9po3oo5lnb90moi6qj240bh7d.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ericfranzee.store",
-            "certificate_hash": "78f55ff2b9dcd12ccda11c1261d4bbd8f45abb58"
+            "certificate_hash": "6c849574d724650c223574aefbb006686f8b15f9"
           }
         },
         {

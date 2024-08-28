@@ -126,7 +126,7 @@ class _MyDigitalListState extends State<MyDigitalList> {
       child: Column(
         children: [
           32.verticalSpace,
-          Lottie.asset("assets/lottie/notification_empty.json",
+          Lottie.asset("assets/lottie/noData.json",
               width: MediaQuery.sizeOf(context).width / 1.5),
           32.verticalSpace,
           Text(
