@@ -1,0 +1,12 @@
+com.baseflow.permissionhandler.permission_handler_android-jetified-window-1.0.0-beta04-0 /home/user/.gradle/caches/transforms-3/9c31f69f71eae9086f4d1932b05ab1fc/transformed/jetified-window-1.0.0-beta04/res
+com.baseflow.permissionhandler.permission_handler_android-core-1.6.0-1 /home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res
+com.baseflow.permissionhandler.permission_handler_android-jetified-annotation-experimental-1.1.0-2 /home/user/.gradle/caches/transforms-3/a9a970af0a881d0279e286f6aba675a5/transformed/jetified-annotation-experimental-1.1.0/res
+com.baseflow.permissionhandler.permission_handler_android-jetified-window-java-1.0.0-beta04-3 /home/user/.gradle/caches/transforms-3/e13a5b32b921ae01ab7f7d393bb197d9/transformed/jetified-window-java-1.0.0-beta04/res
+com.baseflow.permissionhandler.permission_handler_android-main-4 /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-12.0.1/android/src/main/res
+com.baseflow.permissionhandler.permission_handler_android-release-5 /home/user/.pub-cache/hosted/pub.dev/permission_handler_android-12.0.1/android/src/release/res
+com.baseflow.permissionhandler.permission_handler_android-pngs-6 /home/user/Store-testflight/build/permission_handler_android/generated/res/pngs/release
+com.baseflow.permissionhandler.permission_handler_android-resValues-7 /home/user/Store-testflight/build/permission_handler_android/generated/res/resValues/release
+com.baseflow.permissionhandler.permission_handler_android-rs-8 /home/user/Store-testflight/build/permission_handler_android/generated/res/rs/release
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-9 /home/user/Store-testflight/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-10 /home/user/Store-testflight/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.baseflow.permissionhandler.permission_handler_android-merged_res-11 /home/user/Store-testflight/build/permission_handler_android/intermediates/merged_res/release

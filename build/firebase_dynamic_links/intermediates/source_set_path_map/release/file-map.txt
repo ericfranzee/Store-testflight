@@ -1,0 +1,16 @@
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-firebase-common-20.4.2-0 /home/user/.gradle/caches/transforms-3/24853d647bab20eda81be28947baff30/transformed/jetified-firebase-common-20.4.2/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-play-services-base-18.0.1-1 /home/user/.gradle/caches/transforms-3/717c2965c0f441632f32fc16f674c9e9/transformed/jetified-play-services-base-18.0.1/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-window-1.0.0-beta04-2 /home/user/.gradle/caches/transforms-3/9c31f69f71eae9086f4d1932b05ab1fc/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-core-1.6.0-3 /home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-annotation-experimental-1.1.0-4 /home/user/.gradle/caches/transforms-3/a9a970af0a881d0279e286f6aba675a5/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-window-java-1.0.0-beta04-5 /home/user/.gradle/caches/transforms-3/e13a5b32b921ae01ab7f7d393bb197d9/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-jetified-play-services-basement-18.1.0-6 /home/user/.gradle/caches/transforms-3/f1d19554f3cd572af7d92455abc67283/transformed/jetified-play-services-basement-18.1.0/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-main-7 /home/user/.pub-cache/hosted/pub.dev/firebase_dynamic_links-5.4.8/android/src/main/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-release-8 /home/user/.pub-cache/hosted/pub.dev/firebase_dynamic_links-5.4.8/android/src/release/res
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-packaged_res-9 /home/user/Store-testflight/build/firebase_core/intermediates/packaged_res/release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-pngs-10 /home/user/Store-testflight/build/firebase_dynamic_links/generated/res/pngs/release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-resValues-11 /home/user/Store-testflight/build/firebase_dynamic_links/generated/res/resValues/release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-rs-12 /home/user/Store-testflight/build/firebase_dynamic_links/generated/res/rs/release
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-13 /home/user/Store-testflight/build/firebase_dynamic_links/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-mergeReleaseResources-14 /home/user/Store-testflight/build/firebase_dynamic_links/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.firebase.dynamiclinks.firebase_dynamic_links-merged_res-15 /home/user/Store-testflight/build/firebase_dynamic_links/intermediates/merged_res/release

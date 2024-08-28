@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/notification_template_part_chronometer.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/notification_action_tombstone.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/custom_dialog.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/notification_template_icon_group.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/notification_action.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-merged_res-10:/layout/notification_template_part_time.xml",
+        "source": "com.ajinasokan.flutterdisplaymode.flutter_displaymode-core-1.6.0-1:/layout/notification_template_part_time.xml"
+    }
+]
