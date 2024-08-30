@@ -9,12 +9,12 @@ class AppConstants {
   AppConstants._();
 
   /// api urls
-  static const String baseUrl = 'https://code.incrat.com';
+  static const String baseUrl = 'https://code.incrat.com/';
   static const String drawingBaseUrl = 'https://api.openrouteservice.org/';
   static const String googleApiKey = 'AIzaSyDuAH807MtBHmUqgSskpMr1rt7IKLAko7k';
   static const String privacyPolicyUrl = '$baseUrl/privacy-policy';
-  static const String adminPageUrl = 'https://store.ericfranzee.com';
-  static const String webUrl = 'https://ceazed.ericfranzee.com';
+  static const String adminPageUrl = 'https://store.ericfranzee.com/';
+  static const String webUrl = 'https://ceazed.ericfranzee.com/';
   static const String firebaseWebKey =
       'AIzaSyBJS_7oVJUGpNMBo-YaDqc-SMU_J_PWjEk';
   static const String urlPrefix = 'https://store-zee.page.link';

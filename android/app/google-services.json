@@ -14,19 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "15350343199-cvn3cr2eece1jvj1d7lh06cofvvs40eu.apps.googleusercontent.com",
+          "client_id": "15350343199-7p60sh6cmf03ccjf8bf2h8ms6dja5hsj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ericfranzee.shop",
-            "certificate_hash": "8cb15cb95e683693b94677e6793ab8f35eb83c0e"
-          }
-        },
-        {
-          "client_id": "15350343199-np9avtmr0ovllue558ad28okg5t6qvvk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ericfranzee.shop",
-            "certificate_hash": "6b68fd4749fc78c38960aa659dd97d8d99239913"
+            "certificate_hash": "6c849574d724650c223574aefbb006686f8b15f9"
           }
         },
         {

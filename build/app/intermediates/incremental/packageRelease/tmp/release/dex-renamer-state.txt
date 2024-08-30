@@ -1,4 +1,4 @@
-#Wed Aug 28 11:49:08 UTC 2024
+#Fri Aug 30 02:05:15 UTC 2024
 base.1=/home/user/Store-testflight/build/app/intermediates/dex/release/minifyReleaseWithR8/classes2.dex
 path.1=classes2.dex
 base.0=/home/user/Store-testflight/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
