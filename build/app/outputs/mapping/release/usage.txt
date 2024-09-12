@@ -5941,17 +5941,13 @@ androidx.core.view.WindowInsetsCompat$BuilderImpl:
 androidx.core.view.WindowInsetsCompat$Impl20:
     public androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
-    protected boolean isTypeVisible(int)
-    boolean isVisible(int)
 androidx.core.view.WindowInsetsCompat$Impl29:
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
 androidx.core.view.WindowInsetsCompat$Impl30:
     public androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
-    public boolean isVisible(int)
 androidx.core.view.WindowInsetsCompat$Impl:
     androidx.core.graphics.Insets getInsetsIgnoringVisibility(int)
     androidx.core.view.WindowInsetsCompat inset(int,int,int,int)
-    boolean isVisible(int)
 androidx.core.view.WindowInsetsCompat$Type$InsetsType
 androidx.core.view.WindowInsetsCompat$Type:
     static final int CAPTION_BAR
@@ -5970,7 +5966,6 @@ androidx.core.view.WindowInsetsCompat$Type:
     static int all()
     public static int captionBar()
     public static int displayCutout()
-    public static int ime()
     public static int mandatorySystemGestures()
     public static int navigationBars()
     public static int statusBars()
@@ -5998,7 +5993,6 @@ androidx.core.view.WindowInsetsCompat:
     static androidx.core.graphics.Insets insetInsets(androidx.core.graphics.Insets,int,int,int,int)
     public boolean isConsumed()
     public boolean isRound()
-    public boolean isVisible(int)
     public androidx.core.view.WindowInsetsCompat replaceSystemWindowInsets(android.graphics.Rect)
 androidx.core.view.WindowInsetsControllerCompat$Impl20:
     void addOnControllableInsetsChangedListener(androidx.core.view.WindowInsetsControllerCompat$OnControllableInsetsChangedListener)
@@ -7956,6 +7950,22 @@ androidx.media.app.NotificationCompat$MediaStyle
 androidx.media.app.NotificationCompat
 androidx.media.session.MediaButtonReceiver$MediaButtonConnectionCallback
 androidx.media.session.MediaButtonReceiver
+androidx.multidex.BuildConfig
+androidx.multidex.MultiDex$V14$ElementConstructor
+androidx.multidex.MultiDex$V14$ICSElementConstructor
+androidx.multidex.MultiDex$V14$JBMR11ElementConstructor
+androidx.multidex.MultiDex$V14$JBMR2ElementConstructor
+androidx.multidex.MultiDex$V14
+androidx.multidex.MultiDex$V19
+androidx.multidex.MultiDex$V4
+androidx.multidex.MultiDex
+androidx.multidex.MultiDexApplication
+androidx.multidex.MultiDexExtractor$1
+androidx.multidex.MultiDexExtractor$ExtractedDex
+androidx.multidex.MultiDexExtractor
+androidx.multidex.R
+androidx.multidex.ZipUtil$CentralDirectory
+androidx.multidex.ZipUtil
 androidx.print.PrintHelper$1
 androidx.print.PrintHelper$OnPrintFinishCallback
 androidx.print.PrintHelper$PrintBitmapAdapter
@@ -31225,8 +31235,6 @@ flutter.plugins.vibrate.R$string
 flutter.plugins.vibrate.R$style
 flutter.plugins.vibrate.R$styleable
 flutter.plugins.vibrate.R
-io.flutter.Build$API_LEVELS
-io.flutter.Build
 io.flutter.BuildConfig
 io.flutter.FlutterInjector$Builder:
     public io.flutter.FlutterInjector$Builder setDeferredComponentManager(io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager)
@@ -31273,7 +31281,6 @@ io.flutter.embedding.android.FlutterActivity:
     private static final java.lang.String TAG
     public static android.content.Intent createDefaultIntent(android.content.Context)
     public io.flutter.embedding.android.ExclusiveAppComponent getExclusiveAppComponent()
-    protected android.window.OnBackInvokedCallback getOnBackInvokedCallback()
     void setDelegate(io.flutter.embedding.android.FlutterActivityAndFragmentDelegate)
     public void updateSystemUiOverlays()
     public static io.flutter.embedding.android.FlutterActivity$CachedEngineIntentBuilder withCachedEngine(java.lang.String)
@@ -31513,7 +31520,6 @@ io.flutter.embedding.engine.loader.FlutterLoader:
     static final java.lang.String FLUTTER_ASSETS_DIR_KEY
     private static final java.lang.String IMPELLER_BACKEND_META_DATA_KEY
     private static final java.lang.String IMPELLER_OPENGL_GPU_TRACING_DATA_KEY
-    private static final java.lang.String IMPELLER_VULKAN_GPU_TRACING_DATA_KEY
     static final java.lang.String ISOLATE_SNAPSHOT_DATA_KEY
     private static final java.lang.String LEAK_VM_META_DATA_KEY
     private static final java.lang.String OLD_GEN_HEAP_SIZE_META_DATA_KEY
@@ -31545,6 +31551,7 @@ io.flutter.embedding.engine.loader.ResourceExtractor:
     private static void copy(java.io.InputStream,java.io.OutputStream)
     private static void deleteFiles(java.lang.String,java.util.HashSet)
     private static java.lang.String[] getExistingTimestamps(java.io.File)
+    private static java.lang.String[] getSupportedAbis()
     static long getVersionCode(android.content.pm.PackageInfo)
     io.flutter.embedding.engine.loader.ResourceExtractor start()
 io.flutter.embedding.engine.mutatorsstack.FlutterMutatorView:
@@ -31605,14 +31612,10 @@ io.flutter.embedding.engine.renderer.FlutterRenderer:
     private static final java.lang.String TAG
     public void dispatchSemanticsAction(int,int,java.nio.ByteBuffer,int)
     public android.graphics.Bitmap getBitmap()
-    private void markTextureFrameAvailable(long)
     public void setAccessibilityFeatures(int)
 io.flutter.embedding.engine.systemchannels.AccessibilityChannel:
     private static final java.lang.String TAG
     public void <init>(io.flutter.plugin.common.BasicMessageChannel,io.flutter.embedding.engine.FlutterJNI)
-io.flutter.embedding.engine.systemchannels.BackGestureChannel:
-    private static final java.lang.String TAG
-    public void setMethodCallHandler(io.flutter.plugin.common.MethodChannel$MethodCallHandler)
 io.flutter.embedding.engine.systemchannels.DeferredComponentChannel:
     private static final java.lang.String TAG
     public void completeInstallError(java.lang.String,java.lang.String)
@@ -31777,7 +31780,7 @@ io.flutter.plugin.platform.PlatformViewsController:
     private static final java.lang.String TAG
     public void disposePlatformView(int)
     public android.util.SparseArray getOverlayLayerViews()
-io.flutter.plugin.platform.SingleViewWindowManager:
+io.flutter.plugin.platform.SingleViewPresentation$WindowManagerHandler:
     private static final java.lang.String TAG
 io.flutter.plugin.platform.SurfaceProducerPlatformViewRenderTarget:
     private static final java.lang.String TAG
@@ -32475,13 +32478,11 @@ io.flutter.view.FlutterView$SurfaceTextureRegistryEntry
 io.flutter.view.FlutterView$ViewportMetrics
 io.flutter.view.FlutterView$ZeroSides
 io.flutter.view.FlutterView
-io.flutter.view.TextureRegistry$TextureEntry:
-    public abstract long id()
+io.flutter.view.TextureRegistry$TextureEntry
 io.flutter.view.TextureRegistry:
     public void onTrimMemory(int)
     public abstract io.flutter.view.TextureRegistry$SurfaceTextureEntry registerSurfaceTexture(android.graphics.SurfaceTexture)
 io.flutter.view.VsyncWaiter:
-    public static io.flutter.view.VsyncWaiter getInstance(float,io.flutter.embedding.engine.FlutterJNI)
     public static void reset()
 io.grpc.Attributes$Builder:
     public io.grpc.Attributes$Builder setAll(io.grpc.Attributes)
@@ -41432,23 +41433,10 @@ android.support.v4.media.MediaBrowserCompat$SearchResultReceiver:
     private final android.support.v4.media.MediaBrowserCompat$SearchCallback mCallback
     private final android.os.Bundle mExtras
     private final java.lang.String mQuery
-android.support.v4.media.MediaDescriptionCompat:
-    void <init>(android.os.Parcel)
 android.support.v4.media.session.MediaControllerCompat$Callback$MessageHandler
-android.support.v4.media.session.MediaControllerCompat$Callback$StubCompat:
-    public void onExtrasChanged(android.os.Bundle)
-    public void onMetadataChanged(android.support.v4.media.MediaMetadataCompat)
-    public void onQueueChanged(java.util.List)
-    public void onQueueTitleChanged(java.lang.CharSequence)
-    public void onSessionDestroyed()
-    public void onVolumeInfoChanged(android.support.v4.media.session.ParcelableVolumeInfo)
 android.support.v4.media.session.MediaControllerCompat$Callback:
     android.support.v4.media.session.MediaControllerCompat$Callback$MessageHandler mHandler
 androidx.activity.ComponentActivity$ReportFullyDrawnExecutorApi1
-androidx.appcompat.app.AppCompatDelegateImpl$1
-androidx.appcompat.app.AppCompatDelegateImpl$4
-androidx.appcompat.app.AppCompatDelegateImpl:
-    private static boolean sInstalledExceptionHandler
 androidx.appcompat.app.ToolbarActionBar
 androidx.appcompat.app.WindowDecorActionBar:
     static final synthetic boolean $assertionsDisabled
@@ -41456,7 +41444,6 @@ androidx.appcompat.widget.AppCompatTextViewAutoSizeHelper:
     private static java.lang.Object accessAndReturnWithDefault(java.lang.Object,java.lang.String,java.lang.Object)
     private android.text.StaticLayout createStaticLayoutForMeasuringPre16(java.lang.CharSequence,android.text.Layout$Alignment,int)
     private static java.lang.reflect.Field getTextViewField(java.lang.String)
-androidx.appcompat.widget.FitWindowsViewGroup
 androidx.browser.customtabs.CustomTabsCallback:
     public void extraCallback(java.lang.String,android.os.Bundle)
     public android.os.Bundle extraCallbackWithResult(java.lang.String,android.os.Bundle)
@@ -41473,69 +41460,9 @@ androidx.browser.customtabs.CustomTabsClient$2$5
 androidx.browser.customtabs.CustomTabsClient$2$6
 androidx.browser.customtabs.CustomTabsClient$2:
     final synthetic androidx.browser.customtabs.CustomTabsCallback val$callback
-androidx.cardview.R$color:
-    public static final int cardview_shadow_end_color
-    public static final int cardview_shadow_start_color
-androidx.cardview.R$dimen
-androidx.cardview.widget.CardView$1:
-    public void setMinWidthHeightInternal(int,int)
-androidx.cardview.widget.CardView:
-    static synthetic void access$101(androidx.cardview.widget.CardView,int)
-    static synthetic void access$201(androidx.cardview.widget.CardView,int)
-androidx.cardview.widget.CardViewApi17Impl$1
-androidx.cardview.widget.CardViewApi17Impl
 androidx.cardview.widget.CardViewBaseImpl$1
-androidx.cardview.widget.CardViewBaseImpl
-androidx.cardview.widget.CardViewDelegate:
-    public abstract void setMinWidthHeightInternal(int,int)
-androidx.cardview.widget.RoundRectDrawableWithShadow$RoundRectHelper
-androidx.cardview.widget.RoundRectDrawableWithShadow:
-    private boolean mAddPaddingForCorners
-    private android.content.res.ColorStateList mBackground
-    private final android.graphics.RectF mCardBounds
-    private float mCornerRadius
-    private android.graphics.Paint mCornerShadowPaint
-    private android.graphics.Path mCornerShadowPath
-    private boolean mDirty
-    private android.graphics.Paint mEdgeShadowPaint
-    private final int mInsetShadow
-    private android.graphics.Paint mPaint
-    private boolean mPrintedShadowClipWarning
-    private float mRawMaxShadowSize
-    private float mRawShadowSize
-    private final int mShadowEndColor
-    private float mShadowSize
-    private final int mShadowStartColor
-    static androidx.cardview.widget.RoundRectDrawableWithShadow$RoundRectHelper sRoundRectHelper
-    void <init>(android.content.res.Resources,android.content.res.ColorStateList,float,float,float)
-    private void buildComponents(android.graphics.Rect)
-    private void buildShadowCorners()
-    public void draw(android.graphics.Canvas)
-    private void drawShadow(android.graphics.Canvas)
-    android.content.res.ColorStateList getColor()
-    float getCornerRadius()
-    void getMaxShadowAndCornerPadding(android.graphics.Rect)
-    float getMaxShadowSize()
-    float getMinHeight()
-    float getMinWidth()
-    public int getOpacity()
-    public boolean getPadding(android.graphics.Rect)
-    float getShadowSize()
-    public boolean isStateful()
-    protected void onBoundsChange(android.graphics.Rect)
-    protected boolean onStateChange(int[])
-    void setAddPaddingForCorners(boolean)
-    public void setAlpha(int)
-    private void setBackground(android.content.res.ColorStateList)
-    void setColor(android.content.res.ColorStateList)
-    public void setColorFilter(android.graphics.ColorFilter)
-    void setCornerRadius(float)
-    void setMaxShadowSize(float)
-    void setShadowSize(float)
-    private void setShadowSize(float,float)
-    private int toEven(float)
-androidx.core.R$id:
-    public static final int tag_transition_group
+androidx.cardview.widget.CardViewBaseImpl:
+    public void initStatic()
 androidx.core.app.ActivityOptionsCompat:
     public android.os.Bundle toBundle()
 androidx.core.app.BundleCompat$BeforeApi18Impl
@@ -41583,20 +41510,6 @@ androidx.core.app.SharedElementCallback:
     public abstract void onSharedElementEnd(java.util.List,java.util.List,java.util.List)
     public abstract void onSharedElementStart(java.util.List,java.util.List,java.util.List)
 androidx.core.content.LocusIdCompat
-androidx.core.graphics.TypefaceCompat:
-    private static android.graphics.Typeface getBestFontFromFamily(android.content.Context,android.graphics.Typeface,int)
-androidx.core.graphics.TypefaceCompatApi29Impl:
-    protected android.graphics.Typeface createFromInputStream(android.content.Context,java.io.InputStream)
-androidx.core.graphics.TypefaceCompatBaseImpl$2
-androidx.core.graphics.TypefaceCompatBaseImpl:
-    private void addFontFamily(android.graphics.Typeface,androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry)
-    private androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry findBestEntry(androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry,int)
-    androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry getFontFamily(android.graphics.Typeface)
-    private static long getUniqueKey(android.graphics.Typeface)
-androidx.core.graphics.drawable.TintAwareDrawable:
-    public abstract void setTint(int)
-    public abstract void setTintList(android.content.res.ColorStateList)
-    public abstract void setTintMode(android.graphics.PorterDuff$Mode)
 androidx.core.location.LocationListenerCompat$-CC:
     public static void $default$onProviderDisabled(androidx.core.location.LocationListenerCompat,java.lang.String)
     public static void $default$onProviderEnabled(androidx.core.location.LocationListenerCompat,java.lang.String)
@@ -41604,23 +41517,11 @@ androidx.core.location.LocationListenerCompat$-CC:
 androidx.core.os.OperationCanceledException
 androidx.core.text.PrecomputedTextCompat:
     private static java.util.concurrent.Executor sExecutor
-androidx.core.view.LayoutInflaterCompat:
-    private static boolean sCheckedField
-    private static java.lang.reflect.Field sLayoutInflaterFactory2Field
-    private static void forceSetFactory2(android.view.LayoutInflater,android.view.LayoutInflater$Factory2)
 androidx.core.view.MenuProvider$-CC
-androidx.core.view.NestedScrollingChild
-androidx.core.view.NestedScrollingParent
-androidx.core.view.TintableBackgroundView
 androidx.core.view.ViewCompat:
     private static java.lang.reflect.Field sMinHeightField
     private static boolean sMinHeightFieldFetched
-    private static java.util.WeakHashMap sTransitionNameMap
 androidx.core.view.ViewPropertyAnimatorCompat$ViewPropertyAnimatorListenerApi14
-androidx.core.view.accessibility.AccessibilityNodeInfoCompat:
-    public int getActions()
-androidx.core.widget.TintableCompoundButton
-androidx.core.widget.TintableImageSourceView
 androidx.fragment.app.Fragment$AnimationInfo:
     androidx.core.app.SharedElementCallback mEnterTransitionCallback
     androidx.core.app.SharedElementCallback mExitTransitionCallback
@@ -41629,10 +41530,6 @@ androidx.fragment.app.FragmentLifecycleCallbacksDispatcher$FragmentLifecycleCall
 androidx.fragment.app.FragmentManager$FragmentLifecycleCallbacks
 androidx.fragment.app.FragmentTransition:
     static java.lang.String findKeyForValue(androidx.collection.ArrayMap,java.lang.String)
-androidx.interpolator.view.animation.FastOutLinearInInterpolator
-androidx.interpolator.view.animation.FastOutSlowInInterpolator
-androidx.interpolator.view.animation.LinearOutSlowInInterpolator
-androidx.interpolator.view.animation.LookupTableInterpolator
 androidx.lifecycle.DefaultLifecycleObserver$-CC
 androidx.lifecycle.LifecycleRegistryOwner$-CC
 androidx.lifecycle.LifecycleRegistryOwner:
@@ -41646,11 +41543,6 @@ androidx.lifecycle.ViewModelProvider$NewInstanceFactory:
 androidx.room.util.TableInfo$Column:
     public boolean isPrimaryKey()
 androidx.startup.StartupLogger
-androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat:
-    private void setupColorAnimator(android.animation.Animator)
-androidx.vectordrawable.graphics.drawable.AnimationUtilsCompat:
-    private static android.view.animation.Interpolator createInterpolatorFromXml(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser)
-androidx.vectordrawable.graphics.drawable.PathInterpolatorCompat
 androidx.webkit.TracingConfig:
     public java.util.List getCustomIncludedCategories()
     public int getPredefinedCategories()
@@ -41670,7 +41562,6 @@ com.baseflow.permissionhandler.ServiceManager:
 com.google.android.datatransport.runtime.dagger.internal.DoubleCheck:
     static final synthetic boolean $assertionsDisabled
 com.google.android.datatransport.runtime.dagger.internal.MemoizedSentinel
-com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerScheduler
 com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener$-CC:
     public static void $default$onExperimentalSleepingForOffloadChanged(com.google.android.exoplayer2.ExoPlayer$AudioOffloadListener,boolean)
 com.google.android.exoplayer2.MediaItem$AdsConfiguration:
@@ -41739,7 +41630,6 @@ com.google.android.exoplayer2.video.spherical.SphericalGLSurfaceView:
     private final com.google.android.exoplayer2.video.spherical.SceneRenderer scene
 com.google.android.gms.auth.api.accounttransfer.zzr:
     public final android.os.Bundle zza()
-com.google.android.gms.cloudmessaging.IMessengerCompat$Proxy
 com.google.android.gms.common.internal.service.zao:
     public static final synthetic int zab
 com.google.android.gms.common.util.AndroidUtilsLight:
@@ -41792,8 +41682,6 @@ com.google.protobuf.MessageSchema:
 com.google.protobuf.OneofInfo
 com.google.protobuf.UnsafeUtil:
     static long objectFieldOffset(java.lang.reflect.Field)
-com.tekartik.sqflite.Utils:
-    static java.util.Locale localeForLanguageTagPre21(java.lang.String)
 dev.fluttercommunity.plus.connectivity.ConnectivityMethodChannelHandler:
     static final synthetic boolean $assertionsDisabled
 flutter.plugins.vibrate.VibrateMethodCallHandler:
@@ -41844,8 +41732,8 @@ io.flutter.plugins.googlesignin.GoogleSignInPlugin$Delegate$PendingOperation:
     static final synthetic boolean $assertionsDisabled
 io.flutter.plugins.urllauncher.UrlLauncher:
     static final synthetic boolean $assertionsDisabled
-io.flutter.plugins.videoplayer.CustomSSLSocketFactory
-io.flutter.view.TextureRegistry$TextureEntry
+io.flutter.view.VsyncWaiter:
+    public static io.flutter.view.VsyncWaiter getInstance(float,io.flutter.embedding.engine.FlutterJNI)
 io.grpc.Attributes$Builder:
     static final synthetic boolean $assertionsDisabled
 io.grpc.Attributes:

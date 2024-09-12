@@ -4,7 +4,7 @@
             "outputFile": "com.alexmiller.map_launcher-merged_res-10:/values-tr/values-tr.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-tr/values-tr.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "com.alexmiller.map_launcher-mergeReleaseResources-8:/values-tr/values-tr.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-tr/values-tr.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -4,24 +4,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-merged_res-22:/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-gu/values-gu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "53",
-                        "startColumns": "4",
-                        "startOffsets": "5412",
-                        "endColumns": "100",
-                        "endOffsets": "5508"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/6f85f17a75d1db9a731fa5129501905d/transformed/jetified-facebook-login-16.2.0/res/values-gu/values-gu.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\e7337a86605a19f3eb7f6b9079c98d36\\transformed\\jetified-facebook-login-16.2.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-gu/values-gu.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-gu\\values-gu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "5412",
+                        "endColumns": "100",
+                        "endOffsets": "5508"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\a72ab0b076d7fc18550d0271adc34907\\transformed\\appcompat-1.1.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -60,24 +60,7 @@
             "outputFile": "ru.innim.flutter_login_facebook-mergeReleaseResources-20:/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-gu/values-gu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "53",
-                        "startColumns": "4",
-                        "startOffsets": "5412",
-                        "endColumns": "100",
-                        "endOffsets": "5508"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/6f85f17a75d1db9a731fa5129501905d/transformed/jetified-facebook-login-16.2.0/res/values-gu/values-gu.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\e7337a86605a19f3eb7f6b9079c98d36\\transformed\\jetified-facebook-login-16.2.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -94,7 +77,24 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-gu/values-gu.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-gu\\values-gu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "53",
+                        "startColumns": "4",
+                        "startOffsets": "5412",
+                        "endColumns": "100",
+                        "endOffsets": "5508"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\a72ab0b076d7fc18550d0271adc34907\\transformed\\appcompat-1.1.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

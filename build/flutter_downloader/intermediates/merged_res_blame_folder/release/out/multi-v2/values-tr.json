@@ -4,7 +4,7 @@
             "outputFile": "vn.hunghd.flutterdownloader.flutter_downloader-merged_res-14:/values-tr/values-tr.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2932eb36dd5c5b44fbd7b72f1a38f220/transformed/core-1.9.0/res/values-tr/values-tr.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\2d3c2ee8d8adbf99c28d9020c1936e48\\transformed\\core-1.9.0\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "vn.hunghd.flutterdownloader.flutter_downloader-mergeReleaseResources-12:/values-tr/values-tr.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2932eb36dd5c5b44fbd7b72f1a38f220/transformed/core-1.9.0/res/values-tr/values-tr.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\2d3c2ee8d8adbf99c28d9020c1936e48\\transformed\\core-1.9.0\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

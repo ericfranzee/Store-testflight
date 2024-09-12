@@ -4,7 +4,7 @@
             "outputFile": "com.aboutyou.dart_packages.sign_in_with_apple-merged_res-11:/values-ms/values-ms.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/7a951d0b421fa5f157d7a164c015a708/transformed/browser-1.2.0/res/values-ms/values-ms.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\743766b212d9fc83a155679ca2c720d4\\transformed\\browser-1.2.0\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-ms/values-ms.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -36,7 +36,7 @@
             "outputFile": "com.aboutyou.dart_packages.sign_in_with_apple-mergeReleaseResources-9:/values-ms/values-ms.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/7a951d0b421fa5f157d7a164c015a708/transformed/browser-1.2.0/res/values-ms/values-ms.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\743766b212d9fc83a155679ca2c720d4\\transformed\\browser-1.2.0\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -46,7 +46,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/a59498c5e6c7a5766fb9f5c46245a20d/transformed/core-1.6.0/res/values-ms/values-ms.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\61f6dd00eb1351eb117fb336b43bd171\\transformed\\core-1.6.0\\res\\values-ms\\values-ms.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

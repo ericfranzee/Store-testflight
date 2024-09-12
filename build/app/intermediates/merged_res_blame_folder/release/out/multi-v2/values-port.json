@@ -4,7 +4,7 @@
             "outputFile": "com.ericfranzee.store.app-mergeReleaseResources-43:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\a72ab0b076d7fc18550d0271adc34907\\transformed\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

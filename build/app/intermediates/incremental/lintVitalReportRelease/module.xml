@@ -1,12 +1,12 @@
 <lint-module
     format="1"
-    dir="/home/user/Store-testflight/android/app"
+    dir="D:\git\Store-testfligt\android\app"
     name=":app"
     type="APP"
     maven="android:app:"
     gradle="7.3.0"
-    buildFolder="/home/user/Store-testflight/build/app"
-    bootClassPath="/opt/android/platforms/android-34/android.jar:/opt/android/build-tools/30.0.3/core-lambda-stubs.jar"
+    buildFolder="D:\git\Store-testfligt\build\app"
+    bootClassPath="C:\Users\Ericfranzee\AppData\Local\Android\sdk\platforms\android-34\android.jar;C:\Users\Ericfranzee\AppData\Local\Android\sdk\build-tools\30.0.3\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34">
   <lintOptions

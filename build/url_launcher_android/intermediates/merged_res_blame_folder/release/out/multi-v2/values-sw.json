@@ -4,24 +4,7 @@
             "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-mergeReleaseResources-10:/values-sw/values-sw.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/4bcd6dd466679aae58e5c8e650d0817b/transformed/browser-1.5.0/res/values-sw/values-sw.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,169,270,387",
-                        "endColumns": "113,100,116,102",
-                        "endOffsets": "164,265,382,485"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "778,892,993,1110",
-                        "endColumns": "113,100,116,102",
-                        "endOffsets": "887,988,1105,1208"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/60c9103f1fdf9ee35bc00c7e7b00400a/transformed/core-1.10.1/res/values-sw/values-sw.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\f2f7578f648b7ef3bf64891415984010\\transformed\\core-1.10.1\\res\\values-sw\\values-sw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "55,149,251,348,449,556,663,1213",
                         "endColumns": "93,101,96,100,106,106,114,100",
                         "endOffsets": "144,246,343,444,551,658,773,1309"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\82689d886c47943b236d38341404d88e\\transformed\\browser-1.5.0\\res\\values-sw\\values-sw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,169,270,387",
+                        "endColumns": "113,100,116,102",
+                        "endOffsets": "164,265,382,485"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "778,892,993,1110",
+                        "endColumns": "113,100,116,102",
+                        "endOffsets": "887,988,1105,1208"
                     }
                 }
             ]
@@ -43,24 +43,7 @@
             "outputFile": "io.flutter.plugins.urllauncher.url_launcher_android-merged_res-12:/values-sw/values-sw.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/4bcd6dd466679aae58e5c8e650d0817b/transformed/browser-1.5.0/res/values-sw/values-sw.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,169,270,387",
-                        "endColumns": "113,100,116,102",
-                        "endOffsets": "164,265,382,485"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "778,892,993,1110",
-                        "endColumns": "113,100,116,102",
-                        "endOffsets": "887,988,1105,1208"
-                    }
-                },
-                {
-                    "source": "/home/user/.gradle/caches/transforms-3/60c9103f1fdf9ee35bc00c7e7b00400a/transformed/core-1.10.1/res/values-sw/values-sw.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\f2f7578f648b7ef3bf64891415984010\\transformed\\core-1.10.1\\res\\values-sw\\values-sw.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -74,6 +57,23 @@
                         "startOffsets": "55,149,251,348,449,556,663,1213",
                         "endColumns": "93,101,96,100,106,106,114,100",
                         "endOffsets": "144,246,343,444,551,658,773,1309"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\82689d886c47943b236d38341404d88e\\transformed\\browser-1.5.0\\res\\values-sw\\values-sw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,169,270,387",
+                        "endColumns": "113,100,116,102",
+                        "endOffsets": "164,265,382,485"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "778,892,993,1110",
+                        "endColumns": "113,100,116,102",
+                        "endOffsets": "887,988,1105,1208"
                     }
                 }
             ]

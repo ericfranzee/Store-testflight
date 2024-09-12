@@ -4,7 +4,7 @@
             "outputFile": "com.ericfranzee.store.app-mergeReleaseResources-43:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/2e03775442a64724d3ab915c0e4e75e2/transformed/appcompat-1.1.0/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\a72ab0b076d7fc18550d0271adc34907\\transformed\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/user/.gradle/caches/transforms-3/fae8e38e4284091f6d3d8e1270867f23/transformed/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\Ericfranzee\\.gradle\\caches\\transforms-3\\0b8e9ddc66d4388cbc95e88e3c8e6834\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
